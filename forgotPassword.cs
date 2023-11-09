@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ILib
 {
-    public partial class Form2 : Form
+    public partial class forgotPassword : Form
     {
-        public Form2()
+        public forgotPassword()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
