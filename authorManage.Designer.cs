@@ -36,11 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ngườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +50,11 @@
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -110,51 +110,6 @@
             this.label5.Text = "DANH MỤC TÁC GIẢ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // simpleButton5
-            // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(555, 372);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton5.TabIndex = 6;
-            this.simpleButton5.Text = "Đóng";
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(114, 372);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(74, 23);
-            this.simpleButton4.TabIndex = 5;
-            this.simpleButton4.Text = "Sửa";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(211, 372);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 4;
-            this.simpleButton3.Text = "Xoá";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(310, 372);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "Lưu";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(20, 372);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Thêm";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -179,7 +134,7 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // quảnLýSáchToolStripMenuItem
@@ -195,13 +150,13 @@
             // danhSáchTácGiảToolStripMenuItem
             // 
             this.danhSáchTácGiảToolStripMenuItem.Name = "danhSáchTácGiảToolStripMenuItem";
-            this.danhSáchTácGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.danhSáchTácGiảToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.danhSáchTácGiảToolStripMenuItem.Text = "Danh sách tác giả";
             // 
             // quảnLýLoạiSáchToolStripMenuItem
             // 
             this.quảnLýLoạiSáchToolStripMenuItem.Name = "quảnLýLoạiSáchToolStripMenuItem";
-            this.quảnLýLoạiSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quảnLýLoạiSáchToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.quảnLýLoạiSáchToolStripMenuItem.Text = "Quản lý loại sách";
             // 
             // quảnLýMượntrảToolStripMenuItem
@@ -256,6 +211,51 @@
             // 
             this.idtype.HeaderText = "Loại tài khoản";
             this.idtype.Name = "idtype";
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(555, 372);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton5.TabIndex = 6;
+            this.simpleButton5.Text = "Đóng";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(114, 372);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(74, 23);
+            this.simpleButton4.TabIndex = 5;
+            this.simpleButton4.Text = "Sửa";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(211, 372);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 4;
+            this.simpleButton3.Text = "Xoá";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(310, 372);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 3;
+            this.simpleButton2.Text = "Lưu";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(20, 372);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Text = "Thêm";
             // 
             // authorManage
             // 
