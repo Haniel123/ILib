@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace ILib
 {
-    public partial class register : Form
+    public partial class TypeofBookManagement : Form
     {
-        public register()
+        public TypeofBookManagement()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btn_bookAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
