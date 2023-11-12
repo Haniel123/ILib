@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace ILib
 {
-    public partial class homePage : Form
+    public partial class readerManage : Form
     {
-        public homePage()
+        public readerManage()
         {
             InitializeComponent();
         }
 
-        private void tileNavPane1_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
         {
 
         }
