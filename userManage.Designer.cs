@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userManage));
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,22 +47,21 @@
             this.quảnLýLoạiSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýMượntrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(18, 136);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(850, 225);
-            this.listBox1.TabIndex = 29;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(330, 43);
+            this.label5.Location = new System.Drawing.Point(221, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 22);
             this.label5.TabIndex = 28;
@@ -104,7 +102,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(793, 376);
+            this.simpleButton5.Location = new System.Drawing.Point(553, 376);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 23;
@@ -155,7 +153,7 @@
             this.thốngKêToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(881, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(643, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,7 +168,7 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // quảnLýSáchToolStripMenuItem
@@ -206,13 +204,55 @@
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.fullname,
+            this.address,
+            this.phone,
+            this.idtype});
+            this.dataGridView1.Location = new System.Drawing.Point(18, 126);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(610, 244);
+            this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // fullname
+            // 
+            this.fullname.HeaderText = "Họ và tên";
+            this.fullname.Name = "fullname";
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.DividerWidth = 1;
+            this.phone.HeaderText = "Số điện thoại";
+            this.phone.Name = "phone";
+            // 
+            // idtype
+            // 
+            this.idtype.HeaderText = "Loại tài khoản";
+            this.idtype.Name = "idtype";
+            // 
             // userManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 419);
+            this.ClientSize = new System.Drawing.Size(643, 412);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -224,17 +264,16 @@
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Name = "userManage";
-            this.Text = "userManage";
+            this.Text = "Quản lý thủ thư";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
@@ -253,5 +292,11 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýLoạiSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýMượntrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idtype;
     }
 }
