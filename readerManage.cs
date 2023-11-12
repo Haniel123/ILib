@@ -31,5 +31,15 @@ namespace ILib
         {
 
         }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void readerManage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

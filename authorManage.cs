@@ -41,5 +41,10 @@ namespace ILib
         {
 
         }
+
+        private void authorManage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

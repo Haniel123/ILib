@@ -44,12 +44,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 59);
+            this.label3.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 43);
+            this.label3.Size = new System.Drawing.Size(278, 34);
             this.label3.TabIndex = 11;
-            this.label3.Text = "ILib";
+            this.label3.Text = "Thông tin tài khoản";
             // 
             // label2
             // 
@@ -109,7 +109,7 @@
             this.textBox3.Size = new System.Drawing.Size(158, 20);
             this.textBox3.TabIndex = 12;
             // 
-            // Form2
+            // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,8 +122,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "register";
+            this.Text = "Đăng ký";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
