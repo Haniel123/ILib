@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ILib
 {
-    public partial class homePage : Form
+    public partial class userManage : Form
     {
-        public homePage()
+        public userManage()
         {
             InitializeComponent();
-        }
-
-        private void tileNavPane1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

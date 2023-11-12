@@ -63,17 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bookManage.cs">
+    <Compile Include="authorManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bookManage.Designer.cs">
-      <DependentUpon>bookManage.cs</DependentUpon>
+    <Compile Include="authorManage.Designer.cs">
+      <DependentUpon>authorManage.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="readerManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="readerManage.Designer.cs">
+      <DependentUpon>readerManage.cs</DependentUpon>
     </Compile>
     <Compile Include="register.cs">
       <SubType>Form</SubType>
@@ -95,17 +101,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userManage.Designer.cs">
+      <DependentUpon>userManage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forgotPassword.resx">
       <DependentUpon>forgotPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookManage.resx">
-      <DependentUpon>bookManage.cs</DependentUpon>
+    <EmbeddedResource Include="authorManage.resx">
+      <DependentUpon>authorManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="homePage.resx">
       <DependentUpon>homePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="readerManage.resx">
+      <DependentUpon>readerManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
@@ -121,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="userManage.resx">
+      <DependentUpon>userManage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\120299436_177825247171468_3483578957513889385_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-login.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -113,6 +113,7 @@
             this.tileNavPane1.Size = new System.Drawing.Size(800, 40);
             this.tileNavPane1.TabIndex = 5;
             this.tileNavPane1.Text = "tileNavPane1";
+            this.tileNavPane1.Click += new System.EventHandler(this.tileNavPane1_Click);
             // 
             // navButton2
             // 

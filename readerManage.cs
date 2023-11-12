@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace ILib
 {
-    public partial class bookManage : Form
+    public partial class readerManage : Form
     {
-        public bookManage()
+        public readerManage()
         {
             InitializeComponent();
         }
 
-        private void listBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void simpleButton6_Click(object sender, EventArgs e)
         {
 
         }
