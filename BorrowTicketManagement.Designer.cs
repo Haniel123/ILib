@@ -28,52 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowTicketManagement));
             this.title_borrowTicket = new System.Windows.Forms.Label();
             this.grp_bookDetail = new System.Windows.Forms.GroupBox();
             this.txt_brwTicketBook = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketBook = new System.Windows.Forms.Label();
-            this.btn_brwTicketUpdate = new System.Windows.Forms.Button();
-            this.btn_brwTicketAdd = new System.Windows.Forms.Button();
-            this.txt_brwTicketStartDate = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketStartDate = new System.Windows.Forms.Label();
             this.txt_brwTicketStatus = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketStatus = new System.Windows.Forms.Label();
             this.txt_brwTicketId = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketId = new System.Windows.Forms.Label();
-            this.txt_brwTicketReturnDate = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketUReturnDate = new System.Windows.Forms.Label();
             this.txt_brwTicketUser = new System.Windows.Forms.TextBox();
             this.lbl_brwTicketUser = new System.Windows.Forms.Label();
             this.lst_brwTicket = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grp_bookDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_borrowTicket
             // 
             this.title_borrowTicket.AutoSize = true;
-            this.title_borrowTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.title_borrowTicket.Location = new System.Drawing.Point(171, 7);
+            this.title_borrowTicket.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.title_borrowTicket.Location = new System.Drawing.Point(172, 18);
             this.title_borrowTicket.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title_borrowTicket.Name = "title_borrowTicket";
-            this.title_borrowTicket.Size = new System.Drawing.Size(275, 37);
+            this.title_borrowTicket.Size = new System.Drawing.Size(258, 36);
             this.title_borrowTicket.TabIndex = 0;
             this.title_borrowTicket.Text = "Quản Lý Vé Mượn";
             // 
             // grp_bookDetail
             // 
-            this.grp_bookDetail.Controls.Add(this.button1);
+            this.grp_bookDetail.Controls.Add(this.dateTimePicker2);
+            this.grp_bookDetail.Controls.Add(this.lst_brwTicket);
+            this.grp_bookDetail.Controls.Add(this.dateTimePicker1);
             this.grp_bookDetail.Controls.Add(this.txt_brwTicketBook);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketBook);
-            this.grp_bookDetail.Controls.Add(this.btn_brwTicketUpdate);
-            this.grp_bookDetail.Controls.Add(this.btn_brwTicketAdd);
-            this.grp_bookDetail.Controls.Add(this.txt_brwTicketStartDate);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketStartDate);
             this.grp_bookDetail.Controls.Add(this.txt_brwTicketStatus);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketStatus);
             this.grp_bookDetail.Controls.Add(this.txt_brwTicketId);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketId);
-            this.grp_bookDetail.Controls.Add(this.txt_brwTicketReturnDate);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketUReturnDate);
             this.grp_bookDetail.Controls.Add(this.txt_brwTicketUser);
             this.grp_bookDetail.Controls.Add(this.lbl_brwTicketUser);
@@ -106,41 +105,6 @@
             this.lbl_brwTicketBook.Size = new System.Drawing.Size(69, 18);
             this.lbl_brwTicketBook.TabIndex = 15;
             this.lbl_brwTicketBook.Text = "Mã sách:";
-            // 
-            // btn_brwTicketUpdate
-            // 
-            this.btn_brwTicketUpdate.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_brwTicketUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_brwTicketUpdate.ForeColor = System.Drawing.Color.White;
-            this.btn_brwTicketUpdate.Location = new System.Drawing.Point(320, 129);
-            this.btn_brwTicketUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_brwTicketUpdate.Name = "btn_brwTicketUpdate";
-            this.btn_brwTicketUpdate.Size = new System.Drawing.Size(105, 32);
-            this.btn_brwTicketUpdate.TabIndex = 14;
-            this.btn_brwTicketUpdate.Text = "Cập nhật";
-            this.btn_brwTicketUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btn_brwTicketAdd
-            // 
-            this.btn_brwTicketAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_brwTicketAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_brwTicketAdd.ForeColor = System.Drawing.Color.White;
-            this.btn_brwTicketAdd.Location = new System.Drawing.Point(85, 129);
-            this.btn_brwTicketAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_brwTicketAdd.Name = "btn_brwTicketAdd";
-            this.btn_brwTicketAdd.Size = new System.Drawing.Size(105, 32);
-            this.btn_brwTicketAdd.TabIndex = 13;
-            this.btn_brwTicketAdd.Text = "Thêm mới";
-            this.btn_brwTicketAdd.UseVisualStyleBackColor = false;
-            // 
-            // txt_brwTicketStartDate
-            // 
-            this.txt_brwTicketStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_brwTicketStartDate.Location = new System.Drawing.Point(99, 97);
-            this.txt_brwTicketStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_brwTicketStartDate.Name = "txt_brwTicketStartDate";
-            this.txt_brwTicketStartDate.Size = new System.Drawing.Size(201, 24);
-            this.txt_brwTicketStartDate.TabIndex = 8;
             // 
             // lbl_brwTicketStartDate
             // 
@@ -193,15 +157,6 @@
             this.lbl_brwTicketId.TabIndex = 3;
             this.lbl_brwTicketId.Text = "Mã vé:";
             // 
-            // txt_brwTicketReturnDate
-            // 
-            this.txt_brwTicketReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_brwTicketReturnDate.Location = new System.Drawing.Point(387, 96);
-            this.txt_brwTicketReturnDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_brwTicketReturnDate.Name = "txt_brwTicketReturnDate";
-            this.txt_brwTicketReturnDate.Size = new System.Drawing.Size(178, 24);
-            this.txt_brwTicketReturnDate.TabIndex = 12;
-            // 
             // lbl_brwTicketUReturnDate
             // 
             this.lbl_brwTicketUReturnDate.AutoSize = true;
@@ -236,32 +191,68 @@
             // lst_brwTicket
             // 
             this.lst_brwTicket.HideSelection = false;
-            this.lst_brwTicket.Location = new System.Drawing.Point(11, 234);
+            this.lst_brwTicket.Location = new System.Drawing.Point(0, 129);
             this.lst_brwTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lst_brwTicket.Name = "lst_brwTicket";
-            this.lst_brwTicket.Size = new System.Drawing.Size(570, 110);
+            this.lst_brwTicket.Size = new System.Drawing.Size(565, 116);
             this.lst_brwTicket.TabIndex = 5;
             this.lst_brwTicket.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // dateTimePicker1
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(202, 129);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 32);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Xoá";
-            this.button1.UseVisualStyleBackColor = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(380, 95);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(185, 29);
+            this.dateTimePicker1.TabIndex = 18;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(99, 95);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(204, 29);
+            this.dateTimePicker2.TabIndex = 19;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(120, 332);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(74, 24);
+            this.simpleButton4.TabIndex = 22;
+            this.simpleButton4.Text = "Sửa";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(215, 332);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 24);
+            this.simpleButton3.TabIndex = 21;
+            this.simpleButton3.Text = "Xoá";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(24, 332);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 24);
+            this.simpleButton1.TabIndex = 20;
+            this.simpleButton1.Text = "Thêm";
             // 
             // BorrowTicketManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 368);
-            this.Controls.Add(this.lst_brwTicket);
+            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.grp_bookDetail);
             this.Controls.Add(this.title_borrowTicket);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -278,21 +269,21 @@
 
         private System.Windows.Forms.Label title_borrowTicket;
         private System.Windows.Forms.GroupBox grp_bookDetail;
-        private System.Windows.Forms.Button btn_brwTicketUpdate;
-        private System.Windows.Forms.Button btn_brwTicketAdd;
-        private System.Windows.Forms.TextBox txt_brwTicketStartDate;
         private System.Windows.Forms.Label lbl_brwTicketStartDate;
         private System.Windows.Forms.TextBox txt_brwTicketStatus;
         private System.Windows.Forms.Label lbl_brwTicketStatus;
         private System.Windows.Forms.TextBox txt_brwTicketId;
         private System.Windows.Forms.Label lbl_brwTicketId;
-        private System.Windows.Forms.TextBox txt_brwTicketReturnDate;
         private System.Windows.Forms.Label lbl_brwTicketUReturnDate;
         private System.Windows.Forms.TextBox txt_brwTicketUser;
         private System.Windows.Forms.Label lbl_brwTicketUser;
         private System.Windows.Forms.TextBox txt_brwTicketBook;
         private System.Windows.Forms.Label lbl_brwTicketBook;
         private System.Windows.Forms.ListView lst_brwTicket;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
