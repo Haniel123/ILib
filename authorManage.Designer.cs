@@ -36,39 +36,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ngườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.danhSáchTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýLoạiSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýMượntrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.menuStrip1.SuspendLayout();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 87);
+            this.textBox1.Location = new System.Drawing.Point(118, 81);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 20);
             this.textBox1.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(408, 87);
+            this.textBox4.Location = new System.Drawing.Point(432, 81);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(202, 20);
             this.textBox4.TabIndex = 10;
@@ -76,18 +65,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 90);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(25, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Tên tác giả";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(350, 90);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(346, 81);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Trạng thái";
             // 
@@ -102,74 +93,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(228, 42);
+            this.label5.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(209, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 22);
+            this.label5.Size = new System.Drawing.Size(257, 36);
             this.label5.TabIndex = 15;
-            this.label5.Text = "DANH MỤC TÁC GIẢ";
+            this.label5.Text = "Danh Mục Tác Giả";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ngườiDùngToolStripMenuItem,
-            this.quảnLýSáchToolStripMenuItem,
-            this.quảnLýMượntrảToolStripMenuItem,
-            this.thốngKêToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(655, 24);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ngườiDùngToolStripMenuItem
-            // 
-            this.ngườiDùngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngXuấtToolStripMenuItem});
-            this.ngườiDùngToolStripMenuItem.Name = "ngườiDùngToolStripMenuItem";
-            this.ngườiDùngToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
-            this.ngườiDùngToolStripMenuItem.Text = "Thông tin tài khoản";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            // 
-            // quảnLýSáchToolStripMenuItem
-            // 
-            this.quảnLýSáchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchTácGiảToolStripMenuItem,
-            this.quảnLýLoạiSáchToolStripMenuItem});
-            this.quảnLýSáchToolStripMenuItem.Name = "quảnLýSáchToolStripMenuItem";
-            this.quảnLýSáchToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.quảnLýSáchToolStripMenuItem.Text = "Quản lý sách";
-            this.quảnLýSáchToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSáchToolStripMenuItem_Click);
-            // 
-            // danhSáchTácGiảToolStripMenuItem
-            // 
-            this.danhSáchTácGiảToolStripMenuItem.Name = "danhSáchTácGiảToolStripMenuItem";
-            this.danhSáchTácGiảToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.danhSáchTácGiảToolStripMenuItem.Text = "Danh sách tác giả";
-            // 
-            // quảnLýLoạiSáchToolStripMenuItem
-            // 
-            this.quảnLýLoạiSáchToolStripMenuItem.Name = "quảnLýLoạiSáchToolStripMenuItem";
-            this.quảnLýLoạiSáchToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.quảnLýLoạiSáchToolStripMenuItem.Text = "Quản lý loại sách";
-            // 
-            // quảnLýMượntrảToolStripMenuItem
-            // 
-            this.quảnLýMượntrảToolStripMenuItem.Name = "quảnLýMượntrảToolStripMenuItem";
-            this.quảnLýMượntrảToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.quảnLýMượntrảToolStripMenuItem.Text = "Quản lý mượn/trả";
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // dataGridView1
             // 
@@ -177,45 +107,18 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.fullname,
-            this.address,
-            this.phone,
-            this.idtype});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 122);
+            this.status});
+            this.dataGridView1.Location = new System.Drawing.Point(24, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(610, 244);
             this.dataGridView1.TabIndex = 32;
             // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            // 
-            // fullname
-            // 
-            this.fullname.HeaderText = "Họ và tên";
-            this.fullname.Name = "fullname";
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.DividerWidth = 1;
-            this.phone.HeaderText = "Số điện thoại";
-            this.phone.Name = "phone";
-            // 
-            // idtype
-            // 
-            this.idtype.HeaderText = "Loại tài khoản";
-            this.idtype.Name = "idtype";
-            // 
             // simpleButton5
             // 
+            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(555, 372);
+            this.simpleButton5.Location = new System.Drawing.Point(559, 366);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 6;
@@ -223,8 +126,10 @@
             // 
             // simpleButton4
             // 
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(114, 372);
+            this.simpleButton4.Location = new System.Drawing.Point(118, 366);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(74, 23);
             this.simpleButton4.TabIndex = 5;
@@ -232,8 +137,10 @@
             // 
             // simpleButton3
             // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(211, 372);
+            this.simpleButton3.Location = new System.Drawing.Point(215, 366);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 4;
@@ -241,8 +148,10 @@
             // 
             // simpleButton2
             // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(310, 372);
+            this.simpleButton2.Location = new System.Drawing.Point(314, 366);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 3;
@@ -250,12 +159,32 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(20, 372);
+            this.simpleButton1.Location = new System.Drawing.Point(24, 366);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "Thêm";
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // fullname
+            // 
+            this.fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fullname.HeaderText = "Họ và tên";
+            this.fullname.Name = "fullname";
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.HeaderText = "Trạng thái";
+            this.status.Name = "status";
             // 
             // authorManage
             // 
@@ -273,13 +202,9 @@
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "authorManage";
             this.Text = "Danh mục tác giả";
             this.Load += new System.EventHandler(this.authorManage_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -298,19 +223,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ngườiDùngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýSáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem danhSáchTácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýLoạiSáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýMượntrảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idtype;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

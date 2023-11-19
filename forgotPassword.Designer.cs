@@ -41,19 +41,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(130, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 43);
+            this.label3.Size = new System.Drawing.Size(75, 37);
             this.label3.TabIndex = 19;
             this.label3.Text = "ILib";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(118, 286);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(100, 33);
             this.button1.TabIndex = 16;
             this.button1.Text = "Đăng ký";
             this.button1.UseVisualStyleBackColor = false;
@@ -62,10 +63,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(70, 247);
+            this.label2.Location = new System.Drawing.Point(47, 244);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Mật khẩu";
             // 
@@ -73,10 +75,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(49, 188);
+            this.label1.Location = new System.Drawing.Point(17, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Tên tài khoản";
             // 

@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookManagement));
             this.grp_bookDetail = new System.Windows.Forms.GroupBox();
             this.txt_bookStatus = new System.Windows.Forms.TextBox();
             this.lbl_bookStatus = new System.Windows.Forms.Label();
-            this.btn_bookUpdate = new System.Windows.Forms.Button();
-            this.btn_bookAdd = new System.Windows.Forms.Button();
             this.txt_bookId = new System.Windows.Forms.TextBox();
             this.lbl_bookId = new System.Windows.Forms.Label();
             this.txt_bookQuantity = new System.Windows.Forms.TextBox();
@@ -53,18 +52,20 @@
             this.grid_col_bookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_col_bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_col_bookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grp_bookDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_book)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_bookDetail
             // 
-            this.grp_bookDetail.Controls.Add(this.button1);
+            this.grp_bookDetail.Controls.Add(this.simpleButton4);
+            this.grp_bookDetail.Controls.Add(this.simpleButton3);
+            this.grp_bookDetail.Controls.Add(this.simpleButton1);
             this.grp_bookDetail.Controls.Add(this.txt_bookStatus);
             this.grp_bookDetail.Controls.Add(this.lbl_bookStatus);
-            this.grp_bookDetail.Controls.Add(this.btn_bookUpdate);
-            this.grp_bookDetail.Controls.Add(this.btn_bookAdd);
             this.grp_bookDetail.Controls.Add(this.txt_bookId);
             this.grp_bookDetail.Controls.Add(this.lbl_bookId);
             this.grp_bookDetail.Controls.Add(this.txt_bookQuantity);
@@ -79,9 +80,9 @@
             this.grp_bookDetail.Controls.Add(this.lbl_bookName);
             this.grp_bookDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.grp_bookDetail.Location = new System.Drawing.Point(9, 71);
-            this.grp_bookDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grp_bookDetail.Margin = new System.Windows.Forms.Padding(2);
             this.grp_bookDetail.Name = "grp_bookDetail";
-            this.grp_bookDetail.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grp_bookDetail.Padding = new System.Windows.Forms.Padding(2);
             this.grp_bookDetail.Size = new System.Drawing.Size(568, 179);
             this.grp_bookDetail.TabIndex = 3;
             this.grp_bookDetail.TabStop = false;
@@ -92,9 +93,9 @@
             // 
             this.txt_bookStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookStatus.Location = new System.Drawing.Point(85, 133);
-            this.txt_bookStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookStatus.Name = "txt_bookStatus";
-            this.txt_bookStatus.Size = new System.Drawing.Size(141, 24);
+            this.txt_bookStatus.Size = new System.Drawing.Size(187, 24);
             this.txt_bookStatus.TabIndex = 14;
             this.txt_bookStatus.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -109,39 +110,11 @@
             this.lbl_bookStatus.TabIndex = 13;
             this.lbl_bookStatus.Text = "Trạng thái:";
             // 
-            // btn_bookUpdate
-            // 
-            this.btn_bookUpdate.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_bookUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_bookUpdate.ForeColor = System.Drawing.Color.White;
-            this.btn_bookUpdate.Location = new System.Drawing.Point(454, 128);
-            this.btn_bookUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_bookUpdate.Name = "btn_bookUpdate";
-            this.btn_bookUpdate.Size = new System.Drawing.Size(105, 32);
-            this.btn_bookUpdate.TabIndex = 16;
-            this.btn_bookUpdate.Text = "Cập nhật";
-            this.btn_bookUpdate.UseVisualStyleBackColor = false;
-            this.btn_bookUpdate.Click += new System.EventHandler(this.btn_bookUpdate_Click);
-            // 
-            // btn_bookAdd
-            // 
-            this.btn_bookAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_bookAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_bookAdd.ForeColor = System.Drawing.Color.White;
-            this.btn_bookAdd.Location = new System.Drawing.Point(236, 129);
-            this.btn_bookAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_bookAdd.Name = "btn_bookAdd";
-            this.btn_bookAdd.Size = new System.Drawing.Size(105, 32);
-            this.btn_bookAdd.TabIndex = 15;
-            this.btn_bookAdd.Text = "Thêm mới";
-            this.btn_bookAdd.UseVisualStyleBackColor = false;
-            this.btn_bookAdd.Click += new System.EventHandler(this.btn_bookAdd_Click);
-            // 
             // txt_bookId
             // 
             this.txt_bookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookId.Location = new System.Drawing.Point(85, 97);
-            this.txt_bookId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookId.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookId.Name = "txt_bookId";
             this.txt_bookId.Size = new System.Drawing.Size(76, 24);
             this.txt_bookId.TabIndex = 8;
@@ -162,7 +135,7 @@
             // 
             this.txt_bookQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookQuantity.Location = new System.Drawing.Point(390, 64);
-            this.txt_bookQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookQuantity.Name = "txt_bookQuantity";
             this.txt_bookQuantity.Size = new System.Drawing.Size(170, 24);
             this.txt_bookQuantity.TabIndex = 6;
@@ -182,7 +155,7 @@
             // 
             this.txt_bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookPrice.Location = new System.Drawing.Point(85, 64);
-            this.txt_bookPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookPrice.Name = "txt_bookPrice";
             this.txt_bookPrice.Size = new System.Drawing.Size(212, 24);
             this.txt_bookPrice.TabIndex = 4;
@@ -202,7 +175,7 @@
             // 
             this.txt_bookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookAuthor.Location = new System.Drawing.Point(229, 97);
-            this.txt_bookAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookAuthor.Name = "txt_bookAuthor";
             this.txt_bookAuthor.Size = new System.Drawing.Size(121, 24);
             this.txt_bookAuthor.TabIndex = 10;
@@ -224,7 +197,7 @@
             // 
             this.txt_bookType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookType.Location = new System.Drawing.Point(433, 96);
-            this.txt_bookType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookType.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookType.Name = "txt_bookType";
             this.txt_bookType.Size = new System.Drawing.Size(127, 24);
             this.txt_bookType.TabIndex = 12;
@@ -246,7 +219,7 @@
             // 
             this.txt_bookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_bookName.Location = new System.Drawing.Point(85, 31);
-            this.txt_bookName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_bookName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_bookName.Name = "txt_bookName";
             this.txt_bookName.Size = new System.Drawing.Size(475, 24);
             this.txt_bookName.TabIndex = 2;
@@ -266,11 +239,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label1.Location = new System.Drawing.Point(195, 12);
+            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(200, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 37);
+            this.label1.Size = new System.Drawing.Size(197, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản Lý Sách";
             // 
@@ -284,13 +257,14 @@
             this.grid_col_bookAuthor,
             this.grid_col_bookQuantity,
             this.grid_col_bookPrice});
-            this.grid_book.Location = new System.Drawing.Point(9, 259);
-            this.grid_book.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid_book.Location = new System.Drawing.Point(9, 258);
+            this.grid_book.Margin = new System.Windows.Forms.Padding(2);
             this.grid_book.Name = "grid_book";
             this.grid_book.RowHeadersWidth = 51;
             this.grid_book.RowTemplate.Height = 24;
             this.grid_book.Size = new System.Drawing.Size(568, 132);
             this.grid_book.TabIndex = 15;
+            this.grid_book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_book_CellContentClick);
             // 
             // grid_col_bookId
             // 
@@ -334,18 +308,38 @@
             this.grid_col_bookPrice.Name = "grid_col_bookPrice";
             this.grid_col_bookPrice.Width = 125;
             // 
-            // button1
+            // simpleButton4
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(345, 128);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 32);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Xoá";
-            this.button1.UseVisualStyleBackColor = false;
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(390, 133);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(74, 24);
+            this.simpleButton4.TabIndex = 17;
+            this.simpleButton4.Text = "Sửa";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(485, 133);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 24);
+            this.simpleButton3.TabIndex = 16;
+            this.simpleButton3.Text = "Xoá";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(294, 133);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 24);
+            this.simpleButton1.TabIndex = 15;
+            this.simpleButton1.Text = "Thêm";
             // 
             // BookManagement
             // 
@@ -355,7 +349,7 @@
             this.Controls.Add(this.grid_book);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grp_bookDetail);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BookManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookForm";
@@ -382,9 +376,7 @@
         private System.Windows.Forms.Label lbl_bookQuantity;
         private System.Windows.Forms.TextBox txt_bookPrice;
         private System.Windows.Forms.Label lbl_bookPrice;
-        private System.Windows.Forms.Button btn_bookAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_bookUpdate;
         private System.Windows.Forms.DataGridView grid_book;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_col_bookId;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_col_bookName;
@@ -394,6 +386,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_col_bookPrice;
         private System.Windows.Forms.TextBox txt_bookStatus;
         private System.Windows.Forms.Label lbl_bookStatus;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

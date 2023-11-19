@@ -66,5 +66,10 @@ namespace ILib
         {
 
         }
+
+        private void grid_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
