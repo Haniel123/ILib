@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace ILib
 {
     public partial class authorManage : Form
     {
+            authorBUS bus = new authorBUS();
         public authorManage()
         {
             InitializeComponent();
@@ -44,6 +47,17 @@ namespace ILib
 
         private void authorManage_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
+        {
+            string authorName = txtAuhorname.Text;
+            Author author = new Author();
+            author.Name = authorName;
+            author.Status = 1;
+            var result = bus.insertAuthorB(author);
+            txtAuhorname.Text = result.ToString();
 
         }
     }
