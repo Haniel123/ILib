@@ -21,5 +21,10 @@ namespace ILib
         {
 
         }
+
+        private void homePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

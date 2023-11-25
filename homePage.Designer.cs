@@ -146,6 +146,7 @@
             this.IsMdiContainer = true;
             this.Name = "homePage";
             this.Text = "homePage";
+            this.Load += new System.EventHandler(this.homePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
