@@ -47,7 +47,7 @@ namespace ILib
 
             if (bus.checkUser(userName, password))
             {
-                homePage homePage = new homePage();
+                authorManage homePage = new authorManage();
                 homePage.ShowDialog();
                 this.Close();
             }
