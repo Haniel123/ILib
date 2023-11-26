@@ -53,7 +53,7 @@ namespace ILib
         private void btnAddAuthor_Click(object sender, EventArgs e)
         {
             string authorName = txtAuhorname.Text;
-            Author author = new Author();
+            DAO.Author author = new DAO.Author();
             author.Name = authorName;
             author.Status = 1;
             var result = bus.insertAuthorB(author);
