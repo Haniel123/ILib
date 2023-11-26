@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b96065ce9784e3aacc9230796f21785" Name="Diagram1">
+        <EntityTypeShape EntityType="ELibModel.Author" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Book" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.BookStatu" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.BookType" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Reader" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Usert" Width="1.5" PointX="8" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.UserType" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="ELibModel.FK__Book__IdAuthor__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="ELibModel.FK__Book__IdStatus__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ELibModel.FK__Book__IdType__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="ELibModel.FK__Reader__IdType__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ELibModel.FK__Usert__IdType__4AB81AF0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

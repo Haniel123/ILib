@@ -79,11 +79,11 @@
             this.grp_bookDetail.Controls.Add(this.txt_bookName);
             this.grp_bookDetail.Controls.Add(this.lbl_bookName);
             this.grp_bookDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.grp_bookDetail.Location = new System.Drawing.Point(12, 87);
-            this.grp_bookDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grp_bookDetail.Location = new System.Drawing.Point(7, 57);
+            this.grp_bookDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grp_bookDetail.Name = "grp_bookDetail";
-            this.grp_bookDetail.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grp_bookDetail.Size = new System.Drawing.Size(757, 220);
+            this.grp_bookDetail.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grp_bookDetail.Size = new System.Drawing.Size(568, 179);
             this.grp_bookDetail.TabIndex = 3;
             this.grp_bookDetail.TabStop = false;
             this.grp_bookDetail.Text = "Thông tin chi tiết";
@@ -94,10 +94,9 @@
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(520, 164);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton4.Location = new System.Drawing.Point(390, 133);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(99, 30);
+            this.simpleButton4.Size = new System.Drawing.Size(74, 24);
             this.simpleButton4.TabIndex = 17;
             this.simpleButton4.Text = "Sửa";
             // 
@@ -106,10 +105,9 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(647, 164);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton3.Location = new System.Drawing.Point(485, 133);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(100, 30);
+            this.simpleButton3.Size = new System.Drawing.Size(75, 24);
             this.simpleButton3.TabIndex = 16;
             this.simpleButton3.Text = "Xoá";
             // 
@@ -118,20 +116,19 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(392, 164);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Location = new System.Drawing.Point(294, 133);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(100, 30);
+            this.simpleButton1.Size = new System.Drawing.Size(75, 24);
             this.simpleButton1.TabIndex = 15;
             this.simpleButton1.Text = "Thêm";
             // 
             // txt_bookStatus
             // 
             this.txt_bookStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookStatus.Location = new System.Drawing.Point(113, 164);
-            this.txt_bookStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookStatus.Location = new System.Drawing.Point(85, 133);
+            this.txt_bookStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookStatus.Name = "txt_bookStatus";
-            this.txt_bookStatus.Size = new System.Drawing.Size(248, 28);
+            this.txt_bookStatus.Size = new System.Drawing.Size(187, 24);
             this.txt_bookStatus.TabIndex = 14;
             this.txt_bookStatus.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -139,19 +136,20 @@
             // 
             this.lbl_bookStatus.AutoSize = true;
             this.lbl_bookStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookStatus.Location = new System.Drawing.Point(13, 167);
+            this.lbl_bookStatus.Location = new System.Drawing.Point(10, 136);
+            this.lbl_bookStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookStatus.Name = "lbl_bookStatus";
-            this.lbl_bookStatus.Size = new System.Drawing.Size(99, 24);
+            this.lbl_bookStatus.Size = new System.Drawing.Size(77, 18);
             this.lbl_bookStatus.TabIndex = 13;
             this.lbl_bookStatus.Text = "Trạng thái:";
             // 
             // txt_bookId
             // 
             this.txt_bookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookId.Location = new System.Drawing.Point(113, 119);
-            this.txt_bookId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookId.Location = new System.Drawing.Point(85, 97);
+            this.txt_bookId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookId.Name = "txt_bookId";
-            this.txt_bookId.Size = new System.Drawing.Size(100, 28);
+            this.txt_bookId.Size = new System.Drawing.Size(76, 24);
             this.txt_bookId.TabIndex = 8;
             this.txt_bookId.TextChanged += new System.EventHandler(this.txt_bookId_TextChanged);
             // 
@@ -159,57 +157,60 @@
             // 
             this.lbl_bookId.AutoSize = true;
             this.lbl_bookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookId.Location = new System.Drawing.Point(13, 122);
+            this.lbl_bookId.Location = new System.Drawing.Point(10, 99);
+            this.lbl_bookId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookId.Name = "lbl_bookId";
-            this.lbl_bookId.Size = new System.Drawing.Size(86, 24);
+            this.lbl_bookId.Size = new System.Drawing.Size(69, 18);
             this.lbl_bookId.TabIndex = 7;
             this.lbl_bookId.Text = "Mã sách:";
             // 
             // txt_bookQuantity
             // 
             this.txt_bookQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookQuantity.Location = new System.Drawing.Point(520, 79);
-            this.txt_bookQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookQuantity.Location = new System.Drawing.Point(390, 64);
+            this.txt_bookQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookQuantity.Name = "txt_bookQuantity";
-            this.txt_bookQuantity.Size = new System.Drawing.Size(225, 28);
+            this.txt_bookQuantity.Size = new System.Drawing.Size(170, 24);
             this.txt_bookQuantity.TabIndex = 6;
             // 
             // lbl_bookQuantity
             // 
             this.lbl_bookQuantity.AutoSize = true;
             this.lbl_bookQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookQuantity.Location = new System.Drawing.Point(423, 82);
+            this.lbl_bookQuantity.Location = new System.Drawing.Point(317, 67);
+            this.lbl_bookQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookQuantity.Name = "lbl_bookQuantity";
-            this.lbl_bookQuantity.Size = new System.Drawing.Size(91, 24);
+            this.lbl_bookQuantity.Size = new System.Drawing.Size(71, 18);
             this.lbl_bookQuantity.TabIndex = 5;
             this.lbl_bookQuantity.Text = "Số lượng:";
             // 
             // txt_bookPrice
             // 
             this.txt_bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookPrice.Location = new System.Drawing.Point(113, 79);
-            this.txt_bookPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookPrice.Location = new System.Drawing.Point(85, 64);
+            this.txt_bookPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookPrice.Name = "txt_bookPrice";
-            this.txt_bookPrice.Size = new System.Drawing.Size(281, 28);
+            this.txt_bookPrice.Size = new System.Drawing.Size(212, 24);
             this.txt_bookPrice.TabIndex = 4;
             // 
             // lbl_bookPrice
             // 
             this.lbl_bookPrice.AutoSize = true;
             this.lbl_bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookPrice.Location = new System.Drawing.Point(13, 82);
+            this.lbl_bookPrice.Location = new System.Drawing.Point(10, 67);
+            this.lbl_bookPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookPrice.Name = "lbl_bookPrice";
-            this.lbl_bookPrice.Size = new System.Drawing.Size(43, 24);
+            this.lbl_bookPrice.Size = new System.Drawing.Size(35, 18);
             this.lbl_bookPrice.TabIndex = 3;
             this.lbl_bookPrice.Text = "Giá:";
             // 
             // txt_bookAuthor
             // 
             this.txt_bookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookAuthor.Location = new System.Drawing.Point(305, 119);
-            this.txt_bookAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookAuthor.Location = new System.Drawing.Point(229, 97);
+            this.txt_bookAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookAuthor.Name = "txt_bookAuthor";
-            this.txt_bookAuthor.Size = new System.Drawing.Size(160, 28);
+            this.txt_bookAuthor.Size = new System.Drawing.Size(121, 24);
             this.txt_bookAuthor.TabIndex = 10;
             this.txt_bookAuthor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -217,9 +218,10 @@
             // 
             this.lbl_bookAuthor.AutoSize = true;
             this.lbl_bookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookAuthor.Location = new System.Drawing.Point(221, 122);
+            this.lbl_bookAuthor.Location = new System.Drawing.Point(166, 99);
+            this.lbl_bookAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookAuthor.Name = "lbl_bookAuthor";
-            this.lbl_bookAuthor.Size = new System.Drawing.Size(77, 24);
+            this.lbl_bookAuthor.Size = new System.Drawing.Size(60, 18);
             this.lbl_bookAuthor.TabIndex = 9;
             this.lbl_bookAuthor.Text = "Tác giả:";
             this.lbl_bookAuthor.Click += new System.EventHandler(this.label1_Click_1);
@@ -227,10 +229,10 @@
             // txt_bookType
             // 
             this.txt_bookType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookType.Location = new System.Drawing.Point(577, 118);
-            this.txt_bookType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookType.Location = new System.Drawing.Point(433, 96);
+            this.txt_bookType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookType.Name = "txt_bookType";
-            this.txt_bookType.Size = new System.Drawing.Size(168, 28);
+            this.txt_bookType.Size = new System.Drawing.Size(127, 24);
             this.txt_bookType.TabIndex = 12;
             this.txt_bookType.TextChanged += new System.EventHandler(this.txt_bookType_TextChanged);
             // 
@@ -238,9 +240,10 @@
             // 
             this.lbl_bookType.AutoSize = true;
             this.lbl_bookType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookType.Location = new System.Drawing.Point(476, 122);
+            this.lbl_bookType.Location = new System.Drawing.Point(357, 99);
+            this.lbl_bookType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookType.Name = "lbl_bookType";
-            this.lbl_bookType.Size = new System.Drawing.Size(95, 24);
+            this.lbl_bookType.Size = new System.Drawing.Size(76, 18);
             this.lbl_bookType.TabIndex = 11;
             this.lbl_bookType.Text = "Loại sách:";
             this.lbl_bookType.Click += new System.EventHandler(this.label1_Click);
@@ -248,10 +251,10 @@
             // txt_bookName
             // 
             this.txt_bookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_bookName.Location = new System.Drawing.Point(113, 38);
-            this.txt_bookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_bookName.Location = new System.Drawing.Point(85, 31);
+            this.txt_bookName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_bookName.Name = "txt_bookName";
-            this.txt_bookName.Size = new System.Drawing.Size(632, 28);
+            this.txt_bookName.Size = new System.Drawing.Size(475, 24);
             this.txt_bookName.TabIndex = 2;
             this.txt_bookName.TextChanged += new System.EventHandler(this.txt_bookName_TextChanged);
             // 
@@ -259,9 +262,10 @@
             // 
             this.lbl_bookName.AutoSize = true;
             this.lbl_bookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_bookName.Location = new System.Drawing.Point(13, 42);
+            this.lbl_bookName.Location = new System.Drawing.Point(10, 34);
+            this.lbl_bookName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bookName.Name = "lbl_bookName";
-            this.lbl_bookName.Size = new System.Drawing.Size(94, 24);
+            this.lbl_bookName.Size = new System.Drawing.Size(73, 18);
             this.lbl_bookName.TabIndex = 1;
             this.lbl_bookName.Text = "Tên sách:";
             // 
@@ -269,9 +273,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(267, 27);
+            this.label1.Location = new System.Drawing.Point(198, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 43);
+            this.label1.Size = new System.Drawing.Size(197, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản Lý Sách";
             // 
@@ -285,12 +290,12 @@
             this.grid_col_bookAuthor,
             this.grid_col_bookQuantity,
             this.grid_col_bookPrice});
-            this.grid_book.Location = new System.Drawing.Point(12, 318);
-            this.grid_book.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grid_book.Location = new System.Drawing.Point(7, 244);
+            this.grid_book.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid_book.Name = "grid_book";
             this.grid_book.RowHeadersWidth = 51;
             this.grid_book.RowTemplate.Height = 24;
-            this.grid_book.Size = new System.Drawing.Size(757, 162);
+            this.grid_book.Size = new System.Drawing.Size(568, 132);
             this.grid_book.TabIndex = 15;
             this.grid_book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_book_CellContentClick);
             // 
@@ -338,13 +343,13 @@
             // 
             // BookManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 494);
+            this.ClientSize = new System.Drawing.Size(586, 386);
             this.Controls.Add(this.grid_book);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grp_bookDetail);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookForm";
