@@ -121,13 +121,19 @@
   <data name="Awicons-Vista-Artistic-Add.256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Awicons-Vista-Artistic-Add.256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="360_F_558484537_vyuk2C23spArvlDHWFv8Z9rTqzpMJk3t" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_558484537_vyuk2C23spArvlDHWFv8Z9rTqzpMJk3t.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot (195)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot (195).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="120299436_177825247171468_3483578957513889385_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\120299436_177825247171468_3483578957513889385_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background-login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aaa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

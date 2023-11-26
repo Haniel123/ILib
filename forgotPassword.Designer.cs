@@ -112,6 +112,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Name = "forgotPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.forgotPassword_Load);
             this.ResumeLayout(false);

@@ -147,6 +147,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="authorManage.resx">
       <DependentUpon>authorManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="homePage.resx">
       <DependentUpon>homePage.cs</DependentUpon>
@@ -203,6 +204,29 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_558484537_vyuk2C23spArvlDHWFv8Z9rTqzpMJk3t.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BUS\BUS.csproj">
+      <Project>{bd747cec-5695-4180-885e-69417584cd48}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="DAO\DAO.csproj">
+      <Project>{929562fb-e771-4754-9933-c15a21d4219f}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="DTO\DTO.csproj">
+      <Project>{1dce7c1b-c0dd-4888-9384-5d24d3061999}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

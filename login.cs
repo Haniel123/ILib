@@ -47,7 +47,7 @@ namespace ILib
 
             if (bus.checkUser(userName, password))
             {
-                authorManage homePage = new authorManage();
+                homePage homePage = new homePage();
                 homePage.ShowDialog();
                 this.Close();
             }
@@ -66,7 +66,19 @@ namespace ILib
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            string message = "Bạn có muốn thoát ?";
+            string title = "Thoát";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+              Application.Exit();
+            }
+            else
+            {
+                // Do something
+            }
         }
     }
 }

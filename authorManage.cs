@@ -18,6 +18,7 @@ namespace ILib
         public authorManage()
         {
             InitializeComponent();
+            dgvAuthor.AutoGenerateColumns = false;
         }
 
         private void listBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,7 +48,8 @@ namespace ILib
 
         private void authorManage_Load(object sender, EventArgs e)
         {
-
+           var result = bus.getAuthorB();
+            dgvAuthor.DataSource = result;
         }
 
         private void btnAddAuthor_Click(object sender, EventArgs e)
@@ -58,6 +60,12 @@ namespace ILib
             author.Status = 1;
             var result = bus.insertAuthorB(author);
             txtAuhorname.Text = result.ToString();
+            var result2 = bus.getAuthorB();
+            dgvAuthor.DataSource = result2;
+        }
+
+        private void dgvAuthor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
