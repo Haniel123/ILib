@@ -9,18 +9,17 @@ namespace DAO
     public class authorDAO
     {
         public ELibEntities db = new ELibEntities();
-      public int insertAuthor(Author item)
+        public int insertAuthor(Author item)
         {
             db.Authors.Add(item);
-            var result =  db.SaveChanges();
+            var result = db.SaveChanges();
             return result;
         }
-
         public List<Author> getAuthor()
         {
-   
-            var result = from author in db.Authors  select author;
+            var result = from author in db.Authors select author;
             return result.ToList();
         }
     }
+
 }

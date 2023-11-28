@@ -86,6 +86,7 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="userDAO.cs" />
     <Compile Include="Usert.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>
