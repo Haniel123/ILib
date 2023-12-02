@@ -28,191 +28,272 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TypeofBookManagement));
-            this.title_typeOfBook = new System.Windows.Forms.Label();
-            this.grp_typeOfBookDetail = new System.Windows.Forms.GroupBox();
-            this.txt_typeOfBookStatus = new System.Windows.Forms.TextBox();
-            this.lbl_typeOfBookStatus = new System.Windows.Forms.Label();
-            this.txt_typeOfBookId = new System.Windows.Forms.TextBox();
-            this.lbl_typeOfBookId = new System.Windows.Forms.Label();
-            this.txt_typeOfBookName = new System.Windows.Forms.TextBox();
-            this.lbl_typeOfBookName = new System.Windows.Forms.Label();
-            this.lst_typeOfBook = new System.Windows.Forms.ListView();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.grp_typeOfBookDetail.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.GroupBox = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GridView_Book = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView_Book)).BeginInit();
             this.SuspendLayout();
             // 
-            // title_typeOfBook
+            // label2
             // 
-            this.title_typeOfBook.AutoSize = true;
-            this.title_typeOfBook.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
-            this.title_typeOfBook.Location = new System.Drawing.Point(144, 10);
-            this.title_typeOfBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.title_typeOfBook.Name = "title_typeOfBook";
-            this.title_typeOfBook.Size = new System.Drawing.Size(263, 36);
-            this.title_typeOfBook.TabIndex = 0;
-            this.title_typeOfBook.Text = "Quản Lý Loại Sách";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(4, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tên loại";
             // 
-            // grp_typeOfBookDetail
+            // GroupBox
             // 
-            this.grp_typeOfBookDetail.Controls.Add(this.txt_typeOfBookStatus);
-            this.grp_typeOfBookDetail.Controls.Add(this.lbl_typeOfBookStatus);
-            this.grp_typeOfBookDetail.Controls.Add(this.txt_typeOfBookId);
-            this.grp_typeOfBookDetail.Controls.Add(this.lbl_typeOfBookId);
-            this.grp_typeOfBookDetail.Controls.Add(this.txt_typeOfBookName);
-            this.grp_typeOfBookDetail.Controls.Add(this.lbl_typeOfBookName);
-            this.grp_typeOfBookDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.grp_typeOfBookDetail.Location = new System.Drawing.Point(6, 61);
-            this.grp_typeOfBookDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_typeOfBookDetail.Name = "grp_typeOfBookDetail";
-            this.grp_typeOfBookDetail.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_typeOfBookDetail.Size = new System.Drawing.Size(422, 101);
-            this.grp_typeOfBookDetail.TabIndex = 4;
-            this.grp_typeOfBookDetail.TabStop = false;
-            this.grp_typeOfBookDetail.Text = "Thông tin chi tiết";
+            this.GroupBox.Controls.Add(this.textBox3);
+            this.GroupBox.Controls.Add(this.label9);
+            this.GroupBox.Controls.Add(this.textBox2);
+            this.GroupBox.Controls.Add(this.textBox1);
+            this.GroupBox.Controls.Add(this.label2);
+            this.GroupBox.Controls.Add(this.label4);
+            this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.GroupBox.Location = new System.Drawing.Point(9, 72);
+            this.GroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.GroupBox.Name = "GroupBox";
+            this.GroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.GroupBox.Size = new System.Drawing.Size(734, 122);
+            this.GroupBox.TabIndex = 2;
+            this.GroupBox.TabStop = false;
+            this.GroupBox.Text = "Thông tin";
             // 
-            // txt_typeOfBookStatus
+            // label4
             // 
-            this.txt_typeOfBookStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_typeOfBookStatus.Location = new System.Drawing.Point(284, 63);
-            this.txt_typeOfBookStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_typeOfBookStatus.Name = "txt_typeOfBookStatus";
-            this.txt_typeOfBookStatus.Size = new System.Drawing.Size(134, 24);
-            this.txt_typeOfBookStatus.TabIndex = 6;
-            this.txt_typeOfBookStatus.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(4, 81);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Mã loại";
             // 
-            // lbl_typeOfBookStatus
+            // label1
             // 
-            this.lbl_typeOfBookStatus.AutoSize = true;
-            this.lbl_typeOfBookStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_typeOfBookStatus.Location = new System.Drawing.Point(205, 66);
-            this.lbl_typeOfBookStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_typeOfBookStatus.Name = "lbl_typeOfBookStatus";
-            this.lbl_typeOfBookStatus.Size = new System.Drawing.Size(77, 18);
-            this.lbl_typeOfBookStatus.TabIndex = 5;
-            this.lbl_typeOfBookStatus.Text = "Trạng thái:";
-            this.lbl_typeOfBookStatus.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(754, 70);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Quản Lý Loại Sách";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_typeOfBookId
+            // GridView_Book
             // 
-            this.txt_typeOfBookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_typeOfBookId.Location = new System.Drawing.Point(106, 63);
-            this.txt_typeOfBookId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_typeOfBookId.Name = "txt_typeOfBookId";
-            this.txt_typeOfBookId.Size = new System.Drawing.Size(96, 24);
-            this.txt_typeOfBookId.TabIndex = 4;
+            this.GridView_Book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView_Book.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.GridView_Book.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GridView_Book.Location = new System.Drawing.Point(0, 297);
+            this.GridView_Book.Margin = new System.Windows.Forms.Padding(2);
+            this.GridView_Book.Name = "GridView_Book";
+            this.GridView_Book.RowHeadersWidth = 51;
+            this.GridView_Book.Size = new System.Drawing.Size(754, 353);
+            this.GridView_Book.TabIndex = 14;
             // 
-            // lbl_typeOfBookId
+            // button5
             // 
-            this.lbl_typeOfBookId.AutoSize = true;
-            this.lbl_typeOfBookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_typeOfBookId.Location = new System.Drawing.Point(11, 66);
-            this.lbl_typeOfBookId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_typeOfBookId.Name = "lbl_typeOfBookId";
-            this.lbl_typeOfBookId.Size = new System.Drawing.Size(96, 18);
-            this.lbl_typeOfBookId.TabIndex = 3;
-            this.lbl_typeOfBookId.Text = "Mã loại sách:";
+            this.button5.AutoSize = true;
+            this.button5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(631, 204);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 54);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Đóng";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // txt_typeOfBookName
+            // button4
             // 
-            this.txt_typeOfBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_typeOfBookName.Location = new System.Drawing.Point(106, 31);
-            this.txt_typeOfBookName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_typeOfBookName.Name = "txt_typeOfBookName";
-            this.txt_typeOfBookName.Size = new System.Drawing.Size(312, 24);
-            this.txt_typeOfBookName.TabIndex = 2;
+            this.button4.AutoSize = true;
+            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(360, 204);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button4.Size = new System.Drawing.Size(112, 54);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Lưu";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // lbl_typeOfBookName
+            // button3
             // 
-            this.lbl_typeOfBookName.AutoSize = true;
-            this.lbl_typeOfBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_typeOfBookName.Location = new System.Drawing.Point(10, 34);
-            this.lbl_typeOfBookName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_typeOfBookName.Name = "lbl_typeOfBookName";
-            this.lbl_typeOfBookName.Size = new System.Drawing.Size(64, 18);
-            this.lbl_typeOfBookName.TabIndex = 1;
-            this.lbl_typeOfBookName.Text = "Tên loại:";
+            this.button3.AutoSize = true;
+            this.button3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button3.Image = global::ILib.Properties.Resources.icons8_repair_48;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(244, 204);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button3.Size = new System.Drawing.Size(112, 54);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Sửa";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // lst_typeOfBook
+            // button2
             // 
-            this.lst_typeOfBook.HideSelection = false;
-            this.lst_typeOfBook.Location = new System.Drawing.Point(6, 167);
-            this.lst_typeOfBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lst_typeOfBook.Name = "lst_typeOfBook";
-            this.lst_typeOfBook.Size = new System.Drawing.Size(532, 144);
-            this.lst_typeOfBook.TabIndex = 9;
-            this.lst_typeOfBook.UseCompatibleStateImageBehavior = false;
+            this.button2.AutoSize = true;
+            this.button2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button2.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(127, 204);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button2.Size = new System.Drawing.Size(112, 54);
+            this.button2.TabIndex = 100;
+            this.button2.Text = "Xóa";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // simpleButton4
+            // button1
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(433, 101);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(101, 24);
-            this.simpleButton4.TabIndex = 20;
-            this.simpleButton4.Text = "Sửa";
+            this.button1.AutoSize = true;
+            this.button1.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button1.Image = global::ILib.Properties.Resources.icons8_plus_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(9, 204);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 54);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Thêm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // simpleButton3
+            // textBox1
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(433, 131);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(101, 24);
-            this.simpleButton3.TabIndex = 19;
-            this.simpleButton3.Text = "Xoá";
+            this.textBox1.Font = new System.Drawing.Font("Cambria", 14F);
+            this.textBox1.Location = new System.Drawing.Point(86, 36);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(644, 29);
+            this.textBox1.TabIndex = 4;
             // 
-            // simpleButton1
+            // textBox2
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(433, 71);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(101, 24);
-            this.simpleButton1.TabIndex = 18;
-            this.simpleButton1.Text = "Thêm";
+            this.textBox2.Font = new System.Drawing.Font("Cambria", 14F);
+            this.textBox2.Location = new System.Drawing.Point(86, 76);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(245, 29);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Cambria", 14F);
+            this.textBox3.Location = new System.Drawing.Point(485, 76);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(245, 29);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(384, 80);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(97, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Trạng thái";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Tên loại";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Trạng thái";
+            this.Column3.Name = "Column3";
             // 
             // TypeofBookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 326);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.lst_typeOfBook);
-            this.Controls.Add(this.grp_typeOfBookDetail);
-            this.Controls.Add(this.title_typeOfBook);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(754, 650);
+            this.ControlBox = false;
+            this.Controls.Add(this.GroupBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GridView_Book);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(6, 8);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TypeofBookManagement";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TypeofBookManagement";
-            this.grp_typeOfBookDetail.ResumeLayout(false);
-            this.grp_typeOfBookDetail.PerformLayout();
+            this.GroupBox.ResumeLayout(false);
+            this.GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView_Book)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label title_typeOfBook;
-        private System.Windows.Forms.GroupBox grp_typeOfBookDetail;
-        private System.Windows.Forms.TextBox txt_typeOfBookId;
-        private System.Windows.Forms.Label lbl_typeOfBookId;
-        private System.Windows.Forms.TextBox txt_typeOfBookName;
-        private System.Windows.Forms.Label lbl_typeOfBookName;
-        private System.Windows.Forms.ListView lst_typeOfBook;
-        private System.Windows.Forms.TextBox txt_typeOfBookStatus;
-        private System.Windows.Forms.Label lbl_typeOfBookStatus;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox GroupBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView GridView_Book;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
