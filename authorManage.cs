@@ -22,31 +22,6 @@ namespace ILib
             dgvAuthor.AutoGenerateColumns = false;
         }
 
-        private void listBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void authorManage_Load(object sender, EventArgs e)
         {
             var result = bus.getAuthorB();
@@ -135,6 +110,11 @@ namespace ILib
             txtId.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
             txtName.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
             txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
+        }
+
+        private void dgvAuthor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

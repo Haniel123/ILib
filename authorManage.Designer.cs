@@ -154,6 +154,7 @@
             this.dgvAuthor.Size = new System.Drawing.Size(754, 353);
             this.dgvAuthor.TabIndex = 107;
             this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
+            this.dgvAuthor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellContentClick);
             // 
             // id
             // 

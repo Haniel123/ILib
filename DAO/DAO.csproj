@@ -87,6 +87,7 @@
     <Compile Include="Reader.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="readerDAO.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>

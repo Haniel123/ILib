@@ -66,7 +66,6 @@
             // 
             this.GroupBox.Controls.Add(this.txtUsername);
             this.GroupBox.Controls.Add(this.label7);
-            this.GroupBox.Controls.Add(this.txtIdUser);
             this.GroupBox.Controls.Add(this.cbbPositionUser);
             this.GroupBox.Controls.Add(this.txtPasswordRepeatUset);
             this.GroupBox.Controls.Add(this.label5);
@@ -93,17 +92,19 @@
             // txtIdUser
             // 
             this.txtIdUser.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtIdUser.Location = new System.Drawing.Point(485, 165);
+            this.txtIdUser.Location = new System.Drawing.Point(254, 53);
             this.txtIdUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdUser.Name = "txtIdUser";
             this.txtIdUser.Size = new System.Drawing.Size(245, 29);
             this.txtIdUser.TabIndex = 16;
+            this.txtIdUser.Visible = false;
             // 
             // cbbPositionUser
             // 
+            this.cbbPositionUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPositionUser.Font = new System.Drawing.Font("Cambria", 14F);
             this.cbbPositionUser.FormattingEnabled = true;
-            this.cbbPositionUser.Location = new System.Drawing.Point(485, 76);
+            this.cbbPositionUser.Location = new System.Drawing.Point(485, 75);
             this.cbbPositionUser.Margin = new System.Windows.Forms.Padding(2);
             this.cbbPositionUser.Name = "cbbPositionUser";
             this.cbbPositionUser.Size = new System.Drawing.Size(245, 30);
@@ -117,6 +118,7 @@
             this.txtPasswordRepeatUset.Name = "txtPasswordRepeatUset";
             this.txtPasswordRepeatUset.Size = new System.Drawing.Size(245, 29);
             this.txtPasswordRepeatUset.TabIndex = 14;
+            this.txtPasswordRepeatUset.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -137,6 +139,7 @@
             this.txtPasswordUser.Name = "txtPasswordUser";
             this.txtPasswordUser.Size = new System.Drawing.Size(245, 29);
             this.txtPasswordUser.TabIndex = 12;
+            this.txtPasswordUser.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -339,7 +342,7 @@
             this.txtUsername.Location = new System.Drawing.Point(143, 162);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(245, 29);
+            this.txtUsername.Size = new System.Drawing.Size(587, 29);
             this.txtUsername.TabIndex = 18;
             // 
             // label7
@@ -405,6 +408,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.GroupBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtIdUser);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.button5);

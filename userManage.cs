@@ -164,20 +164,7 @@ namespace ILib
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void te(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void btnDeleteUser_Click_1(object sender, EventArgs e)
         {
@@ -202,8 +189,5 @@ namespace ILib
         {
 
         }
-
-
-
     }
 }
