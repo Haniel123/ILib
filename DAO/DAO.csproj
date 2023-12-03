@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ELibEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="functionDAO.cs" />
     <Compile Include="loginDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader.cs">
@@ -89,6 +90,7 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="userDAO.cs" />
     <Compile Include="Usert.cs">
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>

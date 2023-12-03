@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtAuhorname = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAuthor = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditAuthor = new System.Windows.Forms.Button();
+            this.btnDeleteAuthor = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox
             // 
-            this.GroupBox.Controls.Add(this.textBox3);
+            this.GroupBox.Controls.Add(this.txtStatus);
             this.GroupBox.Controls.Add(this.label9);
-            this.GroupBox.Controls.Add(this.textBox2);
-            this.GroupBox.Controls.Add(this.txtAuhorname);
+            this.GroupBox.Controls.Add(this.txtId);
+            this.GroupBox.Controls.Add(this.txtName);
             this.GroupBox.Controls.Add(this.label2);
             this.GroupBox.Controls.Add(this.label4);
             this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
@@ -67,14 +67,14 @@
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Thông tin";
             // 
-            // textBox3
+            // txtStatus
             // 
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 14F);
-            this.textBox3.Location = new System.Drawing.Point(485, 76);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(245, 29);
-            this.textBox3.TabIndex = 8;
+            this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtStatus.Location = new System.Drawing.Point(485, 76);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(245, 29);
+            this.txtStatus.TabIndex = 8;
             // 
             // label9
             // 
@@ -87,23 +87,23 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "Trạng thái";
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 14F);
-            this.textBox2.Location = new System.Drawing.Point(86, 76);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 29);
-            this.textBox2.TabIndex = 6;
+            this.txtId.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtId.Location = new System.Drawing.Point(86, 76);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(245, 29);
+            this.txtId.TabIndex = 6;
             // 
-            // txtAuhorname
+            // txtName
             // 
-            this.txtAuhorname.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtAuhorname.Location = new System.Drawing.Point(86, 36);
-            this.txtAuhorname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAuhorname.Name = "txtAuhorname";
-            this.txtAuhorname.Size = new System.Drawing.Size(644, 29);
-            this.txtAuhorname.TabIndex = 4;
+            this.txtName.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtName.Location = new System.Drawing.Point(86, 36);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(644, 29);
+            this.txtName.TabIndex = 4;
             // 
             // label2
             // 
@@ -143,9 +143,9 @@
             // 
             this.dgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAuthor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.id,
+            this.name,
+            this.status});
             this.dgvAuthor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAuthor.Location = new System.Drawing.Point(0, 297);
             this.dgvAuthor.Margin = new System.Windows.Forms.Padding(2);
@@ -153,6 +153,27 @@
             this.dgvAuthor.RowHeadersWidth = 51;
             this.dgvAuthor.Size = new System.Drawing.Size(754, 353);
             this.dgvAuthor.TabIndex = 107;
+            this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Tác giả";
+            this.name.Name = "name";
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Trạng thái";
+            this.status.Name = "status";
             // 
             // button5
             // 
@@ -185,37 +206,39 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEditAuthor
             // 
-            this.button3.AutoSize = true;
-            this.button3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button3.Image = global::ILib.Properties.Resources.icons8_repair_48;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(244, 204);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button3.Size = new System.Drawing.Size(112, 54);
-            this.button3.TabIndex = 104;
-            this.button3.Text = "Sửa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEditAuthor.AutoSize = true;
+            this.btnEditAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEditAuthor.Image = global::ILib.Properties.Resources.icons8_repair_48;
+            this.btnEditAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditAuthor.Location = new System.Drawing.Point(244, 204);
+            this.btnEditAuthor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditAuthor.Name = "btnEditAuthor";
+            this.btnEditAuthor.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnEditAuthor.Size = new System.Drawing.Size(112, 54);
+            this.btnEditAuthor.TabIndex = 104;
+            this.btnEditAuthor.Text = "Sửa";
+            this.btnEditAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditAuthor.UseVisualStyleBackColor = true;
+            this.btnEditAuthor.Click += new System.EventHandler(this.btnEditAuthor_Click);
             // 
-            // button2
+            // btnDeleteAuthor
             // 
-            this.button2.AutoSize = true;
-            this.button2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::ILib.Properties.Resources.icons8_delete_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(127, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.button2.Size = new System.Drawing.Size(112, 54);
-            this.button2.TabIndex = 108;
-            this.button2.Text = "Xóa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDeleteAuthor.AutoSize = true;
+            this.btnDeleteAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteAuthor.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.btnDeleteAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteAuthor.Location = new System.Drawing.Point(127, 204);
+            this.btnDeleteAuthor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteAuthor.Name = "btnDeleteAuthor";
+            this.btnDeleteAuthor.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnDeleteAuthor.Size = new System.Drawing.Size(112, 54);
+            this.btnDeleteAuthor.TabIndex = 108;
+            this.btnDeleteAuthor.Text = "Xóa";
+            this.btnDeleteAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteAuthor.UseVisualStyleBackColor = true;
+            this.btnDeleteAuthor.Click += new System.EventHandler(this.btnDeleteAuthor_Click);
             // 
             // btnAddAuthor
             // 
@@ -231,25 +254,7 @@
             this.btnAddAuthor.Text = "Thêm";
             this.btnAddAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddAuthor.UseVisualStyleBackColor = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Name";
-            this.Column2.HeaderText = "Tác giả";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "Status";
-            this.Column3.HeaderText = "Trạng thái";
-            this.Column3.Name = "Column3";
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
             // authorManage
             // 
@@ -262,8 +267,8 @@
             this.Controls.Add(this.dgvAuthor);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEditAuthor);
+            this.Controls.Add(this.btnDeleteAuthor);
             this.Controls.Add(this.btnAddAuthor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(6, 8);
@@ -282,21 +287,21 @@
 
         #endregion
         private System.Windows.Forms.GroupBox GroupBox;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtAuhorname;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditAuthor;
+        private System.Windows.Forms.Button btnDeleteAuthor;
         private System.Windows.Forms.Button btnAddAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }
