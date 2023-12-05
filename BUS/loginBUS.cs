@@ -9,8 +9,10 @@ namespace BUS
     public class loginBUS
     {
         loginDAO login1DAO = new loginDAO();
-        public bool checkUser(string userName,string passWord) {
-            return login1DAO.checkUser(userName,passWord);
+
+        public bool checkUser(string userName, string passWord)
+        {
+            return login1DAO.checkUser(userName, passWord);
         }
     }
 }

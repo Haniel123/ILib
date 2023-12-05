@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.Data.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -49,10 +50,10 @@
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -80,6 +81,12 @@
     <Compile Include="authorManage.Designer.cs">
       <DependentUpon>authorManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +104,10 @@
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs" />
+    <Compile Include="Model1.Designer.cs">
+      <DependentUpon>Model1.cs</DependentUpon>
     </Compile>
     <Compile Include="readerManage.cs">
       <SubType>Form</SubType>
@@ -136,6 +147,9 @@
     <Compile Include="userManage.Designer.cs">
       <DependentUpon>userManage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookForm.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookManagement.resx">
       <DependentUpon>BookManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +241,48 @@
       <Project>{1dce7c1b-c0dd-4888-9384-5d24d3061999}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookshelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\landscape-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticketpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type-of-books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-repair-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

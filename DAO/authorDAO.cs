@@ -17,9 +17,41 @@ namespace DAO
         }
         public List<Author> getAuthor()
         {
+
+            var result = from author in db.Authors where author.Status == 1 orderby author.Id descending select author;
+ 
             var result = from author in db.Authors select author;
+
             return result.ToList();
         }
+
+        public bool updateAuthor(string id, Author item)
+        {
+            int.Parse(id);
+            var items = db.Authors.Find(item.Id);
+            if (items != null)
+            {
+                items.Name = item.Name;
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+
+        }
+
+        public bool deleteAuthor(string id, Author item)
+        {
+            int.Parse(id);
+            var items = db.Authors.Find(item.Id);
+            if (items != null)
+            {
+                items.Status = 0;
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
+
     }
 
 }
