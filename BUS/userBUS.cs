@@ -16,6 +16,7 @@ namespace BUS
             return userDAO.insertUser(item);
         }
 
+
         public bool updateUserB (string id,Usert item)
         {
             return userDAO.updateUser(id ,item);
@@ -27,11 +28,11 @@ namespace BUS
         }
 
 
+
         public List<Usert> getUserB()
         {
             return userDAO.getUser();
         }
-
 
 
         public List<UserType> getUserTypeB()

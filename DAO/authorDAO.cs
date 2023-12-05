@@ -17,7 +17,11 @@ namespace DAO
         }
         public List<Author> getAuthor()
         {
+
             var result = from author in db.Authors where author.Status == 1 orderby author.Id descending select author;
+ 
+            var result = from author in db.Authors select author;
+
             return result.ToList();
         }
 

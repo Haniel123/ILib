@@ -16,6 +16,7 @@ namespace DAO
             return result;
         }
 
+
         public bool updateUser(string id, Usert item)
         {
             int.Parse(id);
@@ -52,6 +53,8 @@ namespace DAO
         public List<Usert> getUser()
         {
             var result = from user in db.Userts where user.Status == 1 orderby user.Id descending select user;
+
+     
             return result.ToList();
         }
         public List<UserType> getUserType()
