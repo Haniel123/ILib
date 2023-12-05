@@ -10,8 +10,10 @@ namespace DAO
     public class loginDAO
     {
         public ELibEntities db = new ELibEntities();
+        functionDAO func = new functionDAO();
         public bool checkUser(string userName, string passWord)
         {
+            passWord = func.ConvertMD5(passWord);
             if (db.Userts.Any(x => x.Username == userName) && db.Userts.Any(x => x.Password == passWord))
             {
                 return true;
