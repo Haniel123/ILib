@@ -10,7 +10,6 @@
         <EntityTypeShape EntityType="ELibModel.BookStatu" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ELibModel.BookType" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ELibModel.Reader" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELibModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ELibModel.Usert" Width="1.5" PointX="8" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ELibModel.UserType" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="ELibModel.FK__Book__IdAuthor__412EB0B6" ManuallyRouted="false" />

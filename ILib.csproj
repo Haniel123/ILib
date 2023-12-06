@@ -99,6 +99,21 @@
     <Compile Include="BorrowTicketManagement.Designer.cs">
       <DependentUpon>BorrowTicketManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ELibDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ELibDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ELibDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ELibDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ELibDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ELibDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +209,39 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="App.Config" />
+    <None Include="ELibDataSet.xsc">
+      <DependentUpon>ELibDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ELibDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ELibDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ELibDataSet.xss">
+      <DependentUpon>ELibDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ELibDataSet1.xsc">
+      <DependentUpon>ELibDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ELibDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ELibDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ELibDataSet1.xss">
+      <DependentUpon>ELibDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ELibDataSet2.xsc">
+      <DependentUpon>ELibDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ELibDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ELibDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ELibDataSet2.xss">
+      <DependentUpon>ELibDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

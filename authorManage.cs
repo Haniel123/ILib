@@ -113,9 +113,6 @@ namespace ILib
             txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
         }
 
-        private void dgvAuthor_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

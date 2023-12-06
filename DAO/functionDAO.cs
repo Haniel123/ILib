@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAO
 {
@@ -14,6 +17,17 @@ namespace DAO
         public bool ValidateUserName(string username)
         {
             return true;
+        }
+
+        public bool ValidateTextBox(System.Windows.Forms.TextBox textBox)
+        {
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                WarningMessageBox("Vui lòng không để trống !!!");
+                textBox.Focus();
+                return true;
+            }
+            return false;
         }
 
 
@@ -60,6 +74,7 @@ namespace DAO
                 return BitConverter.ToString(hash).Replace("-", string.Empty);
             }
         }
+
         public string LoadPositionName(string id)
         {
             int id2 = int.Parse(id);
@@ -98,6 +113,46 @@ namespace DAO
             {
                 return true;
             }
+        }
+
+        public void ButtonControl(Control control, bool action = false)
+        {
+            foreach (var button in control.Controls.OfType<Button>())
+                if (button.Name == "btnDelete" || button.Name == "btnUpdate")
+                {
+                    button.Enabled = action;
+                }
+        }
+
+        public void TextBoxControl(Control control, bool action = false)
+        {
+            foreach (var txt in control.Controls.OfType<TextBox>())
+            {
+                Debug.WriteLine($"Current ReadOnly Value: {txt.ReadOnly}");
+
+                if (txt.ReadOnly)
+                {
+                    txt.ReadOnly = action;
+                    Debug.WriteLine($"Setting ReadOnly to: {action}");
+                }
+            }
+        }
+
+        public bool ConfirmMessageBox(string message)
+        {
+            if (MessageBox.Show(message, "ILib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                return true;
+            else return false;
+        }
+
+        public bool WarningMessageBox(string message)
+        {
+            return MessageBox.Show(message, "ILib", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK;
+        }
+
+        public bool NotifyMessageBox(string message)
+        {
+            return MessageBox.Show(message, "ILib", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK;
         }
     }
 }
