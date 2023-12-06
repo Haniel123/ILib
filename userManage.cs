@@ -32,8 +32,7 @@ namespace ILib
 
             DataGridView dataGridView = (DataGridView)sender;
             int row = e.RowIndex;
-            int d = dataGridView.RowCount - 1;
-            if (row < d)
+            if (row >= 0)
             {
                 if (dgvUser.CurrentRow != null)
                 {
@@ -181,7 +180,6 @@ namespace ILib
         {
 
 
-
             var userId = txtIdUser.Text;
             DAO.Usert user = new DAO.Usert();
             user.Id = int.Parse(userId);
@@ -209,8 +207,15 @@ namespace ILib
 
         private void userManage_Load(object sender, EventArgs e)
         {
+
             var resultUser = bus.getUserB();
+                
             dgvUser.DataSource = resultUser;
+            AutoCompleteStringCollection auto =     new AutoCompleteStringCollection();
+            foreach ( Usert user in auto)
+            {
+                auto.Add(user.Address);
+            }
             //Load user type
             var resultUserType = bus.getUserTypeB();
             cbbPositionUser.DataSource = resultUserType;
