@@ -5,11 +5,12 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using DAO;
 namespace BUS
 {
     public class functionBUS
     {
-
+        public ELibEntities db = new ELibEntities();
         public bool ValidateUserName(string username)
         {
             return true;

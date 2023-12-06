@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.GridView_Book = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.grpBox = new System.Windows.Forms.GroupBox();
+            this.dtpkPublished = new System.Windows.Forms.DateTimePicker();
+            this.cbbAuthor = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblPublished = new System.Windows.Forms.Label();
+            this.ccbType = new System.Windows.Forms.ComboBox();
+            this.bookTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eLibDataSet = new ILib.ELibDataSet();
+            this.lblType = new System.Windows.Forms.Label();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.dgvBook = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,270 +63,316 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView_Book)).BeginInit();
+            this.bookTypeTableAdapter = new ILib.ELibDataSetTableAdapters.BookTypeTableAdapter();
+            this.eLibDataSet1 = new ILib.ELibDataSet1();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.authorTableAdapter = new ILib.ELibDataSet1TableAdapters.AuthorTableAdapter();
+            this.grpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(754, 70);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Quản Lý Sách";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1005, 86);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Quản Lý Sách";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // GroupBox
+            // grpBox
             // 
-            this.GroupBox.Controls.Add(this.dateTimePicker1);
-            this.GroupBox.Controls.Add(this.comboBox1);
-            this.GroupBox.Controls.Add(this.textBox2);
-            this.GroupBox.Controls.Add(this.textBox3);
-            this.GroupBox.Controls.Add(this.label9);
-            this.GroupBox.Controls.Add(this.numericUpDown3);
-            this.GroupBox.Controls.Add(this.label8);
-            this.GroupBox.Controls.Add(this.numericUpDown2);
-            this.GroupBox.Controls.Add(this.label7);
-            this.GroupBox.Controls.Add(this.label6);
-            this.GroupBox.Controls.Add(this.comboBox2);
-            this.GroupBox.Controls.Add(this.label5);
-            this.GroupBox.Controls.Add(this.label4);
-            this.GroupBox.Controls.Add(this.label3);
-            this.GroupBox.Controls.Add(this.textBox1);
-            this.GroupBox.Controls.Add(this.label2);
-            this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
-            this.GroupBox.Location = new System.Drawing.Point(9, 72);
-            this.GroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GroupBox.Name = "GroupBox";
-            this.GroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GroupBox.Size = new System.Drawing.Size(734, 202);
-            this.GroupBox.TabIndex = 2;
-            this.GroupBox.TabStop = false;
-            this.GroupBox.Text = "Thông tin";
+            this.grpBox.Controls.Add(this.dtpkPublished);
+            this.grpBox.Controls.Add(this.cbbAuthor);
+            this.grpBox.Controls.Add(this.txtName);
+            this.grpBox.Controls.Add(this.txtStatus);
+            this.grpBox.Controls.Add(this.lblStatus);
+            this.grpBox.Controls.Add(this.numQuantity);
+            this.grpBox.Controls.Add(this.lblQuantity);
+            this.grpBox.Controls.Add(this.numPrice);
+            this.grpBox.Controls.Add(this.lblPrice);
+            this.grpBox.Controls.Add(this.lblPublished);
+            this.grpBox.Controls.Add(this.ccbType);
+            this.grpBox.Controls.Add(this.lblType);
+            this.grpBox.Controls.Add(this.lblAuthor);
+            this.grpBox.Controls.Add(this.lblName);
+            this.grpBox.Controls.Add(this.txtCode);
+            this.grpBox.Controls.Add(this.lblCode);
+            this.grpBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.grpBox.Location = new System.Drawing.Point(12, 89);
+            this.grpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBox.Name = "grpBox";
+            this.grpBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBox.Size = new System.Drawing.Size(979, 249);
+            this.grpBox.TabIndex = 2;
+            this.grpBox.TabStop = false;
+            this.grpBox.Text = "Thông tin";
             // 
-            // textBox3
+            // dtpkPublished
             // 
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 14F);
-            this.textBox3.Location = new System.Drawing.Point(485, 157);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(245, 29);
-            this.textBox3.TabIndex = 18;
+            this.dtpkPublished.Font = new System.Drawing.Font("Cambria", 13F);
+            this.dtpkPublished.Location = new System.Drawing.Point(124, 143);
+            this.dtpkPublished.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpkPublished.Name = "dtpkPublished";
+            this.dtpkPublished.Size = new System.Drawing.Size(325, 33);
+            this.dtpkPublished.TabIndex = 21;
             // 
-            // label9
+            // cbbAuthor
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(384, 161);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 21);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Trạng thái";
+            this.cbbAuthor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.authorBindingSource, "Name", true));
+            this.cbbAuthor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.authorBindingSource, "Name", true));
+            this.cbbAuthor.DataSource = this.authorBindingSource;
+            this.cbbAuthor.DisplayMember = "Name";
+            this.cbbAuthor.Font = new System.Drawing.Font("Cambria", 14F);
+            this.cbbAuthor.FormattingEnabled = true;
+            this.cbbAuthor.Location = new System.Drawing.Point(123, 94);
+            this.cbbAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbAuthor.Name = "cbbAuthor";
+            this.cbbAuthor.Size = new System.Drawing.Size(325, 35);
+            this.cbbAuthor.TabIndex = 20;
             // 
-            // numericUpDown3
+            // txtName
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Cambria", 14F);
-            this.numericUpDown3.Location = new System.Drawing.Point(92, 157);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(245, 29);
-            this.numericUpDown3.TabIndex = 16;
+            this.txtName.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtName.Location = new System.Drawing.Point(123, 46);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(325, 35);
+            this.txtName.TabIndex = 4;
             // 
-            // label8
+            // txtStatus
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(4, 161);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Số lượng";
+            this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtStatus.Location = new System.Drawing.Point(647, 193);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(325, 35);
+            this.txtStatus.TabIndex = 18;
             // 
-            // numericUpDown2
+            // lblStatus
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Cambria", 14F);
-            this.numericUpDown2.Location = new System.Drawing.Point(485, 119);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(245, 29);
-            this.numericUpDown2.TabIndex = 14;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(512, 198);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(116, 26);
+            this.lblStatus.TabIndex = 17;
+            this.lblStatus.Text = "Trạng thái";
             // 
-            // label7
+            // numQuantity
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(384, 122);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 21);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Giá";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.numQuantity.Font = new System.Drawing.Font("Cambria", 14F);
+            this.numQuantity.Location = new System.Drawing.Point(123, 193);
+            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(327, 35);
+            this.numQuantity.TabIndex = 16;
             // 
-            // label6
+            // lblQuantity
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(4, 122);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 21);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Xuất bản";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblQuantity.Location = new System.Drawing.Point(5, 198);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(102, 26);
+            this.lblQuantity.TabIndex = 15;
+            this.lblQuantity.Text = "Số lượng";
             // 
-            // comboBox2
+            // numPrice
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Cambria", 14F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(486, 77);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(245, 30);
-            this.comboBox2.TabIndex = 10;
+            this.numPrice.Font = new System.Drawing.Font("Cambria", 14F);
+            this.numPrice.Location = new System.Drawing.Point(647, 146);
+            this.numPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numPrice.Name = "numPrice";
+            this.numPrice.Size = new System.Drawing.Size(327, 35);
+            this.numPrice.TabIndex = 14;
             // 
-            // label5
+            // lblPrice
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(384, 81);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 21);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Loại";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblPrice.Location = new System.Drawing.Point(512, 150);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(45, 26);
+            this.lblPrice.TabIndex = 13;
+            this.lblPrice.Text = "Giá";
             // 
-            // label4
+            // lblPublished
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(4, 81);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tác giả";
+            this.lblPublished.AutoSize = true;
+            this.lblPublished.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblPublished.Location = new System.Drawing.Point(5, 150);
+            this.lblPublished.Name = "lblPublished";
+            this.lblPublished.Size = new System.Drawing.Size(102, 26);
+            this.lblPublished.TabIndex = 11;
+            this.lblPublished.Text = "Xuất bản";
             // 
-            // label3
+            // ccbType
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(4, 42);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tên sách";
+            this.ccbType.DataSource = this.bookTypeBindingSource;
+            this.ccbType.DisplayMember = "Name";
+            this.ccbType.Font = new System.Drawing.Font("Cambria", 14F);
+            this.ccbType.FormattingEnabled = true;
+            this.ccbType.Location = new System.Drawing.Point(648, 95);
+            this.ccbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ccbType.Name = "ccbType";
+            this.ccbType.Size = new System.Drawing.Size(325, 35);
+            this.ccbType.TabIndex = 10;
             // 
-            // textBox1
+            // bookTypeBindingSource
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 14F);
-            this.textBox1.Location = new System.Drawing.Point(486, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 29);
-            this.textBox1.TabIndex = 6;
+            this.bookTypeBindingSource.DataMember = "BookType";
+            this.bookTypeBindingSource.DataSource = this.eLibDataSet;
             // 
-            // label2
+            // eLibDataSet
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(384, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Mã sách";
+            this.eLibDataSet.DataSetName = "ELibDataSet";
+            this.eLibDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // lblType
             // 
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button1.Image = global::ILib.Properties.Resources.icons8_plus_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(9, 284);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 54);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblType.Location = new System.Drawing.Point(512, 100);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(56, 26);
+            this.lblType.TabIndex = 9;
+            this.lblType.Text = "Loại";
             // 
-            // button2
+            // lblAuthor
             // 
-            this.button2.AutoSize = true;
-            this.button2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::ILib.Properties.Resources.icons8_delete_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(127, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.button2.Size = new System.Drawing.Size(112, 54);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Xóa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblAuthor.Location = new System.Drawing.Point(5, 100);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(81, 26);
+            this.lblAuthor.TabIndex = 7;
+            this.lblAuthor.Text = "Tác giả";
             // 
-            // button3
+            // lblName
             // 
-            this.button3.AutoSize = true;
-            this.button3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button3.Image = global::ILib.Properties.Resources.icons8_repair_48;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(244, 284);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button3.Size = new System.Drawing.Size(112, 54);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Sửa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblName.Location = new System.Drawing.Point(5, 52);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(100, 26);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Tên sách";
             // 
-            // button4
+            // txtCode
             // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(360, 284);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(112, 54);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Lưu";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.txtCode.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtCode.Location = new System.Drawing.Point(648, 47);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(325, 35);
+            this.txtCode.TabIndex = 6;
             // 
-            // button5
+            // lblCode
             // 
-            this.button5.AutoSize = true;
-            this.button5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(631, 284);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 54);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Đóng";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.lblCode.Location = new System.Drawing.Point(512, 52);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(93, 26);
+            this.lblCode.TabIndex = 5;
+            this.lblCode.Text = "Mã sách";
             // 
-            // GridView_Book
+            // btnAdd
             // 
-            this.GridView_Book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridView_Book.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Image = global::ILib.Properties.Resources.icons8_plus_48;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(12, 350);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(149, 66);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(169, 350);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.btnDelete.Size = new System.Drawing.Size(149, 66);
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.AutoSize = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.Image = global::ILib.Properties.Resources.icons8_repair_48;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(325, 350);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(149, 66);
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSize = true;
+            this.btnSave.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Image = global::ILib.Properties.Resources.icons8_save_48;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(480, 350);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnSave.Size = new System.Drawing.Size(149, 66);
+            this.btnSave.TabIndex = 22;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.AutoSize = true;
+            this.btnExit.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnExit.Image = global::ILib.Properties.Resources.icons8_cancel_48;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(841, 350);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(149, 66);
+            this.btnExit.TabIndex = 23;
+            this.btnExit.Text = "Đóng";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // dgvBook
+            // 
+            this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8,
             this.Column1,
             this.Column2,
@@ -332,44 +381,17 @@
             this.Column6,
             this.Column5,
             this.Column7});
-            this.GridView_Book.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GridView_Book.Location = new System.Drawing.Point(0, 371);
-            this.GridView_Book.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GridView_Book.Name = "GridView_Book";
-            this.GridView_Book.RowHeadersWidth = 51;
-            this.GridView_Book.Size = new System.Drawing.Size(754, 279);
-            this.GridView_Book.TabIndex = 24;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Cambria", 13F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(93, 116);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 28);
-            this.dateTimePicker1.TabIndex = 21;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 76);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 30);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 14F);
-            this.textBox2.Location = new System.Drawing.Point(92, 37);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 29);
-            this.textBox2.TabIndex = 4;
+            this.dgvBook.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvBook.Location = new System.Drawing.Point(0, 457);
+            this.dgvBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvBook.Name = "dgvBook";
+            this.dgvBook.RowHeadersWidth = 51;
+            this.dgvBook.Size = new System.Drawing.Size(1005, 343);
+            this.dgvBook.TabIndex = 24;
             // 
             // Column8
             // 
+            this.Column8.DataPropertyName = "Code";
             this.Column8.HeaderText = "Mã";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
@@ -377,6 +399,7 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "Name";
             this.Column1.HeaderText = "Tên";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -384,6 +407,7 @@
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Author";
             this.Column2.HeaderText = "Tác giả";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -391,6 +415,7 @@
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Type";
             this.Column3.HeaderText = "Loại";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -398,6 +423,7 @@
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Published";
             this.Column4.HeaderText = "Xuất bản";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
@@ -405,6 +431,7 @@
             // 
             // Column6
             // 
+            this.Column6.DataPropertyName = "Price";
             this.Column6.HeaderText = "Giá";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -413,6 +440,7 @@
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "Quantity";
             this.Column5.HeaderText = "Số lượng";
             this.Column5.MinimumWidth = 20;
             this.Column5.Name = "Column5";
@@ -420,36 +448,60 @@
             // 
             // Column7
             // 
+            this.Column7.DataPropertyName = "Status";
             this.Column7.HeaderText = "Trạng thái";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 125;
             // 
+            // bookTypeTableAdapter
+            // 
+            this.bookTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // eLibDataSet1
+            // 
+            this.eLibDataSet1.DataSetName = "ELibDataSet1";
+            this.eLibDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataMember = "Author";
+            this.authorBindingSource.DataSource = this.eLibDataSet1;
+            // 
+            // authorTableAdapter
+            // 
+            this.authorTableAdapter.ClearBeforeFill = true;
+            // 
             // BookManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(754, 650);
+            this.ClientSize = new System.Drawing.Size(1005, 800);
             this.ControlBox = false;
-            this.Controls.Add(this.GridView_Book);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.GroupBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvBook);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.grpBox);
+            this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(6, 8);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BookManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.GroupBox.ResumeLayout(false);
-            this.GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView_Book)).EndInit();
+            this.Load += new System.EventHandler(this.BookManagement_Load);
+            this.grpBox.ResumeLayout(false);
+            this.grpBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,30 +509,30 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox GroupBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView GridView_Book;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.GroupBox grpBox;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.Label lblAuthor;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ComboBox ccbType;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblPublished;
+        private System.Windows.Forms.NumericUpDown numPrice;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.NumericUpDown numQuantity;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.DataGridView dgvBook;
+        private System.Windows.Forms.DateTimePicker dtpkPublished;
+        private System.Windows.Forms.ComboBox cbbAuthor;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -489,5 +541,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private ELibDataSet eLibDataSet;
+        private System.Windows.Forms.BindingSource bookTypeBindingSource;
+        private ELibDataSetTableAdapters.BookTypeTableAdapter bookTypeTableAdapter;
+        private ELibDataSet1 eLibDataSet1;
+        private System.Windows.Forms.BindingSource authorBindingSource;
+        private ELibDataSet1TableAdapters.AuthorTableAdapter authorTableAdapter;
     }
 }
