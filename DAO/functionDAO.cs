@@ -35,6 +35,21 @@ namespace DAO
         }
 
 
+        public bool checkEmpty(string value ) {
+
+            if (value == "" || string.IsNullOrEmpty(value))
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+            
+        
+        }
+
 
         public string ConvertMD5(string input)
         {

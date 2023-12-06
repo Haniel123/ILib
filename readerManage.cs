@@ -67,6 +67,11 @@ namespace ILib
             var userId = txtId.Text;
             string userPhone = txtPhoneUser.Text;
             var userAddress = txtAddressUser.Text;
+            if (func.checkEmpty(userFullName) || func.checkEmpty(userAddress))
+            {
+                MessageBox.Show("Không chừa trống dữ liệu !!!");
+                return;
+            }
 
             if (!func.ValidatePhoneNumber(userPhone))
             {
@@ -74,13 +79,7 @@ namespace ILib
                 return;
             }
 
-            if (userFullName == "" || userAddress == "")
-            {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
-                return;
-            }
             DAO.Reader user = new DAO.Reader();
-
             user.Fullname = userFullName;
             user.Phone = int.Parse(userPhone);
             user.Address = userAddress;
@@ -95,7 +94,7 @@ namespace ILib
             }
             else
             {
-                MessageBox.Show("Sửa thất bại thành công !!!");
+                MessageBox.Show("Sửa tài khoản thành công !!!");
             }
         }
 
@@ -104,19 +103,23 @@ namespace ILib
             var userId = txtId.Text;
             DAO.Reader user = new DAO.Reader();
             user.Id = int.Parse(userId);
-            if (bus.deleteReaderB(userId, user))
-            {
-                MessageBox.Show("Xoá tài khoản thành công !!!");
-                var resultUser = bus.getReaderB();
-                dgvReader.DataSource = resultUser;
-            }
-            else
-            {
-                MessageBox.Show("Xoá tài khoản thất bại !!!");
-            }
-        }
 
-     
+            if (MessageBox.Show("Bạn có chắc là muốn xoá tài khoản này không?", "ILib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (bus.deleteReaderB(userId, user))
+                {
+                    MessageBox.Show("Xoá bạn đọc thành công !!!");
+                    var resultUser = bus.getReaderB();
+                    dgvReader.DataSource = resultUser;
+                }
+                else
+                {
+                    MessageBox.Show("Xoá bạn đọc thất bại !!!");
+                }
+            }
+
+         
+        }
 
         private void dgvReader_CellClick(object sender, DataGridViewCellEventArgs e)
         {

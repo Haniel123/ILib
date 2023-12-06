@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ILib
 {
@@ -34,7 +35,7 @@ namespace ILib
             DAO.Author author = new DAO.Author();
             author.Name = authorName;
             author.Status = 1;
-            if (Name == "")
+            if (func.checkEmpty(Name))
             {
                 MessageBox.Show("Không chừa trống dữ liệu !!!");
                 return;
@@ -51,7 +52,7 @@ namespace ILib
             string authorName = txtName.Text;
             var authorId = txtId.Text;
 
-            if (Name == "")
+            if (func.checkEmpty(Name))
             {
                 MessageBox.Show("Không chừa trống dữ liệu !!!");
                 return;
@@ -67,7 +68,7 @@ namespace ILib
             }
             else
             {
-                MessageBox.Show("Sửa tài khoản thất bại !!!");
+                MessageBox.Show("Sửa tác giả thất bại !!!");
             }
         }
 
@@ -80,13 +81,13 @@ namespace ILib
             author.Id = int.Parse(userId);
             if (bus.deleteAuthorB(userId, author))
             {
-                MessageBox.Show("Xoá tài khoản thành công !!!");
+                MessageBox.Show("Xoá tác giả thành công !!!");
                 var resultUser = bus.getAuthorB();
                 dgvAuthor.DataSource = resultUser;
             }
             else
             {
-                MessageBox.Show("Xoá tài khoản thất bại !!!");
+                MessageBox.Show("Xoá tác giả thất bại !!!");
             }
 
         }

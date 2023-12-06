@@ -28,27 +28,33 @@ namespace ILib
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             DataGridView dataGridView = (DataGridView)sender;
             int row = e.RowIndex;
-            if (dgvUser.CurrentRow != null)
+            int d = dataGridView.RowCount - 1;
+            if (row < d)
             {
-                int numberOfCells = dgvUser.CurrentRow.Cells.Count;
-                for (int i = 1; i < numberOfCells; i++)
+                if (dgvUser.CurrentRow != null)
                 {
-                    if (dgvUser.Rows[row].Cells[i].Value == null)
+                    int numberOfCells = dgvUser.CurrentRow.Cells.Count;
+                    for (int i = 1; i < numberOfCells; i++)
                     {
-                        MessageBox.Show("Có dữ liệu rỗng !");
-                        return;
+                        if (dgvUser.Rows[row].Cells[i].Value == null)
+                        {
+                            MessageBox.Show("Có dữ liệu rỗng !");
+                            return;
+                        }
                     }
                 }
-            }
 
-            txtIdUser.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
-            txtFullname.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
-            txtPhoneUser.Text = dataGridView.Rows[row].Cells[2].Value.ToString();
-            txtUsername.Text = dataGridView.Rows[row].Cells[3].Value.ToString();
-            txtAddressUser.Text = dataGridView.Rows[row].Cells[4].Value.ToString();
-            cbbPositionUser.Text = func.LoadPositionName(dataGridView.Rows[row].Cells[5].Value.ToString());
+                txtIdUser.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
+                txtFullname.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
+                txtPhoneUser.Text = dataGridView.Rows[row].Cells[2].Value.ToString();
+                txtUsername.Text = dataGridView.Rows[row].Cells[3].Value.ToString();
+                txtAddressUser.Text = dataGridView.Rows[row].Cells[4].Value.ToString();
+                cbbPositionUser.Text = func.LoadPositionName(dataGridView.Rows[row].Cells[5].Value.ToString());
+            }
         }
 
         private void userManage_Load_1(object sender, EventArgs e)
@@ -72,7 +78,11 @@ namespace ILib
             var userPassword = func.ConvertMD5(txtPasswordUser.Text);
             var userPasswordRepeat = func.ConvertMD5(txtPasswordRepeatUset.Text);
             int userType = int.Parse(cbbPositionUser.SelectedValue.ToString());
-
+            if (func.checkEmpty(userName) || func.checkEmpty(userPassword) || func.checkEmpty(userFullName) || func.checkEmpty(userAddress))
+            {
+                MessageBox.Show("Không chừa trống dữ liệu !!!");
+                return;
+            }
             if (!func.ValidatePhoneNumber(userPhone))
             {
                 MessageBox.Show("Số điện thoại không hợp lệ !!!");
@@ -91,11 +101,7 @@ namespace ILib
                 MessageBox.Show("Mật khẩu nhập lại không khớp !!!");
                 return;
             }
-            if (userName == "" || userPassword == "" || userFullName == "" || userAddress == "")
-            {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
-                return;
-            }
+           
             DAO.Usert user = new DAO.Usert();
             user.Username = userName;
             user.Password = userPassword;
@@ -125,6 +131,11 @@ namespace ILib
             var userPassword = func.ConvertMD5(txtPasswordUser.Text);
             var userPasswordRepeat = func.ConvertMD5(txtPasswordRepeatUset.Text);
             int userType = int.Parse(cbbPositionUser.SelectedValue.ToString());
+            if (func.checkEmpty(userName) || func.checkEmpty(userPassword) || func.checkEmpty(userFullName) || func.checkEmpty(userAddress))
+            {
+                MessageBox.Show("Không chừa trống dữ liệu !!!");
+                return;
+            }
             if (!func.ValidatePhoneNumber(userPhone))
             {
                 MessageBox.Show("Số điện thoại không hợp lệ !!!");
@@ -136,11 +147,7 @@ namespace ILib
                 MessageBox.Show("Mật khẩu nhập lại không khớp !!!");
                 return;
             }
-            if (userName == "" || userPassword == "" || userFullName == "" || userAddress == "")
-            {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
-                return;
-            }
+           
             DAO.Usert user = new DAO.Usert();
             user.Username = userName;
             if (userPassword != "")
@@ -173,19 +180,25 @@ namespace ILib
         private void btnDeleteUser_Click_1(object sender, EventArgs e)
         {
 
+
+
             var userId = txtIdUser.Text;
             DAO.Usert user = new DAO.Usert();
             user.Id = int.Parse(userId);
-            if (bus.deleteUserB(userId, user))
+            if (MessageBox.Show("Bạn có chắc là muốn xoá tài khoản này không?", "ILib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Xoá tài khoản thành công !!!");
-                var resultUser = bus.getUserB();
-                dgvUser.DataSource = resultUser;
+                if (bus.deleteUserB(userId, user))
+                {
+                    MessageBox.Show("Xoá tài khoản thành công !!!");
+                    var resultUser = bus.getUserB();
+                    dgvUser.DataSource = resultUser;
+                }
+                else
+                {
+                    MessageBox.Show("Xoá tài khoản thất bại !!!");
+                }
             }
-            else
-            {
-                MessageBox.Show("Xoá tài khoản thất bại !!!");
-            }
+           
 
         }
 
