@@ -28,6 +28,7 @@ namespace DAO
                 items.Fullname = item.Fullname;
                 items.Phone = item.Phone;
                 items.Username = item.Address;
+                items.IdType = item.IdType;
                 db.SaveChanges();
                 return true;
             }
