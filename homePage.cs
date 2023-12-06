@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraBars.Alerter;
+﻿using BUS;
+using DAO;
+using DevExpress.XtraBars.Alerter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace ILib
 {
     public partial class homePage : Form
     {
+        functionDAO func = new functionDAO();
+
         public homePage()
         {
             InitializeComponent();
@@ -27,17 +31,11 @@ namespace ILib
             toOpen.Show();
         }
 
-        private void tileNavPane1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_bookManagement_Click(object sender, EventArgs e)
         {
             OpenForm(new BookManagement());
 
         }
-
 
         private void btn_bookTicket_Click(object sender, EventArgs e)
         {
@@ -64,14 +62,9 @@ namespace ILib
             OpenForm(new userManage());
         }
 
-        private void homePage_Load(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-                
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc là muốn thoát không?", "ILib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (func.ConfirmMessageBox("Bạn có chắc là muốn thoát?"))
             {
                 Application.Exit();
             }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAO;
+using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,78 +9,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DevExpress.Utils.Filtering.ExcelFilterOptions;
+using System.Drawing.Imaging;
 
 namespace ILib
 {
     public partial class BookManagement : Form
     {
+        bookBUS BookBUS = new bookBUS();
+        authorBUS AuthorBus = new authorBUS();
+
         public BookManagement()
         {
             InitializeComponent();
+            dgvBook.AutoGenerateColumns = false;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txt_bookId_TextChanged(object sender, EventArgs e)
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_bookAdd_Click(object sender, EventArgs e)
+        private void BookManagement_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_bookUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_bookName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_bookType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grid_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'eLibDataSet1.Author' table. You can move, or remove it, as needed.
+            this.authorTableAdapter.Fill(this.eLibDataSet1.Author);
+            // TODO: This line of code loads data into the 'eLibDataSet.BookType' table. You can move, or remove it, as needed.
+            this.bookTypeTableAdapter.Fill(this.eLibDataSet.BookType);
 
         }
     }

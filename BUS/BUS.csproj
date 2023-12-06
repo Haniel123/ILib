@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="authorBUS.cs" />
+    <Compile Include="bookBUS.cs" />
+    <Compile Include="BookTypeBUS.cs" />
     <Compile Include="functionBUS.cs" />
     <Compile Include="loginBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +61,9 @@
       <Project>{1dce7c1b-c0dd-4888-9384-5d24d3061999}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
