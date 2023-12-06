@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.txtIdUser = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbbPositionUser = new System.Windows.Forms.ComboBox();
             this.txtPasswordRepeatUset = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,15 +43,9 @@
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtIdUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +53,11 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnEditUser = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -89,15 +89,25 @@
             this.GroupBox.Text = "Thông tin";
             this.GroupBox.Enter += new System.EventHandler(this.GroupBox_Enter);
             // 
-            // txtIdUser
+            // txtUsername
             // 
-            this.txtIdUser.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtIdUser.Location = new System.Drawing.Point(254, 53);
-            this.txtIdUser.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdUser.Name = "txtIdUser";
-            this.txtIdUser.Size = new System.Drawing.Size(245, 29);
-            this.txtIdUser.TabIndex = 16;
-            this.txtIdUser.Visible = false;
+            this.txtUsername.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtUsername.Location = new System.Drawing.Point(143, 162);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(587, 29);
+            this.txtUsername.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(4, 167);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 21);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Tên tài khoản";
             // 
             // cbbPositionUser
             // 
@@ -223,6 +233,16 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Điện thoại";
             // 
+            // txtIdUser
+            // 
+            this.txtIdUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtIdUser.Location = new System.Drawing.Point(254, 53);
+            this.txtIdUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdUser.Name = "txtIdUser";
+            this.txtIdUser.Size = new System.Drawing.Size(245, 29);
+            this.txtIdUser.TabIndex = 16;
+            this.txtIdUser.Visible = false;
+            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -237,6 +257,7 @@
             // 
             // dgvUser
             // 
+            this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -254,6 +275,50 @@
             this.dgvUser.Size = new System.Drawing.Size(754, 318);
             this.dgvUser.TabIndex = 20;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            // 
+            // Fullname
+            // 
+            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fullname.DataPropertyName = "Fullname";
+            this.Fullname.HeaderText = "Tên";
+            this.Fullname.Name = "Fullname";
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Điện thoại";
+            this.Phone.Name = "Phone";
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Tên tài khoản";
+            this.Username.Name = "Username";
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            // 
+            // IdType
+            // 
+            this.IdType.DataPropertyName = "IdType";
+            this.IdType.HeaderText = "Chức vụ";
+            this.IdType.Name = "IdType";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.Name = "Status";
             // 
             // btnDeleteUser
             // 
@@ -335,70 +400,6 @@
             this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtUsername.Location = new System.Drawing.Point(143, 162);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(587, 29);
-            this.txtUsername.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(4, 167);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 21);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Tên tài khoản";
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Mã";
-            this.id.Name = "id";
-            // 
-            // Fullname
-            // 
-            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fullname.DataPropertyName = "Fullname";
-            this.Fullname.HeaderText = "Tên";
-            this.Fullname.Name = "Fullname";
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Điện thoại";
-            this.Phone.Name = "Phone";
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Tên tài khoản";
-            this.Username.Name = "Username";
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            // 
-            // IdType
-            // 
-            this.IdType.DataPropertyName = "IdType";
-            this.IdType.HeaderText = "Chức vụ";
-            this.IdType.Name = "IdType";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
             // 
             // userManage
             // 
