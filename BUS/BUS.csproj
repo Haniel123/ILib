@@ -44,12 +44,11 @@
     <Compile Include="authorBUS.cs" />
     <Compile Include="bookBUS.cs" />
     <Compile Include="BookTypeBUS.cs" />
+    <Compile Include="borrowBUS.cs" />
     <Compile Include="functionBUS.cs" />
     <Compile Include="loginBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="readerBUS.cs" />
-
     <Compile Include="userBUS.cs" />
   </ItemGroup>
   <ItemGroup>

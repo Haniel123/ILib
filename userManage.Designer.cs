@@ -119,6 +119,7 @@
             this.cbbPositionUser.Name = "cbbPositionUser";
             this.cbbPositionUser.Size = new System.Drawing.Size(245, 30);
             this.cbbPositionUser.TabIndex = 10;
+            this.cbbPositionUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboComboBox1_KeyPress);
             // 
             // txtPasswordRepeatUset
             // 

@@ -35,11 +35,7 @@ namespace ILib
             DAO.Author author = new DAO.Author();
             author.Name = authorName;
             author.Status = 1;
-            if (func.checkEmpty(Name))
-            {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
-                return;
-            }
+          
             var result = bus.insertAuthorB(author);
             txtName.Text = result.ToString();
             var result2 = bus.getAuthorB();
@@ -96,23 +92,27 @@ namespace ILib
         {
             DataGridView dataGridView = (DataGridView)sender;
             int row = e.RowIndex;
-            if (dgvAuthor.CurrentRow != null)
+            if (row >= 0)
             {
-                int numberOfCells = dgvAuthor.CurrentRow.Cells.Count;
-                for (int i = 1; i < numberOfCells; i++)
+                if (dgvAuthor.CurrentRow != null)
                 {
-                    if (dgvAuthor.Rows[row].Cells[i].Value == null)
+                    int numberOfCells = dgvAuthor.CurrentRow.Cells.Count;
+                    for (int i = 1; i < numberOfCells; i++)
                     {
-                        MessageBox.Show("Có dữ liệu rỗng !");
-                        return;
+                        if (dgvAuthor.Rows[row].Cells[i].Value == null)
+                        {
+                            MessageBox.Show("Có dữ liệu rỗng !");
+                            return;
+                        }
                     }
                 }
-            }
+       
             txtId.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
             txtName.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
             txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
+            }
         }
 
-        
+      
     }
 }

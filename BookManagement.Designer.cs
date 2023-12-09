@@ -33,6 +33,8 @@
             this.grpBox = new System.Windows.Forms.GroupBox();
             this.dtpkPublished = new System.Windows.Forms.DateTimePicker();
             this.cbbAuthor = new System.Windows.Forms.ComboBox();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eLibDataSet1 = new ILib.ELibDataSet1();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -64,17 +66,15 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTypeTableAdapter = new ILib.ELibDataSetTableAdapters.BookTypeTableAdapter();
-            this.eLibDataSet1 = new ILib.ELibDataSet1();
-            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.authorTableAdapter = new ILib.ELibDataSet1TableAdapters.AuthorTableAdapter();
             this.grpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -82,8 +82,9 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1005, 86);
+            this.lblTitle.Size = new System.Drawing.Size(754, 70);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Quản Lý Sách";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,11 +108,11 @@
             this.grpBox.Controls.Add(this.txtCode);
             this.grpBox.Controls.Add(this.lblCode);
             this.grpBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
-            this.grpBox.Location = new System.Drawing.Point(12, 89);
-            this.grpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBox.Location = new System.Drawing.Point(9, 72);
+            this.grpBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBox.Name = "grpBox";
-            this.grpBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpBox.Size = new System.Drawing.Size(979, 249);
+            this.grpBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBox.Size = new System.Drawing.Size(734, 202);
             this.grpBox.TabIndex = 2;
             this.grpBox.TabStop = false;
             this.grpBox.Text = "Thông tin";
@@ -119,10 +120,10 @@
             // dtpkPublished
             // 
             this.dtpkPublished.Font = new System.Drawing.Font("Cambria", 13F);
-            this.dtpkPublished.Location = new System.Drawing.Point(124, 143);
-            this.dtpkPublished.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpkPublished.Location = new System.Drawing.Point(93, 116);
+            this.dtpkPublished.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpkPublished.Name = "dtpkPublished";
-            this.dtpkPublished.Size = new System.Drawing.Size(325, 33);
+            this.dtpkPublished.Size = new System.Drawing.Size(245, 28);
             this.dtpkPublished.TabIndex = 21;
             // 
             // cbbAuthor
@@ -133,75 +134,88 @@
             this.cbbAuthor.DisplayMember = "Name";
             this.cbbAuthor.Font = new System.Drawing.Font("Cambria", 14F);
             this.cbbAuthor.FormattingEnabled = true;
-            this.cbbAuthor.Location = new System.Drawing.Point(123, 94);
-            this.cbbAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbAuthor.Location = new System.Drawing.Point(92, 76);
+            this.cbbAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbAuthor.Name = "cbbAuthor";
-            this.cbbAuthor.Size = new System.Drawing.Size(325, 35);
+            this.cbbAuthor.Size = new System.Drawing.Size(245, 30);
             this.cbbAuthor.TabIndex = 20;
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataMember = "Author";
+            this.authorBindingSource.DataSource = this.eLibDataSet1;
+            // 
+            // eLibDataSet1
+            // 
+            this.eLibDataSet1.DataSetName = "ELibDataSet1";
+            this.eLibDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtName.Location = new System.Drawing.Point(123, 46);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(92, 37);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(325, 35);
+            this.txtName.Size = new System.Drawing.Size(245, 29);
             this.txtName.TabIndex = 4;
             // 
             // txtStatus
             // 
             this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtStatus.Location = new System.Drawing.Point(647, 193);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStatus.Location = new System.Drawing.Point(485, 157);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(325, 35);
+            this.txtStatus.Size = new System.Drawing.Size(245, 29);
             this.txtStatus.TabIndex = 18;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Location = new System.Drawing.Point(512, 198);
+            this.lblStatus.Location = new System.Drawing.Point(384, 161);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(116, 26);
+            this.lblStatus.Size = new System.Drawing.Size(97, 21);
             this.lblStatus.TabIndex = 17;
             this.lblStatus.Text = "Trạng thái";
             // 
             // numQuantity
             // 
             this.numQuantity.Font = new System.Drawing.Font("Cambria", 14F);
-            this.numQuantity.Location = new System.Drawing.Point(123, 193);
-            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numQuantity.Location = new System.Drawing.Point(92, 157);
+            this.numQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(327, 35);
+            this.numQuantity.Size = new System.Drawing.Size(245, 29);
             this.numQuantity.TabIndex = 16;
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblQuantity.Location = new System.Drawing.Point(5, 198);
+            this.lblQuantity.Location = new System.Drawing.Point(4, 161);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(102, 26);
+            this.lblQuantity.Size = new System.Drawing.Size(84, 21);
             this.lblQuantity.TabIndex = 15;
             this.lblQuantity.Text = "Số lượng";
             // 
             // numPrice
             // 
             this.numPrice.Font = new System.Drawing.Font("Cambria", 14F);
-            this.numPrice.Location = new System.Drawing.Point(647, 146);
-            this.numPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numPrice.Location = new System.Drawing.Point(485, 119);
+            this.numPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numPrice.Name = "numPrice";
-            this.numPrice.Size = new System.Drawing.Size(327, 35);
+            this.numPrice.Size = new System.Drawing.Size(245, 29);
             this.numPrice.TabIndex = 14;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblPrice.Location = new System.Drawing.Point(512, 150);
+            this.lblPrice.Location = new System.Drawing.Point(384, 122);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(45, 26);
+            this.lblPrice.Size = new System.Drawing.Size(38, 21);
             this.lblPrice.TabIndex = 13;
             this.lblPrice.Text = "Giá";
             // 
@@ -209,9 +223,10 @@
             // 
             this.lblPublished.AutoSize = true;
             this.lblPublished.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblPublished.Location = new System.Drawing.Point(5, 150);
+            this.lblPublished.Location = new System.Drawing.Point(4, 122);
+            this.lblPublished.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPublished.Name = "lblPublished";
-            this.lblPublished.Size = new System.Drawing.Size(102, 26);
+            this.lblPublished.Size = new System.Drawing.Size(85, 21);
             this.lblPublished.TabIndex = 11;
             this.lblPublished.Text = "Xuất bản";
             // 
@@ -221,10 +236,10 @@
             this.ccbType.DisplayMember = "Name";
             this.ccbType.Font = new System.Drawing.Font("Cambria", 14F);
             this.ccbType.FormattingEnabled = true;
-            this.ccbType.Location = new System.Drawing.Point(648, 95);
-            this.ccbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ccbType.Location = new System.Drawing.Point(486, 77);
+            this.ccbType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ccbType.Name = "ccbType";
-            this.ccbType.Size = new System.Drawing.Size(325, 35);
+            this.ccbType.Size = new System.Drawing.Size(245, 30);
             this.ccbType.TabIndex = 10;
             // 
             // bookTypeBindingSource
@@ -241,9 +256,10 @@
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblType.Location = new System.Drawing.Point(512, 100);
+            this.lblType.Location = new System.Drawing.Point(384, 81);
+            this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(56, 26);
+            this.lblType.Size = new System.Drawing.Size(46, 21);
             this.lblType.TabIndex = 9;
             this.lblType.Text = "Loại";
             // 
@@ -251,9 +267,10 @@
             // 
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblAuthor.Location = new System.Drawing.Point(5, 100);
+            this.lblAuthor.Location = new System.Drawing.Point(4, 81);
+            this.lblAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(81, 26);
+            this.lblAuthor.Size = new System.Drawing.Size(68, 21);
             this.lblAuthor.TabIndex = 7;
             this.lblAuthor.Text = "Tác giả";
             // 
@@ -261,28 +278,30 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblName.Location = new System.Drawing.Point(5, 52);
+            this.lblName.Location = new System.Drawing.Point(4, 42);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(100, 26);
+            this.lblName.Size = new System.Drawing.Size(83, 21);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Tên sách";
             // 
             // txtCode
             // 
             this.txtCode.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtCode.Location = new System.Drawing.Point(648, 47);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCode.Location = new System.Drawing.Point(486, 38);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(325, 35);
+            this.txtCode.Size = new System.Drawing.Size(245, 29);
             this.txtCode.TabIndex = 6;
             // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.lblCode.Location = new System.Drawing.Point(512, 52);
+            this.lblCode.Location = new System.Drawing.Point(384, 42);
+            this.lblCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(93, 26);
+            this.lblCode.Size = new System.Drawing.Size(76, 21);
             this.lblCode.TabIndex = 5;
             this.lblCode.Text = "Mã sách";
             // 
@@ -292,10 +311,10 @@
             this.btnAdd.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Image = global::ILib.Properties.Resources.icons8_plus_48;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(12, 350);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(9, 284);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(149, 66);
+            this.btnAdd.Size = new System.Drawing.Size(112, 54);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -308,11 +327,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Image = global::ILib.Properties.Resources.icons8_delete_48;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(169, 350);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(127, 284);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.btnDelete.Size = new System.Drawing.Size(149, 66);
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnDelete.Size = new System.Drawing.Size(112, 54);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -325,11 +344,11 @@
             this.btnUpdate.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.Image = global::ILib.Properties.Resources.icons8_repair_48;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(325, 350);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(244, 284);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnUpdate.Size = new System.Drawing.Size(149, 66);
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(112, 54);
             this.btnUpdate.TabIndex = 21;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -342,11 +361,11 @@
             this.btnSave.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
             this.btnSave.Image = global::ILib.Properties.Resources.icons8_save_48;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(480, 350);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(360, 284);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnSave.Size = new System.Drawing.Size(149, 66);
+            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnSave.Size = new System.Drawing.Size(112, 54);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -359,10 +378,10 @@
             this.btnExit.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
             this.btnExit.Image = global::ILib.Properties.Resources.icons8_cancel_48;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(841, 350);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(631, 284);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(149, 66);
+            this.btnExit.Size = new System.Drawing.Size(112, 54);
             this.btnExit.TabIndex = 23;
             this.btnExit.Text = "Đóng";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -382,11 +401,11 @@
             this.Column5,
             this.Column7});
             this.dgvBook.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvBook.Location = new System.Drawing.Point(0, 457);
-            this.dgvBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvBook.Location = new System.Drawing.Point(0, 371);
+            this.dgvBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.RowHeadersWidth = 51;
-            this.dgvBook.Size = new System.Drawing.Size(1005, 343);
+            this.dgvBook.Size = new System.Drawing.Size(754, 279);
             this.dgvBook.TabIndex = 24;
             // 
             // Column8
@@ -458,26 +477,16 @@
             // 
             this.bookTypeTableAdapter.ClearBeforeFill = true;
             // 
-            // eLibDataSet1
-            // 
-            this.eLibDataSet1.DataSetName = "ELibDataSet1";
-            this.eLibDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // authorBindingSource
-            // 
-            this.authorBindingSource.DataMember = "Author";
-            this.authorBindingSource.DataSource = this.eLibDataSet1;
-            // 
             // authorTableAdapter
             // 
             this.authorTableAdapter.ClearBeforeFill = true;
             // 
             // BookManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1005, 800);
+            this.ClientSize = new System.Drawing.Size(754, 650);
             this.ControlBox = false;
             this.Controls.Add(this.dgvBook);
             this.Controls.Add(this.btnExit);
@@ -489,19 +498,19 @@
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(6, 8);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.BookManagement_Load);
             this.grpBox.ResumeLayout(false);
             this.grpBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

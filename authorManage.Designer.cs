@@ -41,10 +41,10 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnEditAuthor = new System.Windows.Forms.Button();
             this.btnDeleteAuthor = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,7 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(245, 29);
             this.txtStatus.TabIndex = 8;
+            this.txtStatus.Visible = false;
             // 
             // label9
             // 
@@ -86,6 +87,7 @@
             this.label9.Size = new System.Drawing.Size(97, 21);
             this.label9.TabIndex = 7;
             this.label9.Text = "Trạng thái";
+            this.label9.Visible = false;
             // 
             // txtId
             // 
@@ -95,6 +97,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(245, 29);
             this.txtId.TabIndex = 6;
+            this.txtId.Visible = false;
             // 
             // txtName
             // 
@@ -126,6 +129,7 @@
             this.label4.Size = new System.Drawing.Size(35, 21);
             this.label4.TabIndex = 5;
             this.label4.Text = "Mã";
+            this.label4.Visible = false;
             // 
             // label1
             // 
@@ -154,7 +158,6 @@
             this.dgvAuthor.Size = new System.Drawing.Size(754, 353);
             this.dgvAuthor.TabIndex = 107;
             this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
-
             // 
             // id
             // 
@@ -190,22 +193,6 @@
             this.button5.Text = "Đóng";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(360, 204);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(112, 54);
-            this.button4.TabIndex = 105;
-            this.button4.Text = "Lưu";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // btnEditAuthor
             // 
@@ -257,6 +244,22 @@
             this.btnAddAuthor.UseVisualStyleBackColor = true;
             this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
+            // button4
+            // 
+            this.button4.AutoSize = true;
+            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(360, 204);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button4.Size = new System.Drawing.Size(112, 54);
+            this.button4.TabIndex = 105;
+            this.button4.Text = "Lưu";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // authorManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,12 +300,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnEditAuthor;
         private System.Windows.Forms.Button btnDeleteAuthor;
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -23,6 +23,15 @@ namespace ILib
         {
             InitializeComponent();
             dgvUser.AutoGenerateColumns = false;
+            /*
+            cbbPositionUser.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cbbPositionUser.AutoCompleteSource = AutoCompleteSource.ListItems;
+            */
+        }
+
+        private void cboComboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            cbbPositionUser.DroppedDown = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

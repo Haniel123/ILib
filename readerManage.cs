@@ -125,24 +125,28 @@ namespace ILib
         {
             DataGridView dataGridView = (DataGridView)sender;
             int row = e.RowIndex;
-            if (dgvReader.CurrentRow != null)
+            if (row >= 0)
             {
-                int numberOfCells = dgvReader.CurrentRow.Cells.Count;
-                for (int i = 1; i < numberOfCells; i++)
+                if (dgvReader.CurrentRow != null)
                 {
-                    if (dgvReader.Rows[row].Cells[i].Value == null)
+                    int numberOfCells = dgvReader.CurrentRow.Cells.Count;
+                    for (int i = 1; i < numberOfCells; i++)
                     {
-                        MessageBox.Show("Có dữ liệu rỗng !");
-                        return;
+                        if (dgvReader.Rows[row].Cells[i].Value == null)
+                        {
+                            MessageBox.Show("Có dữ liệu rỗng !");
+                            return;
+                        }
                     }
                 }
-            }
+
 
             txtId.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
             txtFullname.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
             txtAddressUser.Text = dataGridView.Rows[row].Cells[2].Value.ToString();
             txtPhoneUser.Text = dataGridView.Rows[row].Cells[3].Value.ToString();
             txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[4].Value.ToString());
+            }
         }
 
         private void readerManage_Load(object sender, EventArgs e)

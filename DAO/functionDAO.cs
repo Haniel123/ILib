@@ -51,7 +51,7 @@ namespace DAO
 
         public bool checkEmpty(string value ) {
 
-            if (value == "" || string.IsNullOrEmpty(value))
+            if (value == "" || !string.IsNullOrWhiteSpace(value))
             {
                 return false;
 
@@ -88,6 +88,21 @@ namespace DAO
                 return "Chưa xác định !!!";
             }
         }
+
+        public string LoadBookName(string id)
+        {
+            int id2 = int.Parse(id);
+            var position = db.Books.FirstOrDefault(p => p.id.Equals(id2));
+            if (position != null)
+            {
+                return position.Name.ToString();
+            }
+            else
+            {
+                return "Chưa xác định !!!";
+            }
+        }
+     
 
         public string LoadStatus(string status)
         {

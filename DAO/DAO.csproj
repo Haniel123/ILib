@@ -69,6 +69,10 @@
       <DependentUpon>ELibEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="BookTypeDAO.cs" />
+    <Compile Include="borrowDAO.cs" />
+    <Compile Include="BorrowTicket.cs">
+      <DependentUpon>ELibEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ELibEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
