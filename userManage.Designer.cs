@@ -55,7 +55,6 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
@@ -78,7 +77,7 @@
             this.GroupBox.Controls.Add(this.txtFullname);
             this.GroupBox.Controls.Add(this.label2);
             this.GroupBox.Controls.Add(this.label4);
-            this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.GroupBox.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.GroupBox.Location = new System.Drawing.Point(9, 72);
             this.GroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox.Name = "GroupBox";
@@ -91,7 +90,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 14F);
             this.txtUsername.Location = new System.Drawing.Point(143, 162);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
@@ -101,7 +100,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(4, 167);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -112,7 +111,7 @@
             // cbbPositionUser
             // 
             this.cbbPositionUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPositionUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.cbbPositionUser.Font = new System.Drawing.Font("Arial", 14F);
             this.cbbPositionUser.FormattingEnabled = true;
             this.cbbPositionUser.Location = new System.Drawing.Point(485, 75);
             this.cbbPositionUser.Margin = new System.Windows.Forms.Padding(2);
@@ -123,7 +122,7 @@
             // 
             // txtPasswordRepeatUset
             // 
-            this.txtPasswordRepeatUset.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtPasswordRepeatUset.Font = new System.Drawing.Font("Arial", 14F);
             this.txtPasswordRepeatUset.Location = new System.Drawing.Point(485, 115);
             this.txtPasswordRepeatUset.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordRepeatUset.Name = "txtPasswordRepeatUset";
@@ -134,17 +133,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(370, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 21);
+            this.label5.Size = new System.Drawing.Size(113, 21);
             this.label5.TabIndex = 13;
             this.label5.Text = "Nhập lại MK";
             // 
             // txtPasswordUser
             // 
-            this.txtPasswordUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtPasswordUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtPasswordUser.Location = new System.Drawing.Point(106, 115);
             this.txtPasswordUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordUser.Name = "txtPasswordUser";
@@ -155,17 +154,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(4, 120);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 21);
+            this.label6.Size = new System.Drawing.Size(88, 21);
             this.label6.TabIndex = 11;
             this.label6.Text = "Mật khẩu";
             // 
             // txtAddressUser
             // 
-            this.txtAddressUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtAddressUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtAddressUser.Location = new System.Drawing.Point(485, 36);
             this.txtAddressUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressUser.Name = "txtAddressUser";
@@ -175,28 +174,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(370, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Địa chỉ";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(370, 80);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 21);
+            this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 9;
             this.label9.Text = "Chức vụ";
             // 
             // txtPhoneUser
             // 
-            this.txtPhoneUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtPhoneUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtPhoneUser.Location = new System.Drawing.Point(106, 76);
             this.txtPhoneUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneUser.Name = "txtPhoneUser";
@@ -205,7 +204,7 @@
             // 
             // txtFullname
             // 
-            this.txtFullname.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtFullname.Font = new System.Drawing.Font("Arial", 14F);
             this.txtFullname.Location = new System.Drawing.Point(106, 36);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.Name = "txtFullname";
@@ -215,7 +214,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(4, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -226,7 +225,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(4, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -236,7 +235,7 @@
             // 
             // txtIdUser
             // 
-            this.txtIdUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtIdUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtIdUser.Location = new System.Drawing.Point(254, 53);
             this.txtIdUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdUser.Name = "txtIdUser";
@@ -247,7 +246,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -324,7 +323,7 @@
             // btnDeleteUser
             // 
             this.btnDeleteUser.AutoSize = true;
-            this.btnDeleteUser.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteUser.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnDeleteUser.Image = global::ILib.Properties.Resources.icons8_delete_48;
             this.btnDeleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteUser.Location = new System.Drawing.Point(127, 274);
@@ -341,7 +340,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(631, 274);
@@ -353,26 +352,10 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(360, 274);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(112, 54);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Lưu";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // btnEditUser
             // 
             this.btnEditUser.AutoSize = true;
-            this.btnEditUser.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEditUser.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnEditUser.Image = global::ILib.Properties.Resources.icons8_repair_48;
             this.btnEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditUser.Location = new System.Drawing.Point(244, 274);
@@ -389,7 +372,7 @@
             // btnAddUser
             // 
             this.btnAddUser.AutoSize = true;
-            this.btnAddUser.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnAddUser.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnAddUser.Image = global::ILib.Properties.Resources.icons8_plus_48;
             this.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddUser.Location = new System.Drawing.Point(9, 274);
@@ -414,7 +397,6 @@
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnAddUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -445,7 +427,6 @@
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnEditUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.TextBox txtPasswordRepeatUset;
