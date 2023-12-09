@@ -23,7 +23,7 @@ namespace DAO
             var items = db.BorrowTickets.Find(item.Id);
             if (items != null)
             {
-                items.Book = item.Book;
+                items.IdBook = item.IdBook;
                 items.DateStart = item.DateStart;
                 items.DateEnd = item.DateEnd;
                 items.IdReader = item.IdReader;

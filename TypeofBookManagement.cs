@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DAO.functionDAO;
 
 namespace ILib
 {
@@ -49,17 +50,20 @@ namespace ILib
         {
             string name = txtName.Text;
             var id = txtID.Text;
+            StatusItem selectedStatus = (StatusItem)cbbStatus.SelectedItem;
+            int status = selectedStatus.Id;
 
             if (func.ValidateTextBox(txtName))
                 return;
             DAO.BookType booktype = new DAO.BookType();
             booktype.Name = name;
             booktype.id = int.Parse(id);
+            booktype.Status = status;
             if (bus.updateBookTypeBUS(id, booktype))
             {
                 func.NotifyMessageBox("Sửa thành công !!!");
-                var resultUser = bus.getBookTypesBUS();
-                dgvBookType.DataSource = resultUser;                
+                var result = bus.getBookTypesBUS();
+                dgvBookType.DataSource = result;                
                 func.TextBoxControl(this, true);
             }
             else
@@ -78,11 +82,10 @@ namespace ILib
                 if (bus.deleteBookTypeBUS(id, booktype))
                 {
                     func.NotifyMessageBox("Xoá thành công !!!");
-                    var resultUser = bus.getBookTypesBUS();
-                    dgvBookType.DataSource = resultUser;
+                    var result = bus.getBookTypesBUS();
+                    dgvBookType.DataSource = result;
                     txtName.Clear();
                     txtID.Clear();
-                    txtStatus.Clear();
                     func.ButtonControl(this);
                     func.TextBoxControl(this, true);
                 }
@@ -97,24 +100,22 @@ namespace ILib
         private void dgvBookType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
-            int row = e.RowIndex;
-            if (dgvBookType.CurrentRow != null)
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView.Rows.Count)
             {
-                int numberOfCells = dgvBookType.CurrentRow.Cells.Count;
-                for (int i = 1; i < numberOfCells; i++)
-                {
-                    if (dgvBookType.Rows[row].Cells[i].Value == null)
-                    {
-                        func.WarningMessageBox("Có dữ liệu rỗng !!!");
-                        return;
-                    }
-                }
+                // Access the selected date and time
+                string id = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string name = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string status = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                // Use the values as needed
+                txtID.Text = id;
+                txtName.Text = name;
+                int statusInt = Convert.ToInt32(status);
+                functionDAO.LoadStatuses(cbbStatus, statusInt);
+
+                func.ButtonControl(this, true);
+                func.TextBoxControl(GroupBox);
             }
-            txtID.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
-            txtName.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
-            txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
-            func.ButtonControl(this,true);
-            func.TextBoxControl(GroupBox);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

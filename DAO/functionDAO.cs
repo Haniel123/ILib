@@ -14,8 +14,42 @@ namespace DAO
     public class functionDAO
     {
         public ELibEntities db = new ELibEntities();
+
         public bool ValidateUserName(string username)
         {
+            return true;
+        }
+
+        public bool IsControlValid(Control control, string controlName)
+        {
+            if (control is TextBox textBox)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    WarningMessageBox($"{controlName} không được để trống !!!");
+                    textBox.Focus();
+                    return false;
+                }
+            }
+            else if (control is ComboBox comboBox)
+            {
+                if (comboBox.SelectedItem == null)
+                {
+                    WarningMessageBox($"{controlName} không được để trống !!!");
+                    comboBox.Focus();
+                    return false;
+                }
+            }
+            else if (control is NumericUpDown numericUpDown)
+            { 
+                if (numericUpDown.Value <= 0)
+                {
+                    WarningMessageBox($"{controlName} phải là một giá trị lớn hơn 0 !!!");
+                    numericUpDown.Focus();
+                    return false;
+                }
+            }
+
             return true;
         }
 
@@ -128,7 +162,7 @@ namespace DAO
             {
                 return true;
             }
-        }
+        }        
 
         public void ButtonControl(Control control, bool action = false)
         {
@@ -145,7 +179,7 @@ namespace DAO
             {
                 Debug.WriteLine($"Current ReadOnly Value: {txt.ReadOnly}");
 
-                if (txt.ReadOnly)
+                if (txt.ReadOnly && txt.Name== "txtStatus")
                 {
                     txt.ReadOnly = action;
                     Debug.WriteLine($"Setting ReadOnly to: {action}");
@@ -168,6 +202,39 @@ namespace DAO
         public bool NotifyMessageBox(string message)
         {
             return MessageBox.Show(message, "ILib", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK;
+        }
+
+        public static void LoadStatuses(ComboBox comboBox, int selectedValue)
+        {
+            // Clear existing items
+            comboBox.Items.Clear();
+
+            // Add default statuses
+            comboBox.Items.Add(new StatusItem { Id = 0, Name = "Ẩn" });
+            comboBox.Items.Add(new StatusItem { Id = 1, Name = "Hoạt động" });
+
+            // Set display and value member properties
+            comboBox.DisplayMember = "Name";
+            comboBox.ValueMember = "Id";
+
+            // Set default status
+            int selectedIndex = comboBox.FindStringExact("Hoạt động"); // Assuming "Active" is the default status
+            if (selectedIndex != -1)
+            {
+                comboBox.SelectedIndex = selectedIndex;
+            }
+
+            // Set the selected value if it exists
+            if (comboBox.Items.Cast<StatusItem>().Any(item => item.Id == selectedValue))
+            {
+                comboBox.SelectedValue = selectedValue;
+            }
+        }
+
+        public class StatusItem
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
         }
     }
 }
