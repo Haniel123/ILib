@@ -44,7 +44,6 @@
             this.btnEditAuthor = new System.Windows.Forms.Button();
             this.btnDeleteAuthor = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +56,7 @@
             this.GroupBox.Controls.Add(this.txtName);
             this.GroupBox.Controls.Add(this.label2);
             this.GroupBox.Controls.Add(this.label4);
-            this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.GroupBox.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.GroupBox.Location = new System.Drawing.Point(9, 72);
             this.GroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox.Name = "GroupBox";
@@ -69,7 +68,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtStatus.Font = new System.Drawing.Font("Arial", 14F);
             this.txtStatus.Location = new System.Drawing.Point(485, 76);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Name = "txtStatus";
@@ -80,18 +79,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(384, 80);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 21);
+            this.label9.Size = new System.Drawing.Size(96, 21);
             this.label9.TabIndex = 7;
             this.label9.Text = "Trạng thái";
             this.label9.Visible = false;
             // 
             // txtId
             // 
-            this.txtId.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtId.Font = new System.Drawing.Font("Arial", 14F);
             this.txtId.Location = new System.Drawing.Point(86, 76);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
@@ -101,7 +100,7 @@
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtName.Font = new System.Drawing.Font("Arial", 14F);
             this.txtName.Location = new System.Drawing.Point(86, 36);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
@@ -111,18 +110,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(4, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 21);
+            this.label2.Size = new System.Drawing.Size(72, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tác giả";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(4, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -134,7 +133,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -182,7 +181,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(631, 204);
@@ -197,7 +196,7 @@
             // btnEditAuthor
             // 
             this.btnEditAuthor.AutoSize = true;
-            this.btnEditAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEditAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnEditAuthor.Image = global::ILib.Properties.Resources.icons8_repair_48;
             this.btnEditAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditAuthor.Location = new System.Drawing.Point(244, 204);
@@ -214,7 +213,7 @@
             // btnDeleteAuthor
             // 
             this.btnDeleteAuthor.AutoSize = true;
-            this.btnDeleteAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAuthor.Image = global::ILib.Properties.Resources.icons8_delete_48;
             this.btnDeleteAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteAuthor.Location = new System.Drawing.Point(127, 204);
@@ -231,7 +230,7 @@
             // btnAddAuthor
             // 
             this.btnAddAuthor.AutoSize = true;
-            this.btnAddAuthor.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnAddAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnAddAuthor.Image = global::ILib.Properties.Resources.icons8_plus_48;
             this.btnAddAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddAuthor.Location = new System.Drawing.Point(9, 204);
@@ -244,22 +243,6 @@
             this.btnAddAuthor.UseVisualStyleBackColor = true;
             this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(360, 204);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(112, 54);
-            this.button4.TabIndex = 105;
-            this.button4.Text = "Lưu";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // authorManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,7 +253,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAuthor);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnEditAuthor);
             this.Controls.Add(this.btnDeleteAuthor);
             this.Controls.Add(this.btnAddAuthor);
@@ -291,12 +273,8 @@
 
         #endregion
         private System.Windows.Forms.GroupBox GroupBox;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.Button button5;
@@ -306,6 +284,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label4;
     }
 }

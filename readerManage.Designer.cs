@@ -45,7 +45,6 @@
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -64,7 +63,7 @@
             this.GroupBox.Controls.Add(this.txtFullname);
             this.GroupBox.Controls.Add(this.label2);
             this.GroupBox.Controls.Add(this.label4);
-            this.GroupBox.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.GroupBox.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.GroupBox.Location = new System.Drawing.Point(9, 72);
             this.GroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox.Name = "GroupBox";
@@ -76,7 +75,7 @@
             // 
             // txtAddressUser
             // 
-            this.txtAddressUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtAddressUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtAddressUser.Location = new System.Drawing.Point(485, 36);
             this.txtAddressUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressUser.Name = "txtAddressUser";
@@ -86,17 +85,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(384, 40);
+            this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(385, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Địa chỉ";
             // 
             // txtStatus
             // 
-            this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtStatus.Font = new System.Drawing.Font("Arial", 14F);
             this.txtStatus.Location = new System.Drawing.Point(485, 76);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Name = "txtStatus";
@@ -106,17 +105,17 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(393, 81);
+            this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(385, 81);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 21);
+            this.label9.Size = new System.Drawing.Size(96, 21);
             this.label9.TabIndex = 9;
             this.label9.Text = "Trạng thái";
             // 
             // txtPhoneUser
             // 
-            this.txtPhoneUser.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtPhoneUser.Font = new System.Drawing.Font("Arial", 14F);
             this.txtPhoneUser.Location = new System.Drawing.Point(106, 76);
             this.txtPhoneUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneUser.Name = "txtPhoneUser";
@@ -125,7 +124,7 @@
             // 
             // txtFullname
             // 
-            this.txtFullname.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtFullname.Font = new System.Drawing.Font("Arial", 14F);
             this.txtFullname.Location = new System.Drawing.Point(106, 36);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.Name = "txtFullname";
@@ -135,7 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(4, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -146,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(4, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -157,7 +156,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Cambria", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -219,7 +218,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(631, 204);
@@ -231,26 +230,10 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
-            this.button4.Image = global::ILib.Properties.Resources.icons8_save_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(360, 204);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(112, 54);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Lưu";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // btnEdit
             // 
             this.btnEdit.AutoSize = true;
-            this.btnEdit.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Image = global::ILib.Properties.Resources.icons8_repair_48;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(244, 204);
@@ -267,7 +250,7 @@
             // btnDelete
             // 
             this.btnDelete.AutoSize = true;
-            this.btnDelete.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Image = global::ILib.Properties.Resources.icons8_delete_48;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(127, 204);
@@ -284,7 +267,7 @@
             // btnAdd
             // 
             this.btnAdd.AutoSize = true;
-            this.btnAdd.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Image = global::ILib.Properties.Resources.icons8_plus_48;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(9, 204);
@@ -299,7 +282,7 @@
             // 
             // txtId
             // 
-            this.txtId.Font = new System.Drawing.Font("Cambria", 14F);
+            this.txtId.Font = new System.Drawing.Font("Arial", 14F);
             this.txtId.Location = new System.Drawing.Point(6, 264);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
@@ -317,7 +300,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReader);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -348,7 +330,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvReader;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
