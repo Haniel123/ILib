@@ -14,16 +14,9 @@ namespace DAO
     
     public partial class Book
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Book()
-        {
-            this.BorrowTickets = new HashSet<BorrowTicket>();
-        }
-    
         public int id { get; set; }
         public int IdType { get; set; }
         public int IdAuthor { get; set; }
-        public int IdStatus { get; set; }
         public string Publisher { get; set; }
         public int Price { get; set; }
         public int Amount { get; set; }
@@ -31,9 +24,6 @@ namespace DAO
         public string Name { get; set; }
     
         public virtual Author Author { get; set; }
-        public virtual BookStatu BookStatu { get; set; }
         public virtual BookType BookType { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BorrowTicket> BorrowTickets { get; set; }
     }
 }

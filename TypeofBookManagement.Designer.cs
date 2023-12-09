@@ -31,13 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox = new System.Windows.Forms.GroupBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBookType = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -46,9 +48,7 @@
             this.eLibDataSet2 = new ILib.ELibDataSet2();
             this.bookTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookTypeTableAdapter = new ILib.ELibDataSet2TableAdapters.BookTypeTableAdapter();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet2)).BeginInit();
@@ -68,7 +68,7 @@
             // 
             // GroupBox
             // 
-            this.GroupBox.Controls.Add(this.txtStatus);
+            this.GroupBox.Controls.Add(this.cbbStatus);
             this.GroupBox.Controls.Add(this.label9);
             this.GroupBox.Controls.Add(this.txtID);
             this.GroupBox.Controls.Add(this.txtName);
@@ -83,16 +83,6 @@
             this.GroupBox.TabIndex = 2;
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Thông tin";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Cambria", 14F);
-            this.txtStatus.Location = new System.Drawing.Point(485, 76);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(245, 29);
-            this.txtStatus.TabIndex = 8;
             // 
             // label9
             // 
@@ -162,6 +152,31 @@
             this.dgvBookType.Size = new System.Drawing.Size(754, 353);
             this.dgvBookType.TabIndex = 14;
             this.dgvBookType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookType_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id";
+            this.Column1.HeaderText = "Mã";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "name";
+            this.Column2.HeaderText = "Tên loại";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "status";
+            this.Column3.HeaderText = "Trạng thái";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
             // 
             // btnExit
             // 
@@ -262,30 +277,15 @@
             // 
             this.bookTypeTableAdapter.ClearBeforeFill = true;
             // 
-            // Column1
+            // cbbStatus
             // 
-            this.Column1.DataPropertyName = "id";
-            this.Column1.HeaderText = "Mã";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "name";
-            this.Column2.HeaderText = "Tên loại";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "status";
-            this.Column3.HeaderText = "Trạng thái";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatus.Font = new System.Drawing.Font("Cambria", 14F);
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Location = new System.Drawing.Point(484, 76);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(245, 30);
+            this.cbbStatus.TabIndex = 8;
             // 
             // TypeofBookManagement
             // 
@@ -329,7 +329,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtName;
@@ -339,5 +338,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.ComboBox cbbStatus;
     }
 }

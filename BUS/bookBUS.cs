@@ -11,14 +11,25 @@ namespace BUS
     {
         bookDAO BookDAO = new bookDAO();
 
-        public int insertBookBUS(Book item)
-        {
-            return BookDAO.insertBook(item);
-        }
-
         public List<Book> getBookBUS()
         {
             return BookDAO.getBook();
         }
+
+        public bool insertBookBUS(Book item)
+        {
+            return BookDAO.insertBook(item);
+        }
+        
+        public bool updateBookBUS(int id, Book item)
+        {
+            return BookDAO.updateBook(id, item);
+        }
+
+        public bool deleteBookBUS(int id, Book item)
+        {
+            return BookDAO.deleteBook(id, item);
+        }
     }
 }
+

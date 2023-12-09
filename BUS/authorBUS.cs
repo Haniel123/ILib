@@ -32,6 +32,11 @@ namespace BUS
             return AuthorDAO.getAuthor();
         }
 
+        public string GetAuthorNameById(int authorId)
+        {
+            
+            return GetAuthorNameById(authorId);
+        }
 
     }
 }
