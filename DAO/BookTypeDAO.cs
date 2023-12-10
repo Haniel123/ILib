@@ -35,6 +35,7 @@ namespace DAO
             if (existingBookType != null)
             {
                 existingBookType.Name = item.Name;
+                existingBookType.Status = item.Status;
                 db.SaveChanges();
                 return true;
             }

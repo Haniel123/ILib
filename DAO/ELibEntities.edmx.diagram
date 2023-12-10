@@ -4,22 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7b96065ce9784e3aacc9230796f21785" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="ELibModel.Author" Width="1.5" PointX="0.75" PointY="7.875" />
-        <EntityTypeShape EntityType="ELibModel.Book" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="ELibModel.BookStatu" Width="1.5" PointX="0.75" PointY="1.875" />
-        <EntityTypeShape EntityType="ELibModel.BookType" Width="1.5" PointX="0.75" PointY="5.25" />
-        <EntityTypeShape EntityType="ELibModel.BorrowTicket" Width="1.5" PointX="5.25" PointY="1.375" />
-        <EntityTypeShape EntityType="ELibModel.Reader" Width="1.5" PointX="3" PointY="10.5" />
-        <EntityTypeShape EntityType="ELibModel.Usert" Width="1.5" PointX="3" PointY="14.375" />
-        <EntityTypeShape EntityType="ELibModel.UserType" Width="1.5" PointX="0.75" PointY="10.75" />
-        <AssociationConnector Association="ELibModel.FK__Book__IdAuthor__412EB0B6" />
-        <AssociationConnector Association="ELibModel.FK__Book__IdStatus__4222D4EF" />
-        <AssociationConnector Association="ELibModel.FK__Book__IdType__403A8C7D" />
-        <AssociationConnector Association="ELibModel.FK__BorrowTic__IdBoo__2A164134" />
-        <AssociationConnector Association="ELibModel.FK__BorrowTic__IdRea__29221CFB" />
-        <AssociationConnector Association="ELibModel.FK__Reader__IdType__45F365D3" />
-        <AssociationConnector Association="ELibModel.FK__Usert__IdType__4AB81AF0" />
+      <Diagram DiagramId="7b96065ce9784e3aacc9230796f21785" Name="Diagram1">
+        <EntityTypeShape EntityType="ELibModel.Author" PointX="0.75" PointY="1.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Book" PointX="3" PointY="1" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.BookStatu" PointX="0.75" PointY="5.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.BookType" PointX="0.75" PointY="7.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Reader" PointX="8" PointY="1.125" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.Usert" PointX="8" PointY="4.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELibModel.UserType" PointX="5.75" PointY="3" Width="1.5" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="ELibModel.FK__Book__IdAuthor__412EB0B6" />
+        <AssociationConnector ManuallyRouted="false" Association="ELibModel.FK__Book__IdType__403A8C7D" />
+        <AssociationConnector ManuallyRouted="false" Association="ELibModel.FK__Reader__IdType__45F365D3" />
+        <AssociationConnector ManuallyRouted="false" Association="ELibModel.FK__Usert__IdType__4AB81AF0" />
+        <EntityTypeShape EntityType="ELibModel.BorrowTicket" Width="1.5" PointX="3.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

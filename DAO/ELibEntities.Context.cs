@@ -33,5 +33,6 @@ namespace DAO
         public virtual DbSet<Reader> Readers { get; set; }
         public virtual DbSet<Usert> Userts { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
+        public virtual DbSet<BorrowTicket> BorrowTickets { get; set; }
     }
 }

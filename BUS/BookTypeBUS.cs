@@ -11,15 +11,15 @@ namespace BUS
     {
         private bookTypeDAO BookTypeDAO = new bookTypeDAO();
 
-        public int insertBookTypeBUS(BookType item)
-        {
-            return BookTypeDAO.insertBookType(item);
-        }
-
         public List<BookType> getBookTypesBUS()
         {
             return BookTypeDAO.getBookTypes();
         }
+
+        public int insertBookTypeBUS(BookType item)
+        {
+            return BookTypeDAO.insertBookType(item);
+        }        
 
         public bool updateBookTypeBUS(string id, BookType item)
         {

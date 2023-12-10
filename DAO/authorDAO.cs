@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,15 @@ namespace DAO
  
 
             return result.ToList();
+        }
+        
+        public string GetAuthorNameById(int authorId)
+        {
+            var result = (from author in db.Authors
+                          where author.Id == authorId
+                          select author.Name).FirstOrDefault();
+
+            return result ?? "Unknown Author";
         }
 
         public bool updateAuthor(string id, Author item)
