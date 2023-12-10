@@ -29,6 +29,7 @@ namespace DAO
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<BookStatu> BookStatus { get; set; }
         public virtual DbSet<BookType> BookTypes { get; set; }
+        public virtual DbSet<BorrowTicket> BorrowTickets { get; set; }
         public virtual DbSet<Reader> Readers { get; set; }
         public virtual DbSet<Usert> Userts { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
