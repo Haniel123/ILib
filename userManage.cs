@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using DTO;
+
 namespace ILib
 {
     public partial class userManage : Form
@@ -68,6 +70,7 @@ namespace ILib
         {
             var resultUser = bus.getUserB();
             dgvUser.DataSource = resultUser;
+            
             //Load user type
             var resultUserType = bus.getUserTypeB();
             cbbPositionUser.DataSource = resultUserType;
@@ -219,11 +222,7 @@ namespace ILib
             var resultUser = bus.getUserB();
                 
             dgvUser.DataSource = resultUser;
-            AutoCompleteStringCollection auto =     new AutoCompleteStringCollection();
-            foreach ( Usert user in auto)
-            {
-                auto.Add(user.Address);
-            }
+           
             //Load user type
             var resultUserType = bus.getUserTypeB();
             cbbPositionUser.DataSource = resultUserType;
@@ -261,6 +260,18 @@ namespace ILib
             bus.insertUserB(user);
             var resultUser = bus.getUserB();
             dgvUser.DataSource = resultUser;
+        
+          
+        }
+
+        private void dgvUser_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 5 && e.Value != null)
+            {
+                int id = Convert.ToInt32(e.Value);
+                string name = func.LoadPositionName(id.ToString());
+                e.Value = name; 
+            }
         }
     }
 }

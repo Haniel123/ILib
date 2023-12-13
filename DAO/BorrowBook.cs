@@ -12,15 +12,12 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class BorrowTicket
+    public partial class BorrowBook
     {
         public int Id { get; set; }
-        public int Status { get; set; }
-        public int IdReader { get; set; }
         public int IdBook { get; set; }
-        public string Code { get; set; }
-        public System.DateTime DateStart { get; set; }
-        public System.DateTime DateEnd { get; set; }
+        public int IdReader { get; set; }
+        public Nullable<int> Status { get; set; }
     
         public virtual Book Book { get; set; }
         public virtual Reader Reader { get; set; }

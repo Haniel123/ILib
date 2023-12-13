@@ -123,6 +123,21 @@ namespace DAO
             }
         }
 
+        public string LoadReader(string id)
+        {
+            int id2 = int.Parse(id);
+            var position = db.Readers.FirstOrDefault(p => p.Id.Equals(id2));
+            if (position != null)
+            {
+                return position.Fullname.ToString();
+            }
+            else
+            {
+                return "Chưa xác định !!!";
+            }
+        }
+
+
         public string LoadBookName(string id)
         {
             int id2 = int.Parse(id);

@@ -15,6 +15,12 @@ namespace BUS
             return borrowDAO.insertBorrow(item);
         }
 
+        public int insertBorrowBookB(BorrowBook item)
+        {
+            return borrowDAO.insertBorrowBook(item);
+        }
+
+
 
         public bool updateBorrowB(string id, BorrowTicket item)
         {
@@ -30,6 +36,13 @@ namespace BUS
         {
             return borrowDAO.getBorrow();
         }
+
+        public List<BorrowBook> getBorrowBookB(int idReader)
+        {
+            return borrowDAO.getBookBorrow(idReader);
+        }
+
+
 
         public List<Book> getBookB()
         {

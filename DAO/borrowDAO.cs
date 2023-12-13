@@ -16,6 +16,13 @@ namespace DAO
             return result;
         }
 
+        public int insertBorrowBook(BorrowBook item)
+        {
+            db.BorrowBooks.Add(item);
+            var result = db.SaveChanges();
+            return result;
+        }
+
 
         public bool updateBorrow(string id, BorrowTicket item)
         {
@@ -54,6 +61,13 @@ namespace DAO
             var result = from borrow in db.BorrowTickets where borrow.Status == 1 orderby borrow.Id descending select borrow;
             return result.ToList();
         }
+
+        public List<BorrowBook> getBookBorrow(int idReader)
+        {
+            var result = from borrbook in db.BorrowBooks where borrbook.IdReader == idReader where borrbook.Status == 1  orderby borrbook.Id descending select borrbook;
+            return result.ToList();
+        }
+
         public List<Book> getBook()
         {
             var result = from usertype in db.Books where usertype.Status == 1 orderby usertype.id descending select usertype;

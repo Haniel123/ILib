@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
-  <!-- EF Runtime content -->
-  <edmx:Runtime>
-    <!-- SSDL content -->
-    <edmx:StorageModels>
-    <Schema Namespace="ELibModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+	<!-- EF Runtime content -->
+	<edmx:Runtime>
+		<!-- SSDL content -->
+		<edmx:StorageModels>
+		<Schema Namespace="ELibModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Author">
           <Key>
             <PropertyRef Name="Id" />
@@ -41,6 +41,15 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BorrowBook">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdBook" Type="int" Nullable="false" />
+          <Property Name="IdReader" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="BorrowTicket">
           <Key>
@@ -110,6 +119,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__BorrowBoo__IdBoo__2DE6D218">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="BorrowBook" Type="Self.BorrowBook" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BorrowBook">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BorrowBoo__IdRea__2CF2ADDF">
+          <End Role="Reader" Type="Self.Reader" Multiplicity="1" />
+          <End Role="BorrowBook" Type="Self.BorrowBook" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reader">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowBook">
+              <PropertyRef Name="IdReader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__BorrowTic__IdBoo__2A164134">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="BorrowTicket" Type="Self.BorrowTicket" Multiplicity="*" />
@@ -163,6 +196,7 @@
           <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BookStatus" EntityType="Self.BookStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BookType" EntityType="Self.BookType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BorrowBook" EntityType="Self.BorrowBook" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BorrowTicket" EntityType="Self.BorrowTicket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reader" EntityType="Self.Reader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usert" EntityType="Self.Usert" Schema="dbo" store:Type="Tables" />
@@ -174,6 +208,14 @@
           <AssociationSet Name="FK__Book__IdType__403A8C7D" Association="Self.FK__Book__IdType__403A8C7D">
             <End Role="BookType" EntitySet="BookType" />
             <End Role="Book" EntitySet="Book" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BorrowBoo__IdBoo__2DE6D218" Association="Self.FK__BorrowBoo__IdBoo__2DE6D218">
+            <End Role="Book" EntitySet="Book" />
+            <End Role="BorrowBook" EntitySet="BorrowBook" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BorrowBoo__IdRea__2CF2ADDF" Association="Self.FK__BorrowBoo__IdRea__2CF2ADDF">
+            <End Role="Reader" EntitySet="Reader" />
+            <End Role="BorrowBook" EntitySet="BorrowBook" />
           </AssociationSet>
           <AssociationSet Name="FK__BorrowTic__IdBoo__2A164134" Association="Self.FK__BorrowTic__IdBoo__2A164134">
             <End Role="Book" EntitySet="Book" />
@@ -193,10 +235,10 @@
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="ELibModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="ELibEntities" annotation:LazyLoadingEnabled="true">
+		<!-- CSDL content -->
+		<edmx:ConceptualModels>
+			<Schema Namespace="ELibModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+				<EntityContainer Name="ELibEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Authors" EntityType="ELibModel.Author" />
           <EntitySet Name="Books" EntityType="ELibModel.Book" />
           <EntitySet Name="BookStatus" EntityType="ELibModel.BookStatu" />
@@ -207,10 +249,6 @@
           <EntitySet Name="UserTypes" EntityType="ELibModel.UserType" />
           <AssociationSet Name="FK__Book__IdAuthor__412EB0B6" Association="ELibModel.FK__Book__IdAuthor__412EB0B6">
             <End Role="Author" EntitySet="Authors" />
-            <End Role="Book" EntitySet="Books" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Book__IdStatus__4222D4EF" Association="ELibModel.FK__Book__IdStatus__4222D4EF">
-            <End Role="BookStatu" EntitySet="BookStatus" />
             <End Role="Book" EntitySet="Books" />
           </AssociationSet>
           <AssociationSet Name="FK__Book__IdType__403A8C7D" Association="ELibModel.FK__Book__IdType__403A8C7D">
@@ -233,6 +271,15 @@
             <End Role="UserType" EntitySet="UserTypes" />
             <End Role="Usert" EntitySet="Userts" />
           </AssociationSet>
+          <EntitySet Name="BorrowBooks" EntityType="ELibModel.BorrowBook" />
+          <AssociationSet Name="FK__BorrowBoo__IdBoo__2DE6D218" Association="ELibModel.FK__BorrowBoo__IdBoo__2DE6D218">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="BorrowBook" EntitySet="BorrowBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BorrowBoo__IdRea__2CF2ADDF" Association="ELibModel.FK__BorrowBoo__IdRea__2CF2ADDF">
+            <End Role="Reader" EntitySet="Readers" />
+            <End Role="BorrowBook" EntitySet="BorrowBooks" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Author">
           <Key>
@@ -250,13 +297,15 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdType" Type="Int32" Nullable="false" />
           <Property Name="IdAuthor" Type="Int32" Nullable="false" />
-          <Property Name="Publisher" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Publisher" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Int32" Nullable="false" />
           <Property Name="Amount" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Author" Relationship="Self.FK__Book__IdAuthor__412EB0B6" FromRole="Book" ToRole="Author" />
-          <NavigationProperty Name="BookType" Relationship="Self.FK__Book__IdType__403A8C7D" FromRole="Book" ToRole="BookType" />
-          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="299" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Author" Relationship="ELibModel.FK__Book__IdAuthor__412EB0B6" FromRole="Book" ToRole="Author" />
+          <NavigationProperty Name="BookType" Relationship="ELibModel.FK__Book__IdType__403A8C7D" FromRole="Book" ToRole="BookType" />
+          <NavigationProperty Name="BorrowTickets" Relationship="ELibModel.FK__BorrowTic__IdBoo__2A164134" FromRole="Book" ToRole="BorrowTicket" />
+          <NavigationProperty Name="BorrowBooks" Relationship="ELibModel.FK__BorrowBoo__IdBoo__2DE6D218" FromRole="Book" ToRole="BorrowBook" />
         </EntityType>
         <EntityType Name="BookStatu">
           <Key>
@@ -301,6 +350,7 @@
           <Property Name="IdType" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BorrowTickets" Relationship="ELibModel.FK__BorrowTic__IdRea__29221CFB" FromRole="Reader" ToRole="BorrowTicket" />
           <NavigationProperty Name="UserType" Relationship="ELibModel.FK__Reader__IdType__45F365D3" FromRole="Reader" ToRole="UserType" />
+          <NavigationProperty Name="BorrowBooks" Relationship="ELibModel.FK__BorrowBoo__IdRea__2CF2ADDF" FromRole="Reader" ToRole="BorrowBook" />
         </EntityType>
         <EntityType Name="Usert">
           <Key>
@@ -398,50 +448,47 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ELibEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Authors" EntityType="Self.Author" />
-          <EntitySet Name="Books" EntityType="Self.Book" />
-          <EntitySet Name="BookStatus" EntityType="Self.BookStatu" />
-          <EntitySet Name="BookTypes" EntityType="Self.BookType" />
-          <EntitySet Name="Readers" EntityType="Self.Reader" />
-          <EntitySet Name="Userts" EntityType="Self.Usert" />
-          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
-          <AssociationSet Name="FK__Book__IdAuthor__412EB0B6" Association="Self.FK__Book__IdAuthor__412EB0B6">
-            <End Role="Author" EntitySet="Authors" />
-            <End Role="Book" EntitySet="Books" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Book__IdType__403A8C7D" Association="Self.FK__Book__IdType__403A8C7D">
-            <End Role="BookType" EntitySet="BookTypes" />
-            <End Role="Book" EntitySet="Books" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Reader__IdType__45F365D3" Association="Self.FK__Reader__IdType__45F365D3">
-            <End Role="UserType" EntitySet="UserTypes" />
-            <End Role="Reader" EntitySet="Readers" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Usert__IdType__4AB81AF0" Association="Self.FK__Usert__IdType__4AB81AF0">
-            <End Role="UserType" EntitySet="UserTypes" />
-            <End Role="Usert" EntitySet="Userts" />
-          </AssociationSet>
-          <EntitySet Name="BorrowTickets" EntityType="ELibModel.BorrowTicket" />
-        </EntityContainer>
-        <EntityType Name="BorrowTicket">
+        <EntityType Name="BorrowBook">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Status" Type="Int32" Nullable="false" />
-          <Property Name="IdReader" Type="Int32" Nullable="false" />
           <Property Name="IdBook" Type="Int32" Nullable="false" />
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="DateStart" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DateEnd" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IdReader" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Book" Relationship="ELibModel.FK__BorrowBoo__IdBoo__2DE6D218" FromRole="BorrowBook" ToRole="Book" />
+          <NavigationProperty Name="Reader" Relationship="ELibModel.FK__BorrowBoo__IdRea__2CF2ADDF" FromRole="BorrowBook" ToRole="Reader" />
+          <Property Name="Status" Type="Int32" />
         </EntityType>
-      </Schema>
-    </edmx:ConceptualModels>
-    <!-- C-S mapping content -->
-    <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ELibModelStoreContainer" CdmEntityContainer="ELibEntities">
+        <Association Name="FK__BorrowBoo__IdBoo__2DE6D218">
+          <End Type="ELibModel.Book" Role="Book" Multiplicity="1" />
+          <End Type="ELibModel.BorrowBook" Role="BorrowBook" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BorrowBook">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BorrowBoo__IdRea__2CF2ADDF">
+          <End Type="ELibModel.Reader" Role="Reader" Multiplicity="1" />
+          <End Type="ELibModel.BorrowBook" Role="BorrowBook" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reader">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowBook">
+              <PropertyRef Name="IdReader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+		</edmx:ConceptualModels>
+		<!-- C-S mapping content -->
+		<edmx:Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ELibModelStoreContainer" CdmEntityContainer="ELibEntities">
           <EntitySetMapping Name="Authors">
             <EntityTypeMapping TypeName="ELibModel.Author">
               <MappingFragment StoreEntitySet="Author">
@@ -459,16 +506,9 @@
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Publisher" ColumnName="Publisher" />
-                <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
                 <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
                 <ScalarProperty Name="IdType" ColumnName="IdType" />
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="IdType" ColumnName="IdType" />
-                <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
-                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -535,45 +575,40 @@
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="BorrowTickets">
-            <EntityTypeMapping TypeName="ELibModel.BorrowTicket">
-              <MappingFragment StoreEntitySet="BorrowTicket">
-                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
-                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
-                <ScalarProperty Name="IdReader" ColumnName="IdReader" />
+          <EntitySetMapping Name="BorrowBooks">
+            <EntityTypeMapping TypeName="ELibModel.BorrowBook">
+              <MappingFragment StoreEntitySet="BorrowBook">
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IdReader" ColumnName="IdReader" />
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
         </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
-  </edmx:Runtime>
-  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
-      </DesignerInfoPropertySet>
-    </Options>
-    <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
-  </Designer>
+			</Mapping>
+		</edmx:Mappings>
+	</edmx:Runtime>
+	<!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+	<Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+		<Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</Connection>
+		<Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="true" />
+				<DesignerProperty Name="EnablePluralization" Value="true" />
+				<DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+				<DesignerProperty Name="UseLegacyProvider" Value="false" />
+				<DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+			</DesignerInfoPropertySet>
+		</Options>
+		<!-- Diagram content (shape and connector positions) -->
+		<Diagrams></Diagrams>
+	</Designer>
 </edmx:Edmx>
