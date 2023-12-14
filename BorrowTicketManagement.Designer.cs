@@ -39,8 +39,8 @@
             this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.GroupBox = new System.Windows.Forms.GroupBox();
+            this.btnAddBook = new System.Windows.Forms.PictureBox();
             this.btnDeleteBook = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAddBook1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,16 +58,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvBook = new System.Windows.Forms.DataGridView();
-            this.IdBorrowBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BorrowBookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtIdBookBorrow = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddBook = new System.Windows.Forms.PictureBox();
+            this.IdBorrowBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BorrowBookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).BeginInit();
             this.GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpStart
@@ -176,39 +175,39 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoSize = true;
-            this.btnDelete.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Image = global::ILib.Properties.Resources.icons8_repair_48;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(244, 250);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnDelete.Size = new System.Drawing.Size(112, 54);
-            this.btnDelete.TabIndex = 17;
-            this.btnDelete.Text = "Sửa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.AutoSize = true;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.btnEdit.Image = global::ILib.Properties.Resources.icons8_repair_48;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(127, 250);
+            this.btnEdit.Location = new System.Drawing.Point(244, 250);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnEdit.Size = new System.Drawing.Size(112, 54);
-            this.btnEdit.TabIndex = 16;
-            this.btnEdit.Text = "Xóa";
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(125, 250);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnDelete.Size = new System.Drawing.Size(112, 54);
+            this.btnDelete.TabIndex = 16;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -307,6 +306,17 @@
             this.GroupBox.TabStop = false;
             this.GroupBox.Text = "Thông tin";
             // 
+            // btnAddBook
+            // 
+            this.btnAddBook.BackgroundImage = global::ILib.Properties.Resources.icons8_plus_48;
+            this.btnAddBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddBook.Location = new System.Drawing.Point(295, 75);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(33, 31);
+            this.btnAddBook.TabIndex = 17;
+            this.btnAddBook.TabStop = false;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
             // btnDeleteBook
             // 
             this.btnDeleteBook.BackgroundImage = global::ILib.Properties.Resources.Awicons_Vista_Artistic_Add_256;
@@ -316,16 +326,6 @@
             this.btnDeleteBook.Size = new System.Drawing.Size(33, 31);
             this.btnDeleteBook.TabIndex = 16;
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
-            // 
-            // btnAddBook1
-            // 
-            this.btnAddBook1.BackgroundImage = global::ILib.Properties.Resources.icons8_plus_48;
-            this.btnAddBook1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAddBook1.Location = new System.Drawing.Point(206, 48);
-            this.btnAddBook1.Name = "btnAddBook1";
-            this.btnAddBook1.Size = new System.Drawing.Size(33, 31);
-            this.btnAddBook1.TabIndex = 15;
-            this.btnAddBook1.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // txtCode
             // 
@@ -413,20 +413,6 @@
             this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
             this.dgvBook.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBook_CellFormatting);
             // 
-            // IdBorrowBook
-            // 
-            this.IdBorrowBook.DataPropertyName = "IdBook";
-            this.IdBorrowBook.HeaderText = "Id";
-            this.IdBorrowBook.Name = "IdBorrowBook";
-            this.IdBorrowBook.Visible = false;
-            // 
-            // BorrowBookName
-            // 
-            this.BorrowBookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BorrowBookName.DataPropertyName = "IdBook";
-            this.BorrowBookName.HeaderText = "Tên sách";
-            this.BorrowBookName.Name = "BorrowBookName";
-            // 
             // txtIdBookBorrow
             // 
             this.txtIdBookBorrow.Font = new System.Drawing.Font("Arial", 14F);
@@ -446,16 +432,19 @@
             this.panel1.Size = new System.Drawing.Size(754, 338);
             this.panel1.TabIndex = 23;
             // 
-            // btnAddBook
+            // IdBorrowBook
             // 
-            this.btnAddBook.BackgroundImage = global::ILib.Properties.Resources.icons8_plus_48;
-            this.btnAddBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddBook.Location = new System.Drawing.Point(295, 75);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(33, 31);
-            this.btnAddBook.TabIndex = 17;
-            this.btnAddBook.TabStop = false;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            this.IdBorrowBook.DataPropertyName = "Id";
+            this.IdBorrowBook.HeaderText = "Id";
+            this.IdBorrowBook.Name = "IdBorrowBook";
+            this.IdBorrowBook.Visible = false;
+            // 
+            // BorrowBookName
+            // 
+            this.BorrowBookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BorrowBookName.DataPropertyName = "IdBook";
+            this.BorrowBookName.HeaderText = "Tên sách";
+            this.BorrowBookName.Name = "BorrowBookName";
             // 
             // BorrowTicketManagement
             // 
@@ -465,11 +454,10 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtIdBookBorrow);
-            this.Controls.Add(this.btnAddBook1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.GroupBox);
             this.Controls.Add(this.label1);
@@ -483,9 +471,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).EndInit();
             this.GroupBox.ResumeLayout(false);
             this.GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,8 +484,8 @@
         private System.Windows.Forms.ComboBox cbbBook;
         private System.Windows.Forms.DataGridView dgvBorrow;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label9;
@@ -513,10 +501,7 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvBook;
-        private DevExpress.XtraEditors.SimpleButton btnAddBook1;
         private DevExpress.XtraEditors.SimpleButton btnDeleteBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdBorrowBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowBookName;
         private System.Windows.Forms.TextBox txtIdBookBorrow;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
@@ -527,5 +512,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnAddBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdBorrowBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowBookName;
     }
 }

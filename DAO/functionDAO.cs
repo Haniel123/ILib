@@ -177,7 +177,21 @@ namespace DAO
             {
                 return true;
             }
-        }        
+        }
+        public bool CheckReader(int reader)
+        {
+
+            var userCheck = db.BorrowTickets.FirstOrDefault(p => p.IdReader.Equals(reader) && p.Status.Equals(1));
+            if (userCheck != null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
 
         public void ButtonControl(Control control, bool action = false)
         {

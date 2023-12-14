@@ -46,7 +46,7 @@ namespace DAO
         public bool deleteBorrow(string id, BorrowTicket item)
         {
             int.Parse(id);
-            var items = db.Userts.Find(item.Id);
+            var items = db.BorrowTickets.Find(item.Id);
             if (items != null)
             {
                 items.Status = 0;
@@ -55,6 +55,21 @@ namespace DAO
             }
             else { return false; }
         }
+
+
+        public bool deleteBorrowBook(string id, BorrowBook item)
+        {
+            int.Parse(id);
+            var items = db.BorrowBooks.Find(item.Id);
+            if (items != null)
+            {
+                items.Status = 0;
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
+
 
         public List<BorrowTicket> getBorrow()
         {

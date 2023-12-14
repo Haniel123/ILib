@@ -39,6 +39,11 @@ namespace ILib
             int idReader = int.Parse(cbbReader.SelectedValue.ToString());
             DateTime timeStart = dtpStart.Value;
             DateTime timeEnd = dtpEnd.Value;
+            if (!func.CheckReader(idReader))
+            {
+                MessageBox.Show("Tên bạn đọc đã tồn tại!!!");
+                return;
+            }
             if (func.checkEmpty(borrowCode))
             {
                 MessageBox.Show("Không chừa trống dữ liệu !!!");
@@ -71,12 +76,6 @@ namespace ILib
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-
             var borrowTicketId = txtId.Text;
             DAO.BorrowTicket user = new DAO.BorrowTicket();
             user.Id = int.Parse(borrowTicketId);
@@ -84,14 +83,42 @@ namespace ILib
             {
                 if (bus.deleteBorrowB(borrowTicketId, user))
                 {
-                    MessageBox.Show("Xoá tài khoản thành công !!!");
-                    var resultUser = bus.getBookB();
-                    dgvBook.DataSource = resultUser;
+                    MessageBox.Show("Xoá vé mượn thành công !!!");
+                    var resultUser = bus.getBorrowB();
+                    dgvBorrow.DataSource = resultUser;
                 }
                 else
                 {
                     MessageBox.Show("Xoá tài khoản thất bại !!!");
                 }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string borrowId = txtId.Text;
+
+            int reader = int.Parse(cbbReader.SelectedValue.ToString());
+            int book = int.Parse(cbbBook.SelectedValue.ToString());
+            var dateStart = dtpStart.Value;
+            var dateEnd = dtpEnd.Value;
+     
+            DAO.BorrowTicket borrowTicket = new DAO.BorrowTicket();
+            borrowTicket.IdReader = reader;
+            borrowTicket.IdBook = book;
+           
+
+            borrowTicket.DateStart = dateStart;
+            borrowTicket.DateEnd = dateEnd;
+            if (bus.deleteBorrowB(borrowId, borrowTicket))
+            {
+                MessageBox.Show("Sửa vé mượn thành công !!!");
+                var resultUser = bus.getBorrowB();
+                dgvBorrow.DataSource = resultUser;
+            }
+            else
+            {
+                MessageBox.Show("Sửa vé mượn thất bại !!!");
             }
         }
 
@@ -164,7 +191,19 @@ namespace ILib
             int row = e.RowIndex;
             if (row >= 0)
             {
-                txtIdBookBorrow.Text = dgvBook.Rows[row].Cells["IdBorrowBook"].Value.ToString();
+                if (dgvBook.CurrentRow != null)
+                {
+                    int numberOfCells = dgvBook.CurrentRow.Cells.Count;
+                    for (int i = 1; i < numberOfCells; i++)
+                    {
+                        if (dgvBook.Rows[row].Cells[i].Value == null)
+                        {
+                            MessageBox.Show("Có dữ liệu rỗng !");
+                            return;
+                        }
+                    }
+                }
+                txtIdBookBorrow.Text = dgvBook.Rows[row].Cells[0].Value.ToString();
             }
         }
 
@@ -172,6 +211,7 @@ namespace ILib
         {
             int idBook = int.Parse(cbbBook.SelectedValue.ToString());
             int idReader = int.Parse(cbbReader.SelectedValue.ToString());
+         
             if (func.checkEmpty(idBook.ToString()) || func.checkEmpty(idReader.ToString()))
             {
                 MessageBox.Show("Không chừa trống dữ liệu !!!");
@@ -209,7 +249,23 @@ namespace ILib
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
-
+            var borrowBookId = txtIdBookBorrow.Text;
+            int reader = int.Parse(cbbReader.SelectedValue.ToString());
+            DAO.BorrowBook user = new DAO.BorrowBook();
+            user.Id = int.Parse(borrowBookId);
+            if (MessageBox.Show("Bạn có chắc là muốn xoá sách này không?", "ILib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (bus.deleteBorrowBookB(borrowBookId, user))
+                {
+                    MessageBox.Show("Xoá sách thành công !!!");
+                    var resultUser = bus.getBorrowBookB(reader);
+                    dgvBook.DataSource = resultUser;
+                }
+                else
+                { 
+                    MessageBox.Show("Xoá sách thất bại !!!");
+                }
+            }
         }
     }
 }

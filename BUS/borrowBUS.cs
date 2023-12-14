@@ -32,6 +32,13 @@ namespace BUS
             return borrowDAO.deleteBorrow(id, item);
         }
 
+        public bool deleteBorrowBookB(string id, BorrowBook item)
+        {
+            return borrowDAO.deleteBorrowBook(id, item);
+        }
+
+
+
         public List<BorrowTicket> getBorrowB()
         {
             return borrowDAO.getBorrow();
