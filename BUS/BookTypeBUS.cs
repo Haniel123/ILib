@@ -30,5 +30,14 @@ namespace BUS
         {
             return BookTypeDAO.deleteBookType(id, item);
         }
+        public List<BookType> searchBUS(string name)
+        {
+            return BookTypeDAO.search(name);
+        }
+
+        public bool isNameExists(string name)
+        {
+            return BookTypeDAO.isNameExists(name);
+        }
     }
 }

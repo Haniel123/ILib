@@ -53,18 +53,6 @@ namespace DAO
             return true;
         }
 
-        public bool ValidateTextBox(System.Windows.Forms.TextBox textBox)
-        {
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                WarningMessageBox("Vui lòng không để trống !!!");
-                textBox.Focus();
-                return true;
-            }
-            return false;
-        }
-
-
         public bool ValidatePhoneNumber(string phoneNumber)
         {
 
@@ -97,7 +85,6 @@ namespace DAO
             
         
         }
-
 
         public string ConvertMD5(string input)
         {
@@ -137,6 +124,33 @@ namespace DAO
             }
         }
 
+        public string LoadAuthor(string id)
+        {
+            int id2 = int.Parse(id);
+            var position = db.Authors.FirstOrDefault(p => p.Id.Equals(id2));
+            if (position != null)
+            {
+                return position.Name.ToString();
+            }
+            else
+            {
+                return "Chưa xác định !!!";
+            }
+        }
+
+        public string LoadType(string id)
+        {
+            int id2 = int.Parse(id);
+            var position = db.BookTypes.FirstOrDefault(p => p.id.Equals(id2));
+            if (position != null)
+            {
+                return position.Name.ToString();
+            }
+            else
+            {
+                return "Chưa xác định !!!";
+            }
+        }
 
         public string LoadBookName(string id)
         {
@@ -151,7 +165,6 @@ namespace DAO
                 return "Chưa xác định !!!";
             }
         }
-     
 
         public string LoadStatus(string status)
         {
@@ -163,7 +176,6 @@ namespace DAO
                 default: return "Hoạt động";
             }
         }
-
 
         public bool CheckUserName(string username)
         {
@@ -178,6 +190,7 @@ namespace DAO
                 return true;
             }
         }
+
         public bool CheckReader(int reader)
         {
 
@@ -191,7 +204,6 @@ namespace DAO
                 return true;
             }
         }
-
 
         public void ButtonControl(Control control, bool action = false)
         {
@@ -212,6 +224,40 @@ namespace DAO
                 {
                     txt.ReadOnly = action;
                     Debug.WriteLine($"Setting ReadOnly to: {action}");
+                }
+            }
+        }
+
+        public void ClearAllControls(Control container)
+        {
+            foreach (Control control in container.Controls)
+            {
+                if (control.HasChildren)
+                {
+                    ClearAllControls(control); 
+                }
+                if (control is TextBox txt)
+                {
+                    txt.Clear();
+                }
+                else if (control is ComboBox cbb)
+                {
+                    cbb.SelectedIndex = -1;
+                }
+                else if (control is NumericUpDown num)
+                {
+                    num.Value = num.Minimum;
+                }
+                else if (control is DateTimePicker dtpk)
+                {
+                    if (dtpk.MinDate <= DateTime.Now && DateTime.Now <= dtpk.MaxDate)
+                    {
+                        dtpk.Value = DateTime.Now;
+                    }
+                    else
+                    {
+                        dtpk.Value = dtpk.MinDate;
+                    }
                 }
             }
         }

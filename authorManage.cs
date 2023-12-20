@@ -25,15 +25,29 @@ namespace ILib
 
         private void authorManage_Load(object sender, EventArgs e)
         {
+            func.TextBoxControl(this, true);
             var result = bus.getAuthorB();
             dgvAuthor.DataSource = result;
         }
 
-        private void btnAddAuthor_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            string authorName = txtName.Text;
+            string name;
+            if (func.IsControlValid(txtName, "Tác giả"))
+            {
+                name = txtName.Text;
+                if (bus.isNameExists(name))
+                {
+                    func.WarningMessageBox("Tác giả đã tồn tại. Vui lòng chọn tác giả khác.");
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
             DAO.Author author = new DAO.Author();
-            author.Name = authorName;
+            author.Name = name;
             author.Status = 1;
           
             var result = bus.insertAuthorB(author);
@@ -43,7 +57,7 @@ namespace ILib
 
         }
 
-        private void btnEditAuthor_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             string authorName = txtName.Text;
             var authorId = txtId.Text;
@@ -58,34 +72,78 @@ namespace ILib
             author.Id = int.Parse(authorId);
             if (bus.updateAuthorB(authorId, author))
             {
-                MessageBox.Show("Sửa tác giả thành công !!!");
+                func.NotifyMessageBox("Sửa thành công !!!");
                 var resultUser = bus.getAuthorB();
                 dgvAuthor.DataSource = resultUser;
+                func.TextBoxControl(this, true);
             }
             else
             {
-                MessageBox.Show("Sửa tác giả thất bại !!!");
+                func.NotifyMessageBox("Sửa thất bại  !!!");
             }
         }
 
-        private void btnDeleteAuthor_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-
-
-            var userId = txtId.Text;
+            var id = txtId.Text;
             DAO.Author author = new DAO.Author();
-            author.Id = int.Parse(userId);
-            if (bus.deleteAuthorB(userId, author))
+            author.Id = int.Parse(id);
+            if (func.ConfirmMessageBox("Bạn có chắc chắn muốn xóa dữ liệu này?"))
             {
-                MessageBox.Show("Xoá tác giả thành công !!!");
-                var resultUser = bus.getAuthorB();
-                dgvAuthor.DataSource = resultUser;
+                if (bus.deleteAuthorB(id, author))
+                {
+                    func.NotifyMessageBox("Xoá thành công !!!");
+                    var result = bus.getAuthorB();
+                    dgvAuthor.DataSource = result;
+                    txtName.Clear();
+                    txtId.Clear();
+                    func.ButtonControl(this);
+                    func.TextBoxControl(this, true);
+                }
+                else
+                {
+                    func.NotifyMessageBox("Xoá thất bại !!!");
+                }
+            }
+
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name;
+            if (func.IsControlValid(txtName, "Vui lòng nhập vào 'Tác giả' để tìm kiếm."))
+            {
+                name = txtName.Text;
             }
             else
             {
-                MessageBox.Show("Xoá tác giả thất bại !!!");
+                return;
             }
 
+
+            var result = bus.searchBUS(name);
+
+            if (result != null && result.Count > 0)
+            {
+                dgvAuthor.DataSource = result;
+                func.NotifyMessageBox("Tìm kiếm thành công !!!");
+            }
+            else
+            {
+                dgvAuthor.DataSource = null;
+                func.NotifyMessageBox("Không tìm thấy kết quả !!!");
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            func.ClearAllControls(this);
+            dgvAuthor.DataSource = null;
+            dgvAuthor.DataSource = bus.getAuthorB();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void dgvAuthor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -106,13 +164,11 @@ namespace ILib
                         }
                     }
                 }
-       
-            txtId.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
-            txtName.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
-            txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
+                func.ButtonControl(this, true);
+                txtId.Text = dataGridView.Rows[row].Cells[0].Value.ToString();
+                txtName.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
+                txtStatus.Text = func.LoadStatus(dataGridView.Rows[row].Cells[2].Value.ToString());
             }
         }
-
-      
     }
 }

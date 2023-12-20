@@ -58,5 +58,18 @@ namespace DAO
 
             return false;
         }
+        public List<BookType> search(string name)
+        {
+            var result = from type in db.BookTypes
+                         where (string.IsNullOrEmpty(name) || type.Name.Contains(name))  && type.Status == 1
+                         orderby type.id descending
+                         select type;
+
+            return result.ToList();
+        }
+        public bool isNameExists(string name)
+        {
+            return db.BookTypes.Any(b => b.Name == name && b.Status == 1);
+        }
     }
 }

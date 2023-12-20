@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ILib
 {
@@ -33,14 +34,14 @@ namespace ILib
 
             if (!func.ValidatePhoneNumber(userPhone))
             {
-                MessageBox.Show("Số điện thoại không hợp lệ !!!");
+                func.WarningMessageBox("Số điện thoại không hợp lệ !!!");
                 return;
             }
 
      
             if (userFullName == "" || userAddress == "")
             {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
+                func.WarningMessageBox("Không chừa trống dữ liệu !!!");
                 return;
             }
             DAO.Reader reader = new DAO.Reader();
@@ -53,7 +54,7 @@ namespace ILib
             bus.insertReaderB(reader);
             var resultUser = bus.getReaderB();
             dgvReader.DataSource = resultUser;
-            MessageBox.Show("Thêm bạn đọc thành công");
+            func.NotifyMessageBox("Thêm bạn đọc thành công !!!");
             foreach (Control c in this.Controls)
             {
                 if (c is TextBox)
@@ -69,13 +70,13 @@ namespace ILib
             var userAddress = txtAddressUser.Text;
             if (func.checkEmpty(userFullName) || func.checkEmpty(userAddress))
             {
-                MessageBox.Show("Không chừa trống dữ liệu !!!");
+                func.WarningMessageBox("Không chừa trống dữ liệu !!!");
                 return;
             }
 
             if (!func.ValidatePhoneNumber(userPhone))
             {
-                MessageBox.Show("Số điện thoại không hợp lệ !!!");
+                func.WarningMessageBox("Số điện thoại không hợp lệ !!!");
                 return;
             }
 
@@ -88,13 +89,13 @@ namespace ILib
             user.Status = 1;
             if (bus.updateReaderB(userId, user))
             {
-                MessageBox.Show("Sửa tài khoản thành công !!!");
+                func.NotifyMessageBox("Sửa tài khoản thành công !!!");
                 var resultUser = bus.getReaderB();
                 dgvReader.DataSource = resultUser;
             }
             else
             {
-                MessageBox.Show("Sửa tài khoản thành công !!!");
+                func.NotifyMessageBox("Sửa tài khoản thành công !!!");
             }
         }
 
@@ -116,9 +117,40 @@ namespace ILib
                 {
                     MessageBox.Show("Xoá bạn đọc thất bại !!!");
                 }
+            }         
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name;
+            if (func.IsControlValid(txtFullname, "Vui lòng nhập vào 'Tên' để tìm kiếm,"))
+            {
+                name = txtFullname.Text;
+            }
+            else
+            {
+                return;
             }
 
-         
+
+            var result = bus.searchBUS(name);
+
+            if (result != null && result.Count > 0)
+            {
+                dgvReader.DataSource = result;
+                func.NotifyMessageBox("Tìm kiếm thành công !!!");
+            }
+            else
+            {
+                dgvReader.DataSource = null;
+                func.NotifyMessageBox("Không tìm thấy kết quả !!!");
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            func.ClearAllControls(this);
+            dgvReader.DataSource = null;
+            dgvReader.DataSource = bus.getReaderB();
         }
 
         private void dgvReader_CellClick(object sender, DataGridViewCellEventArgs e)

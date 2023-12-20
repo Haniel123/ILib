@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DAO.functionDAO;
+using static DevExpress.Utils.Filtering.ExcelFilterOptions;
 
 namespace ILib
 {
@@ -33,12 +34,24 @@ namespace ILib
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
+            string name;
+            if (func.IsControlValid(txtName, "Tên loại"))
+            {
+                name = txtName.Text;
+                if (bus.isNameExists(name))
+                {
+                    func.WarningMessageBox("Tên loại đã tồn tại. Vui lòng chọn tên loại khác.");
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
             DAO.BookType booktype = new DAO.BookType();
             booktype.Name = name;
             booktype.Status = 1;
-            if (func.ValidateTextBox(txtName))
-                return;
+            
             var result = bus.insertBookTypeBUS(booktype);
             txtName.Text = result.ToString();
             var result2 = bus.getBookTypesBUS();
@@ -48,13 +61,19 @@ namespace ILib
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
+            string name;
+            if (func.IsControlValid(txtName, "Loại sách"))
+            {
+                name = txtName.Text;
+            }
+            else
+            {
+                return;
+            }
             var id = txtID.Text;
             StatusItem selectedStatus = (StatusItem)cbbStatus.SelectedItem;
             int status = selectedStatus.Id;
 
-            if (func.ValidateTextBox(txtName))
-                return;
             DAO.BookType booktype = new DAO.BookType();
             booktype.Name = name;
             booktype.id = int.Parse(id);
@@ -97,6 +116,51 @@ namespace ILib
 
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name;
+            if (func.IsControlValid(txtName, "Vui lòng nhập vào 'Tên loại' để tìm kiếm."))
+            {
+                name = txtName.Text;
+            }
+            else
+            {
+                return;
+            }
+
+
+            var result = bus.searchBUS(name);
+
+            if (result != null && result.Count > 0)
+            {
+                dgvBookType.DataSource = result;
+                func.NotifyMessageBox("Tìm kiếm thành công !!!");
+            }
+            else
+            {
+                dgvBookType.DataSource = null;
+                func.NotifyMessageBox("Không tìm thấy kết quả !!!");
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            func.ClearAllControls(this);
+            dgvBookType.DataSource = null;
+            dgvBookType.DataSource = bus.getBookTypesBUS();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cbbStatus_Click(object sender, EventArgs e)
+        {
+            // Load status
+            functionDAO.LoadStatuses(cbbStatus, 1);
+        }
+
         private void dgvBookType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
@@ -116,16 +180,6 @@ namespace ILib
                 func.ButtonControl(this, true);
                 func.TextBoxControl(GroupBox);
             }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
+        }      
     }
 }

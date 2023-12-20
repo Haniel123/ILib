@@ -37,6 +37,15 @@ namespace BUS
             
             return GetAuthorNameById(authorId);
         }
+        public List<Author> searchBUS(string name)
+        {
+            return AuthorDAO.search(name);
+        }
+
+        public bool isNameExists(string name)
+        {
+            return AuthorDAO.isNameExists(name);
+        }
 
     }
 }
