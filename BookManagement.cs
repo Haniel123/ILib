@@ -39,7 +39,10 @@ namespace ILib
             dgvBook.DataSource = books;
 
             dtpkPublished.Format = DateTimePickerFormat.Custom;
-            dtpkPublished.CustomFormat = "MM-yyyy";        
+            dtpkPublished.CustomFormat = "MM-yyyy";
+            dtpkPublished.ShowUpDown = true;
+            dtpkPublished.MinDate = new DateTime(1970, 1, 1);
+            dtpkPublished.MaxDate = DateTime.Today;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,7 +55,13 @@ namespace ILib
             if (func.IsControlValid(txtName, "Tên sách"))
             {
                 name = txtName.Text;
-            } else
+                if (BookBUS.isNameExists(name))
+                {
+                    func.WarningMessageBox("Tên sách đã tồn tại. Vui lòng chọn tên sách khác.");
+                    return;
+                }
+            } 
+            else
             {
                 return;
             }
@@ -111,33 +120,6 @@ namespace ILib
             else
             {
                 func.NotifyMessageBox("Thêm thất bại  !!!");
-            }
-        }
-
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            var id = int.Parse(txtID.Text);
-            DAO.Book book = new DAO.Book();
-            book.id = id;
-            if (func.ConfirmMessageBox("Bạn có chắc chắn muốn xóa dữ liệu này?"))
-            {
-                if (BookBUS.deleteBookBUS(id, book))
-                {
-                    func.NotifyMessageBox("Xoá thành công !!!");
-                    var result = BookBUS.getBookBUS();
-                    dgvBook.DataSource = result;
-                    txtName.Clear();
-                    txtID.Clear();
-                    numPrice.Value = 0;
-                    numQuantity.Value = 0;
-                    func.ButtonControl(this);
-                    func.TextBoxControl(this, true);
-                }
-                else
-                {
-                    func.NotifyMessageBox("Xoá thất bại !!!");
-                }
             }
         }
 
@@ -214,6 +196,78 @@ namespace ILib
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(txtID.Text);
+            DAO.Book book = new DAO.Book();
+            book.id = id;
+            if (func.ConfirmMessageBox("Bạn có chắc chắn muốn xóa dữ liệu này?"))
+            {
+                if (BookBUS.deleteBookBUS(id, book))
+                {
+                    func.NotifyMessageBox("Xoá thành công !!!");
+                    var result = BookBUS.getBookBUS();
+                    dgvBook.DataSource = result;
+                    txtName.Clear();
+                    txtID.Clear();
+                    numPrice.Value = 0;
+                    numQuantity.Value = 0;
+                    func.ButtonControl(this);
+                    func.TextBoxControl(this, true);
+                }
+                else
+                {
+                    func.NotifyMessageBox("Xoá thất bại !!!");
+                }
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name = "";
+            int authorId=0;
+            int typeId=0;
+
+            if (string.IsNullOrWhiteSpace(txtName.Text) && cbbAuthor.SelectedValue == null && cbbType.SelectedValue == null)
+            {
+                func.WarningMessageBox("Vui lòng nhập ít nhất một điều kiện tìm kiếm ('Tên sách' hoặc 'Tác giả' hoặc 'Loại')");         
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                name = txtName.Text;
+            }
+            if (cbbAuthor.SelectedValue != null)
+            {
+                authorId = (int)cbbAuthor.SelectedValue;
+            }
+            if (cbbType.SelectedValue != null)
+            {
+                typeId = (int)cbbType.SelectedValue;
+            }
+
+
+            var result = BookBUS.searchBUS(name, authorId, typeId);
+
+            if (result != null && result.Count > 0)
+            {
+                dgvBook.DataSource = result;
+                func.NotifyMessageBox("Tìm kiếm thành công !!!");
+            }
+            else
+            {
+                dgvBook.DataSource = null;
+                func.NotifyMessageBox("Không tìm thấy kết quả !!!");                
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            func.ClearAllControls(this);
+            dgvBook.DataSource = null;
+            dgvBook.DataSource = BookBUS.getBookBUS();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
@@ -286,5 +340,21 @@ namespace ILib
                 func.TextBoxControl(grpBox);
             }
         }
+
+        private void dgvBook_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && e.Value != null)
+            {
+                int id = Convert.ToInt32(e.Value);
+                string name = func.LoadAuthor(id.ToString());
+                e.Value = name;
+            }
+            if (e.ColumnIndex == 3 && e.Value != null)
+            {
+                int id = Convert.ToInt32(e.Value);
+                string name = func.LoadType(id.ToString());
+                e.Value = name;
+            }
+        }       
     }
 }

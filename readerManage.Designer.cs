@@ -32,23 +32,25 @@
             this.txtAddressUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtPhoneUser = new System.Windows.Forms.TextBox();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReader = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +104,18 @@
             this.txtStatus.Size = new System.Drawing.Size(245, 29);
             this.txtStatus.TabIndex = 10;
             this.txtStatus.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(385, 81);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 21);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Trạng thái";
+            this.label9.Visible = false;
             // 
             // txtPhoneUser
             // 
@@ -172,6 +186,40 @@
             this.dgvReader.Size = new System.Drawing.Size(754, 353);
             this.dgvReader.TabIndex = 16;
             this.dgvReader.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReader_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // Fullname
+            // 
+            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fullname.DataPropertyName = "Fullname";
+            this.Fullname.HeaderText = "Tên";
+            this.Fullname.Name = "Fullname";
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Điện thoại";
+            this.Phone.Name = "Phone";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.Name = "Status";
+            this.Status.Visible = false;
             // 
             // button5
             // 
@@ -247,51 +295,37 @@
             this.txtId.Size = new System.Drawing.Size(245, 29);
             this.txtId.TabIndex = 11;
             // 
-            // label9
+            // btnRefresh
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(385, 81);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 21);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Trạng thái";
-            this.label9.Visible = false;
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(519, 204);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRefresh.Size = new System.Drawing.Size(108, 54);
+            this.btnRefresh.TabIndex = 104;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // id
+            // btnSearch
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Mã";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // Fullname
-            // 
-            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fullname.DataPropertyName = "Fullname";
-            this.Fullname.HeaderText = "Tên";
-            this.Fullname.Name = "Fullname";
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Điện thoại";
-            this.Phone.Name = "Phone";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
-            this.Status.Visible = false;
+            this.btnSearch.AutoSize = true;
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Image = global::ILib.Properties.Resources.icons8_search_48;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(365, 204);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnSearch.Size = new System.Drawing.Size(150, 54);
+            this.btnSearch.TabIndex = 103;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // readerManage
             // 
@@ -299,6 +333,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 650);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.GroupBox);
             this.Controls.Add(this.label1);
@@ -343,5 +379,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

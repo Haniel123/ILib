@@ -37,13 +37,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAuthor = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnEditAuthor = new System.Windows.Forms.Button();
-            this.btnDeleteAuthor = new System.Windows.Forms.Button();
-            this.btnAddAuthor = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +76,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(245, 29);
             this.txtStatus.TabIndex = 8;
-            this.txtStatus.Visible = false;
             // 
             // label9
             // 
@@ -86,17 +87,16 @@
             this.label9.Size = new System.Drawing.Size(96, 21);
             this.label9.TabIndex = 7;
             this.label9.Text = "Trạng thái";
-            this.label9.Visible = false;
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Arial", 14F);
             this.txtId.Location = new System.Drawing.Point(86, 76);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(245, 29);
             this.txtId.TabIndex = 6;
-            this.txtId.Visible = false;
             // 
             // txtName
             // 
@@ -128,7 +128,6 @@
             this.label4.Size = new System.Drawing.Size(35, 21);
             this.label4.TabIndex = 5;
             this.label4.Text = "Mã";
-            this.label4.Visible = false;
             // 
             // label1
             // 
@@ -150,85 +149,21 @@
             this.name,
             this.status});
             this.dgvAuthor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvAuthor.Location = new System.Drawing.Point(0, 420);
+            this.dgvAuthor.Location = new System.Drawing.Point(0, 286);
             this.dgvAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAuthor.Name = "dgvAuthor";
             this.dgvAuthor.RowHeadersWidth = 51;
-            this.dgvAuthor.Size = new System.Drawing.Size(754, 230);
-            this.dgvAuthor.TabIndex = 107;
+            this.dgvAuthor.Size = new System.Drawing.Size(754, 364);
+            this.dgvAuthor.TabIndex = 15;
             this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
-            // 
-            // button5
-            // 
-            this.button5.AutoSize = true;
-            this.button5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.button5.Image = global::ILib.Properties.Resources.icons8_cancel_48;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(631, 204);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 54);
-            this.button5.TabIndex = 106;
-            this.button5.Text = "Đóng";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // btnEditAuthor
-            // 
-            this.btnEditAuthor.AutoSize = true;
-            this.btnEditAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.btnEditAuthor.Image = global::ILib.Properties.Resources.icons8_repair_48;
-            this.btnEditAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditAuthor.Location = new System.Drawing.Point(244, 204);
-            this.btnEditAuthor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditAuthor.Name = "btnEditAuthor";
-            this.btnEditAuthor.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnEditAuthor.Size = new System.Drawing.Size(112, 54);
-            this.btnEditAuthor.TabIndex = 104;
-            this.btnEditAuthor.Text = "Sửa";
-            this.btnEditAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditAuthor.UseVisualStyleBackColor = true;
-            this.btnEditAuthor.Click += new System.EventHandler(this.btnEditAuthor_Click);
-            // 
-            // btnDeleteAuthor
-            // 
-            this.btnDeleteAuthor.AutoSize = true;
-            this.btnDeleteAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.btnDeleteAuthor.Image = global::ILib.Properties.Resources.icons8_delete_48;
-            this.btnDeleteAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAuthor.Location = new System.Drawing.Point(127, 204);
-            this.btnDeleteAuthor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteAuthor.Name = "btnDeleteAuthor";
-            this.btnDeleteAuthor.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnDeleteAuthor.Size = new System.Drawing.Size(112, 54);
-            this.btnDeleteAuthor.TabIndex = 108;
-            this.btnDeleteAuthor.Text = "Xóa";
-            this.btnDeleteAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteAuthor.UseVisualStyleBackColor = true;
-            this.btnDeleteAuthor.Click += new System.EventHandler(this.btnDeleteAuthor_Click);
-            // 
-            // btnAddAuthor
-            // 
-            this.btnAddAuthor.AutoSize = true;
-            this.btnAddAuthor.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.btnAddAuthor.Image = global::ILib.Properties.Resources.icons8_plus_48;
-            this.btnAddAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAuthor.Location = new System.Drawing.Point(9, 204);
-            this.btnAddAuthor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddAuthor.Name = "btnAddAuthor";
-            this.btnAddAuthor.Size = new System.Drawing.Size(112, 54);
-            this.btnAddAuthor.TabIndex = 103;
-            this.btnAddAuthor.Text = "Thêm";
-            this.btnAddAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddAuthor.UseVisualStyleBackColor = true;
-            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
             // id
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "Mã";
             this.id.Name = "id";
+            this.id.Width = 47;
             // 
             // name
             // 
@@ -236,6 +171,7 @@
             this.name.DataPropertyName = "name";
             this.name.HeaderText = "Tác giả";
             this.name.Name = "name";
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // status
             // 
@@ -245,19 +181,121 @@
             this.status.Name = "status";
             this.status.Visible = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.AutoSize = true;
+            this.btnExit.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnExit.Image = global::ILib.Properties.Resources.icons8_cancel_48;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(631, 204);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(112, 54);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "Đóng";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AutoSize = true;
+            this.btnEdit.Enabled = false;
+            this.btnEdit.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.Image = global::ILib.Properties.Resources.icons8_repair_48;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(244, 204);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnEdit.Size = new System.Drawing.Size(112, 54);
+            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Image = global::ILib.Properties.Resources.icons8_delete_48;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(127, 204);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnDelete.Size = new System.Drawing.Size(112, 54);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Image = global::ILib.Properties.Resources.icons8_plus_48;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(9, 204);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(112, 54);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(519, 204);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRefresh.Size = new System.Drawing.Size(108, 54);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoSize = true;
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Image = global::ILib.Properties.Resources.icons8_search_48;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(365, 204);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnSearch.Size = new System.Drawing.Size(150, 54);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // authorManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 650);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.GroupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAuthor);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.btnEditAuthor);
-            this.Controls.Add(this.btnDeleteAuthor);
-            this.Controls.Add(this.btnAddAuthor);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(6, 8);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -279,10 +317,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAuthor;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnEditAuthor;
-        private System.Windows.Forms.Button btnDeleteAuthor;
-        private System.Windows.Forms.Button btnAddAuthor;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtId;
@@ -290,5 +328,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

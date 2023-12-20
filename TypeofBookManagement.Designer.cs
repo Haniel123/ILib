@@ -48,6 +48,8 @@
             this.eLibDataSet2 = new ILib.ELibDataSet2();
             this.bookTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookTypeTableAdapter = new ILib.ELibDataSet2TableAdapters.BookTypeTableAdapter();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet2)).BeginInit();
@@ -92,6 +94,7 @@
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Size = new System.Drawing.Size(245, 30);
             this.cbbStatus.TabIndex = 8;
+            this.cbbStatus.Click += new System.EventHandler(this.cbbStatus_Click);
             // 
             // label9
             // 
@@ -159,7 +162,7 @@
             this.dgvBookType.Name = "dgvBookType";
             this.dgvBookType.RowHeadersWidth = 51;
             this.dgvBookType.Size = new System.Drawing.Size(754, 353);
-            this.dgvBookType.TabIndex = 14;
+            this.dgvBookType.TabIndex = 15;
             this.dgvBookType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookType_CellClick);
             // 
             // Column1
@@ -197,7 +200,7 @@
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(112, 54);
-            this.btnExit.TabIndex = 13;
+            this.btnExit.TabIndex = 14;
             this.btnExit.Text = "Đóng";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.UseVisualStyleBackColor = true;
@@ -233,7 +236,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.btnDelete.Size = new System.Drawing.Size(112, 54);
-            this.btnDelete.TabIndex = 100;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -269,12 +272,46 @@
             // 
             this.bookTypeTableAdapter.ClearBeforeFill = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(514, 204);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRefresh.Size = new System.Drawing.Size(108, 54);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoSize = true;
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Image = global::ILib.Properties.Resources.icons8_search_48;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(360, 204);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnSearch.Size = new System.Drawing.Size(150, 54);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // TypeofBookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 650);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.GroupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBookType);
@@ -319,5 +356,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ComboBox cbbStatus;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

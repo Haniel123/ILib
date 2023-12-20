@@ -60,6 +60,19 @@ namespace DAO
             }
             else { return false; }
         }
+        public List<Author> search(string name)
+        {
+            var result = from author in db.Authors
+                         where (string.IsNullOrEmpty(name) || author.Name.Contains(name)) && author.Status == 1
+                         orderby author.Id descending
+                         select author;
+
+            return result.ToList();
+        }
+        public bool isNameExists(string name)
+        {
+            return db.Authors.Any(b => b.Name == name && b.Status == 1);
+        }
 
     }
 

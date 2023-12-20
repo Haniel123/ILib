@@ -30,8 +30,15 @@ namespace BUS
         {
             return readerDAO.getReader();
         }
+        public List<Reader> searchBUS(string name)
+        {
+            return readerDAO.search(name);
+        }
 
-
+        public bool isNameExists(string name)
+        {
+            return readerDAO.isNameExists(name);
+        }
 
     }
 }
