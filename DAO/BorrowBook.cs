@@ -18,5 +18,8 @@ namespace DAO
         public int IdBook { get; set; }
         public int IdReader { get; set; }
         public Nullable<int> Status { get; set; }
+    
+        public virtual Book Book { get; set; }
+        public virtual Reader Reader { get; set; }
     }
 }

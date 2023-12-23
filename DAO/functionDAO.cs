@@ -177,6 +177,38 @@ namespace DAO
             }
         }
 
+        public void LoadStatusBorrow()
+        {
+            DateTime currentDate = DateTime.Now;
+
+            // Lấy danh sách các bản ghi có enddate lớn hơn hoặc bằng ngày hiện tại và status khác 2
+            var recordsToUpdate = db.BorrowTickets.Where(e => e.DateEnd <= currentDate && e.Status != 2 && e.Status != 0).ToList();
+
+            // Cập nhật trạng thái (status) của các bản ghi
+            foreach (var record in recordsToUpdate)
+            {
+                record.Status = 2;
+            }
+
+            // Lưu thay đổi vào cơ sở dữ liệu
+            db.SaveChanges(); ;
+
+        }
+
+
+
+        public string LoadStatusBorrow(string status)
+        {
+            int status2 = int.Parse(status);
+            switch (status2)
+            {
+                case 1: return "Hoạt động";
+                case 0: return "Đã xoá";
+                case 2: return "Trễ hẹn";
+                default: return "Hoạt động";
+            }
+        }
+
         public bool CheckUserName(string username)
         {
 

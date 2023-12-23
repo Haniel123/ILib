@@ -145,7 +145,7 @@ namespace ILib
                 txtCode.Text = dataGridView.Rows[row].Cells[1].Value.ToString();
                 cbbReader.Text = dataGridView.Rows[row].Cells[2].Value.ToString();
                 var listBookReader = bus.getBorrowBookB(int.Parse(dataGridView.Rows[row].Cells[2].Value.ToString()));
-
+                txtStatus.Text = func.LoadStatusBorrow(dataGridView.Rows[row].Cells[6].Value.ToString());
                 dgvBook.DataSource = listBookReader;
                 dgvBook.Refresh();
 
@@ -171,7 +171,7 @@ namespace ILib
         private void BorrowTicketManagement_Load(object sender, EventArgs e)
         {
 
-
+            func.LoadStatusBorrow();
             var resultBorrow = bus.getBorrowB();
             dgvBorrow.DataSource = resultBorrow;
 
@@ -245,6 +245,12 @@ namespace ILib
                 string name = func.LoadReader(id.ToString());
                 e.Value = name;
             }
+            if (e.ColumnIndex == 6 && e.Value != null)
+            {
+                int id = Convert.ToInt32(e.Value);
+                string name = func.LoadStatusBorrow(id.ToString());
+                e.Value = name;
+            }
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
@@ -266,6 +272,21 @@ namespace ILib
                     MessageBox.Show("Xoá sách thất bại !!!");
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvBook_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvBorrow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

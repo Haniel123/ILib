@@ -31,13 +31,6 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.cbbBook = new System.Windows.Forms.ComboBox();
             this.dgvBorrow = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdReader = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -49,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.GroupBox = new System.Windows.Forms.GroupBox();
             this.btnAddBook = new System.Windows.Forms.PictureBox();
-            this.btnDeleteBook = new DevExpress.XtraEditors.SimpleButton();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,15 +50,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvBook = new System.Windows.Forms.DataGridView();
-            this.txtIdBookBorrow = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.IdBorrowBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BorrowBookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIdBookBorrow = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdReader = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).BeginInit();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpStart
@@ -108,57 +109,8 @@
             this.dgvBorrow.Size = new System.Drawing.Size(493, 338);
             this.dgvBorrow.TabIndex = 20;
             this.dgvBorrow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBorrow_CellClick);
+            this.dgvBorrow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBorrow_CellContentClick);
             this.dgvBorrow.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBorrow_CellFormatting);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // code
-            // 
-            this.code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.code.DataPropertyName = "code";
-            this.code.HeaderText = "Mã vé";
-            this.code.Name = "code";
-            // 
-            // IdReader
-            // 
-            this.IdReader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdReader.DataPropertyName = "IdReader";
-            this.IdReader.HeaderText = "Độc giả";
-            this.IdReader.Name = "IdReader";
-            // 
-            // IdBook
-            // 
-            this.IdBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IdBook.DataPropertyName = "IdBook";
-            this.IdBook.HeaderText = "Sách";
-            this.IdBook.Name = "IdBook";
-            this.IdBook.Visible = false;
-            // 
-            // DateStart
-            // 
-            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateStart.DataPropertyName = "DateStart";
-            this.DateStart.HeaderText = "Ngày mượn";
-            this.DateStart.Name = "DateStart";
-            // 
-            // DateEnd
-            // 
-            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateEnd.DataPropertyName = "DateEnd";
-            this.DateEnd.HeaderText = "Ngày trả";
-            this.DateEnd.Name = "DateEnd";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
-            this.Status.Visible = false;
             // 
             // button5
             // 
@@ -204,7 +156,7 @@
             this.btnDelete.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.btnDelete.Size = new System.Drawing.Size(112, 54);
             this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Text = " ";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -231,9 +183,9 @@
             this.txtStatus.Location = new System.Drawing.Point(484, 75);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(245, 29);
             this.txtStatus.TabIndex = 10;
-            this.txtStatus.Visible = false;
             // 
             // label9
             // 
@@ -245,7 +197,6 @@
             this.label9.Size = new System.Drawing.Size(96, 21);
             this.label9.TabIndex = 9;
             this.label9.Text = "Trạng thái";
-            this.label9.Visible = false;
             // 
             // label6
             // 
@@ -282,8 +233,8 @@
             // 
             // GroupBox
             // 
+            this.GroupBox.Controls.Add(this.pictureBox1);
             this.GroupBox.Controls.Add(this.btnAddBook);
-            this.GroupBox.Controls.Add(this.btnDeleteBook);
             this.GroupBox.Controls.Add(this.txtCode);
             this.GroupBox.Controls.Add(this.dtpEnd);
             this.GroupBox.Controls.Add(this.label3);
@@ -316,16 +267,6 @@
             this.btnAddBook.TabIndex = 17;
             this.btnAddBook.TabStop = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
-            // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.BackgroundImage = global::ILib.Properties.Resources.Awicons_Vista_Artistic_Add_256;
-            this.btnDeleteBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteBook.Location = new System.Drawing.Point(334, 75);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(33, 31);
-            this.btnDeleteBook.TabIndex = 16;
-            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // txtCode
             // 
@@ -389,6 +330,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản Lý Vé Mượn";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtId
             // 
@@ -411,7 +353,22 @@
             this.dgvBook.Size = new System.Drawing.Size(256, 338);
             this.dgvBook.TabIndex = 21;
             this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
+            this.dgvBook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellContentClick);
             this.dgvBook.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBook_CellFormatting);
+            // 
+            // IdBorrowBook
+            // 
+            this.IdBorrowBook.DataPropertyName = "Id";
+            this.IdBorrowBook.HeaderText = "Id";
+            this.IdBorrowBook.Name = "IdBorrowBook";
+            this.IdBorrowBook.Visible = false;
+            // 
+            // BorrowBookName
+            // 
+            this.BorrowBookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BorrowBookName.DataPropertyName = "IdBook";
+            this.BorrowBookName.HeaderText = "Tên sách";
+            this.BorrowBookName.Name = "BorrowBookName";
             // 
             // txtIdBookBorrow
             // 
@@ -432,19 +389,65 @@
             this.panel1.Size = new System.Drawing.Size(754, 338);
             this.panel1.TabIndex = 23;
             // 
-            // IdBorrowBook
+            // pictureBox1
             // 
-            this.IdBorrowBook.DataPropertyName = "Id";
-            this.IdBorrowBook.HeaderText = "Id";
-            this.IdBorrowBook.Name = "IdBorrowBook";
-            this.IdBorrowBook.Visible = false;
+            this.pictureBox1.BackgroundImage = global::ILib.Properties.Resources.icons8_delete_48;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(334, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
-            // BorrowBookName
+            // Id
             // 
-            this.BorrowBookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BorrowBookName.DataPropertyName = "IdBook";
-            this.BorrowBookName.HeaderText = "Tên sách";
-            this.BorrowBookName.Name = "BorrowBookName";
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // code
+            // 
+            this.code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.code.DataPropertyName = "code";
+            this.code.HeaderText = "Mã vé";
+            this.code.Name = "code";
+            // 
+            // IdReader
+            // 
+            this.IdReader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdReader.DataPropertyName = "IdReader";
+            this.IdReader.HeaderText = "Độc giả";
+            this.IdReader.Name = "IdReader";
+            // 
+            // IdBook
+            // 
+            this.IdBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdBook.DataPropertyName = "IdBook";
+            this.IdBook.HeaderText = "Sách";
+            this.IdBook.Name = "IdBook";
+            this.IdBook.Visible = false;
+            // 
+            // DateStart
+            // 
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateStart.DataPropertyName = "DateStart";
+            this.DateStart.HeaderText = "Ngày mượn";
+            this.DateStart.Name = "DateStart";
+            // 
+            // DateEnd
+            // 
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateEnd.DataPropertyName = "DateEnd";
+            this.DateEnd.HeaderText = "Ngày trả";
+            this.DateEnd.Name = "DateEnd";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.Name = "Status";
             // 
             // BorrowTicketManagement
             // 
@@ -474,6 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAddBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,8 +505,12 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvBook;
-        private DevExpress.XtraEditors.SimpleButton btnDeleteBook;
         private System.Windows.Forms.TextBox txtIdBookBorrow;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox btnAddBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdBorrowBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowBookName;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdReader;
@@ -510,9 +518,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DateStart;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnAddBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdBorrowBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowBookName;
     }
 }

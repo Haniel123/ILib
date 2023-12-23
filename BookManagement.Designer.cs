@@ -52,14 +52,6 @@
             this.bookTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eLibDataSet = new ILib.ELibDataSet();
             this.dgvBook = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTypeTableAdapter = new ILib.ELibDataSetTableAdapters.BookTypeTableAdapter();
             this.authorTableAdapter = new ILib.ELibDataSet1TableAdapters.AuthorTableAdapter();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -68,6 +60,14 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLibDataSet1)).BeginInit();
@@ -344,71 +344,6 @@
             this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
             this.dgvBook.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBook_CellFormatting);
             // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Id";
-            this.Column8.HeaderText = "Mã";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Name";
-            this.Column1.HeaderText = "Tên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 140;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "IdAuthor";
-            this.Column2.HeaderText = "Tác giả";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "IdType";
-            this.Column3.HeaderText = "Loại";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 95;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Publisher";
-            this.Column4.HeaderText = "Xuất bản";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Price";
-            this.Column6.HeaderText = "Giá";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Amount";
-            this.Column5.HeaderText = "Số lượng";
-            this.Column5.MinimumWidth = 20;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Status";
-            this.Column7.HeaderText = "Trạng thái";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Visible = false;
-            this.Column7.Width = 125;
-            // 
             // bookTypeTableAdapter
             // 
             this.bookTypeTableAdapter.ClearBeforeFill = true;
@@ -517,6 +452,71 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Id";
+            this.Column8.HeaderText = "Mã";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Name";
+            this.Column1.HeaderText = "Tên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 140;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "IdAuthor";
+            this.Column2.HeaderText = "Tác giả";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "IdType";
+            this.Column3.HeaderText = "Loại";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 95;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Publisher";
+            this.Column4.HeaderText = "Xuất bản";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Price";
+            this.Column6.HeaderText = "Giá";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Amount";
+            this.Column5.HeaderText = "Số lượng";
+            this.Column5.MinimumWidth = 20;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Status";
+            this.Column7.HeaderText = "Trạng thái";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
+            this.Column7.Width = 125;
+            // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +584,8 @@
         private System.Windows.Forms.BindingSource authorBindingSource;
         private ELibDataSet1TableAdapters.AuthorTableAdapter authorTableAdapter;
         private System.Windows.Forms.ComboBox cbbStatus;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -592,7 +594,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

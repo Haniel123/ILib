@@ -46,10 +46,6 @@
             this.txtIdUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +53,10 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnEditUser = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +118,7 @@
             this.cbbPositionUser.Name = "cbbPositionUser";
             this.cbbPositionUser.Size = new System.Drawing.Size(245, 30);
             this.cbbPositionUser.TabIndex = 10;
+            this.cbbPositionUser.SelectedIndexChanged += new System.EventHandler(this.cbbPositionUser_SelectedIndexChanged);
             this.cbbPositionUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboComboBox1_KeyPress);
             // 
             // txtPasswordRepeatUset
@@ -252,8 +253,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(754, 70);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Quản Lý Thủ Thư";
+            this.label1.Text = "Quản Lý Tài Khoản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvUser
             // 
@@ -276,6 +278,51 @@
             this.dgvUser.TabIndex = 20;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvUser.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvUser_CellFormatting);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            // 
+            // Fullname
+            // 
+            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fullname.DataPropertyName = "Fullname";
+            this.Fullname.HeaderText = "Tên";
+            this.Fullname.Name = "Fullname";
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Điện thoại";
+            this.Phone.Name = "Phone";
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Tên tài khoản";
+            this.Username.Name = "Username";
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            // 
+            // IdType
+            // 
+            this.IdType.DataPropertyName = "IdType";
+            this.IdType.HeaderText = "Chức vụ";
+            this.IdType.Name = "IdType";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.Name = "Status";
+            this.Status.Visible = false;
             // 
             // btnDeleteUser
             // 
@@ -342,51 +389,6 @@
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Mã";
-            this.id.Name = "id";
-            // 
-            // Fullname
-            // 
-            this.Fullname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fullname.DataPropertyName = "Fullname";
-            this.Fullname.HeaderText = "Tên";
-            this.Fullname.Name = "Fullname";
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Điện thoại";
-            this.Phone.Name = "Phone";
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Tên tài khoản";
-            this.Username.Name = "Username";
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            // 
-            // IdType
-            // 
-            this.IdType.DataPropertyName = "IdType";
-            this.IdType.HeaderText = "Chức vụ";
-            this.IdType.Name = "IdType";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Trạng thái";
-            this.Status.Name = "Status";
-            this.Status.Visible = false;
-            // 
             // userManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,7 +407,7 @@
             this.Location = new System.Drawing.Point(6, 8);
             this.Name = "userManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý thủ thư";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.userManage_Load_1);
             this.GroupBox.ResumeLayout(false);
             this.GroupBox.PerformLayout();

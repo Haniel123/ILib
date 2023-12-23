@@ -21,5 +21,8 @@ namespace DAO
         public string Code { get; set; }
         public System.DateTime DateStart { get; set; }
         public System.DateTime DateEnd { get; set; }
+    
+        public virtual Book Book { get; set; }
+        public virtual Reader Reader { get; set; }
     }
 }

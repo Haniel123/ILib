@@ -73,7 +73,7 @@ namespace DAO
 
         public List<BorrowTicket> getBorrow()
         {
-            var result = from borrow in db.BorrowTickets where borrow.Status == 1 orderby borrow.Id descending select borrow;
+            var result = from borrow in db.BorrowTickets where borrow.Status != 0 orderby borrow.Id descending select borrow;
             return result.ToList();
         }
 
